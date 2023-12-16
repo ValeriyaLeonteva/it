@@ -1,0 +1,765 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/net.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" --> 
+<title>Потоки ввода-вывода | Технология .Net | mista.ru</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#990066" alink="#CC0066" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="180" background="fon2.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <a name="begin"></a><a href="http://www.mista.ru"><img src="logo.gif" alt="Информационные системы" width="180" height="70" border="0"></a></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC" class="unnamed5"> 
+      <div align="center"><!-- InstanceBeginEditable name="title" --><font color="#CC0000" size="6" face="Verdana, Arial, Helvetica, sans-serif">Потоки 
+        ввода-вывода </font><!-- InstanceEndEditable --></div></td>
+  </tr>
+</table>
+<table width="100%" height="90%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="180" valign="top" background="fon.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <table width="175" border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="100%" valign="top"> 
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../it.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><br>
+              Информационные технологии</font></strong></font></a> </font></p>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="index.htm">Технология .Net </a></strong></font></font></strong></font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><a href="intro.htm">Что 
+              такое .Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="net_framework.htm">.Net 
+              Framework</a><br>
+              <a href="vbnet_future.htm">VB.Net: дорога в будущее</a><br>
+              <a href="vbnet_types.htm">Типы данных VB.Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="vbnet_impression.htm">Впечатление 
+              от VB.Net</a><br>
+              <a href="links.htm">Ссылки по Net</a> </font></p>
+            <table width="99%" border="1" cellspacing="0" cellpadding="5" bordercolor="#FFCC33">
+              <tr> 
+                <td> <p><font face="Arial, Helvetica, sans-serif" size="2">1. 
+                    <a href="clr.htm">CLR - Введение</a><br>
+                    2. <a href="clr2.htm">CLR - Часть 2</a><br>
+                    3. <a href="vs.htm">Visual Studio.Net</a><br>
+                    4. <a href="lib.htm">Библиотека классов </a><br>
+                    5. <a href="array.htm">Массивы и коллекции</a><br>
+                    6. <a href="string.htm">Строки</a><br>
+                    7. <a href="file.htm">Файлы и каталоги</a><br>
+                    8. <a href="stream.htm">Потоки ввода-вывода</a></font></p>
+                  <p align="right"><font face="Arial, Helvetica, sans-serif" size="2"><i><a href="http://www.compress.ru" target="_blank">Компьютер</a></i><a href="http://www.compress.ru" target="_blank"><i>Пресс</i></a> 
+                    </font></p></td>
+              </tr>
+            </table>
+            <br>
+            <hr width="95%" size="1" noshade>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../isu/index.htm">Инф. системы</a></strong></font></font><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../gorod/index.htm">Модель города</a></strong></font></font><br>
+              <img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <font color="#330099" face="Verdana, Arial, Helvetica, sans-serif"><a href="../itbooks.htm">Книги 
+              и статьи</a></font></font></strong></font><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <a href="../era/index.htm">ЭРА</a> </font></strong></font></p>
+            <p><a href="../1c.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">1С:Предприятие</font></strong></font></a> 
+            </p>
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../interesting.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">Интересное</font></strong></font></a></font> 
+            </p>
+            <!-- InstanceBeginEditable name="EditRegion2" --><!-- InstanceEndEditable --> 
+            </td>
+        </tr>
+      </table>
+    </td>
+    <td valign="top" class="unnamed1">  
+      <table width="100%" border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+          <td valign="top" bgcolor="#FFFFCC" class="unnamed4"> <!-- InstanceBeginEditable name="navigation" --><a href="../index.htm">mista.ru</a> 
+            / <a href="../it.htm">Инф. технологии</a> / <a href="index.htm">Технология 
+            .Net</a> / Потоки ввода-вывода<!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td height="65"><!-- InstanceBeginEditable name="text" -->
+            <p align="right"><font face="Arial, Helvetica, sans-serif" size="2">Алексей 
+              Федоров<a href="http://www.compress.ru" target="_blank"><br>
+              КомпьютерПресс</a> 5'2002</font></p>
+            <p align="justify"><a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#01"><font face="Arial, Helvetica, sans-serif" size="2">Пространство 
+              имен System.IO</font></a><font face="Arial, Helvetica, sans-serif" size="2"><br>
+              <a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#02">Потоки</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#03">Класс BufferedStream</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#04">Класс FileStream</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#05">Класс MemoryStream</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#06">Класс NetworkStream</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#07">Класс CryptoStream</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#08">Чтение и запись потоков</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#09">Класс BinaryReader</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#14">Класс BinaryWriter </a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#10">Класс StreamReader</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#11">Класс StreamWriter</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#12">Класс StringWriter</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3290/index.htm#13">Другие классы на базе класса 
+              TextWriter</a></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Мы 
+              продолжаем разговор о Microsoft .NET Framework (см. КомпьютерПресс 
+              № 11-12’2001, 1-4’2002) и библиотеке классов .NET Framework Class 
+              Library. В этом номере мы рассмотрим пространство имен System.IO 
+              и классы, связанные с потоковым вводом-выводом.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              этой части нашего обзора библиотеки классов .NET Framework Class 
+              Library мы начнем знакомство с пространством имен System.IO и рассмотрим 
+              потоки, средства для их чтения и записи из них. В следующем номере 
+              мы расскажем также о входящих в пространство имен System.IO классах, 
+              предназначенных для работы с файловой системой.</font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=01></a>Пространство 
+              имен System.IO</font></h2>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Это 
+              пространство имен содержит классы и другие типы данных, используемые 
+              для синхронной и асинхронной работы (чтение и запись) с потоками 
+              и файлами. Пространство имен System.IO включает классы, реализующие 
+              потоки, средства чтения и записи потоков, а также классы для работы 
+              с файловой системой. Основные классы, входящие в пространство имен 
+              System.IO, показаны на рис. 1.</font></p>
+            <p align="center"><img src="stream_1.gif" width="500" height="199"></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=02></a>Потоки 
+              ввода-вывода </font></h2>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              Stream — это абстрактное представление последовательности байтов. 
+              Классы, наследующие от класса Stream, обеспечивают более специфические 
+              функции — работу с файлами (класс FileStream), памятью (класс MemoryStream) 
+              и сетью (класс NetworkStream). В целом потоки поддерживают операции 
+              чтения, записи, а также операции позиционирования. Отметим, что 
+              операция позиционирования требует определения текущей позиции и 
+              может не поддерживаться в потоках определенного типа, например в 
+              сетевых потоках. Для того чтобы проверить возможности того или иного 
+              типа потока, следует использовать свойства CanRead, CanWrite и CanSeek.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Свойство 
+              Length используется для нахождения длины потока — числа байт, содержащихся 
+              в потоке (значение типа Long). Для определения текущей позиции в 
+              потоке или для ее изменения используется свойство Position (значение 
+              типа Long).</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              Stream содержит несколько методов, определяющих базовую функциональность 
+              всех потоков:</font></p>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;BeginRead(Byte(), 
+                Integer, Integer, AsyncCallback, Object), ReadByte(), Read(Byte(), 
+                Integer, Integer) и EndRead(IAsyncResult) — эти методы используются 
+                для начала и завершения асинхронной операции чтения, для чтения 
+                байта или последовательности байтов из текущей позиции в потоке; 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">BeginWrite(Byte(), 
+                Integer, Integer, AsyncCallback, Object), WriteByte(Byte), Write(Byte(), 
+                Integer, Integer) и EndWrite(IAsyncResult) — эти методы используются 
+                для начала и завершения асинхронной операции записи, записи байта 
+                или последовательности байтов в текущую позицию в потоке; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Seek(Long, 
+                SeekOrigin) — этот метод служит для изменения текущей позиции 
+                в потоке; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">SetLength 
+                — данный метод изменяет длину текущего потока; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Flush() — 
+                этот метод заставляет записать в поток все буферизованные данные; 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Close() — 
+                этот метод закрывает текущий поток. </font></li>
+            </ul>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              следующей таблице показано, в каких случаях мы не можем использовать 
+              некоторые свойства и методы классов, унаследованных от класса Stream. 
+              </font></p>
+            <table border="1" width="100%" bordercolor="#CCCCCC" cellspacing="0">
+              <tr> 
+                <th><font size="2" face="Arial, Helvetica, sans-serif">Если это 
+                  свойство равно False, </font></th>
+                <th><font size="2" face="Arial, Helvetica, sans-serif">мы не можем 
+                  использовать такие свойства и методы</font></th>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">CanRead 
+                  = False</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Read, ReadByte, 
+                  BeginRead, EndRead, Peek</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">CanSeek 
+                  = False</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Length, 
+                  SetLength, Position, Seek</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">CanWrite 
+                  = False</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">SetLength, 
+                  Write, BeginWrite, EndWrite, WriteByte</font></td>
+              </tr>
+            </table>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Как 
+              мы отмечали выше, класс Stream служит в качестве базового класса 
+              для нескольких типов потоков. На рис. 2 показаны классы, унаследованные 
+              от абстрактного класса Stream.</font></p>
+            <p align="center"><img src="stream_2.gif" width="400" height="318"></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Отметим, 
+              что классы NetworkStream и CryptoStream реализованы в других пространствах 
+              имен — в пространстве имен System.Net.Sockets и System.Security. 
+              Cryptography соответственно.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=03></a>Класс 
+              BufferedStream</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              BufferedStream используется для буферизованных потоковых операций 
+              чтения и записи (но не той и другой одновременно) в другой поток. 
+              Этот класс создает буфер в памяти (по умолчанию размер буфера равен 
+              4 Кбайт, но это значение может быть изменено с помощью перегруженного 
+              конструктора), который используется для кэширования данных. В результате 
+              повышается производительность операций чтения и записи — за счет 
+              сокращения числа обращений к функциям операционной системы.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">С 
+              целью создания буфера для существующего потока используется конструктор 
+              класса BufferedStream, а в качестве входного параметра указывается 
+              существующий поток. Дальнейшие операции выполняются через методы 
+              класса BufferedStream, а все изменения в буфере сохраняются в потоке 
+              вызовом метода Flush.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=04></a>Класс 
+              FileStream</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              FileStream используется для чтения и записи файлов. Мы можем использовать 
+              этот класс для чтения и записи байтов, символов, строк и других 
+              типов данных. Класс FileStream поддерживает синхронное и асинхронное 
+              открытие файлов, синхронные операции чтения и записи (методы Read 
+              и Write), а также асинхронные операции чтения и записи (методы BeginRead 
+              и BeginWrite). Асинхронные операции завершаются вызовом методов 
+              EndRead и EndWrite соответственно. Режим по умолчанию — синхронный; 
+              для проверки режима мы используем свойство IsAsync. Для асинхронных 
+              операций необходим объект WaitHandle. Метод Seek используется для 
+              произвольного доступа к файлам. Свойство Position позволяет нам 
+              узнать или установить текущую позицию в потоке. Методы Lock и Unlock 
+              служат для предотвращения доступа ко всему файлу или к его части, 
+              а также для отмены ранее установленного запрета доступа. Свойство 
+              Length возвращает длину потока в байтах, а метод SetLength служит 
+              для задания длины потока. Методы ReadByte и WriteByte используются 
+              для чтения и записи одного байта. Для других примитивных типов нам 
+              необходимы классы BinaryReader и BinaryWriter соответственно.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">От 
+              класса FileStream наследует класс IsolatedStorageFileSystem (пространство 
+              имен System.IO.IsolatedStorage), служащий для чтения, записи и создания 
+              файлов в изолированном хранилище. Изолированное хранилище предоставляет 
+              в наше распоряжение виртуальную файловую систему, позволяющую читать 
+              и записывать данные, недоступные извне. Изолированное хранилище 
+              обеспечивает изоляцию данных на уровне пользователя, сборки или 
+              домена приложения.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=05></a>Класс 
+              MemoryStream</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              MemoryStream может использоваться для создания потока, содержимое 
+              которого хранится не на диске и не в сети, а в памяти. Этот класс 
+              задействует байтовый массив, который может иметь либо фиксированную, 
+              либо произвольную длину. В последнем случае мы можем изменять размер 
+              массива, читать из него и записывать в него. Что касается потока 
+              с фиксированной длиной, то в него мы можем только записывать.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Для 
+              того чтобы выяснить число байтов, выделенных под поток в памяти, 
+              мы пользуемся свойством Capacity, возвращающим данные типа Integer. 
+              Свойство Length возвращает реальное число байтов в потоке (значение 
+              типа Long), а метод GetBuffer() возвращает массив байтов, в котором 
+              располагается поток. Для сохранения всего содержимого потока в байтовом 
+              массиве используется метод ToArray(). Метод WriteTo(Stream) служит 
+              для копирования всего потока в другой поток.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Следующий 
+              пример показывает, как использовать класс MemoryStream для создания 
+              нового потока в памяти, задания его содержимого и сохранения этого 
+              потока в файле:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">‘————————————————————
+‘ Использование класса MemoryStream
+‘————————————————————
+Imports System
+Imports System.IO
+Module VBDemo
+&nbsp;Sub Main()
+&nbsp;&nbsp;Dim Bytes() As Byte = New Byte(10) {}
+&nbsp;&nbsp;Dim I As Integer
+&nbsp;&nbsp;Dim MemStr As New MemoryStream()
+Dim FileStr As New FileStream(“c:\temp\bytes.bin”, _
+&nbsp;&nbsp;&nbsp;FileMode.CreateNew)
+&nbsp;&nbsp;Dim Rand As System.Random = New System.Random()
+&nbsp;&nbsp;For I = 0 To 9
+&nbsp;&nbsp;&nbsp;Bytes(I) = Rand.Next(0, 100)
+&nbsp;&nbsp;Next
+&nbsp;&nbsp;MemStr.Write(Bytes, 0, I)
+&nbsp;&nbsp;MemStr.WriteTo(FileStr)
+&nbsp;&nbsp;MemStr.Close()
+&nbsp;&nbsp;FileStr.Close()
+&nbsp;End Sub
+End Module</font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Ниже 
+              мы кратко рассмотрим еще два типа потоков, которые наследуют от 
+              класса Stream, но реализованы вне пространства имен System.IO.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=06></a>Класс 
+              NetworkStream</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Этот 
+              класс служит для посылки данных по сети. Класс NetworkStream реализует 
+              поток, не поддерживающий операцию позиционирования. Поэтому мы не 
+              можем использовать свойство Position и метод Seek при работе с потоком 
+              этого типа.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Более 
+              подробно сетевые функции в Microsoft .NET мы рассмотрим в одной 
+              из следующих частей данной статьи.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=07></a>Класс 
+              CryptoStream</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Этот 
+              класс реализует поток, который связывает потоки данных с криптографическими 
+              трансформациями. Класс CryptoStream реализован в пространстве имен 
+              System.Secutity.Cryptography.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Для 
+              шифрования и расшифровки потоков мы должны выбрать провайдеров, 
+              которые обеспечивают шифровку и расшифровку. В настоящее время мы 
+              можем выбирать между симметричными алгоритмами типа Encryption Standard 
+              (DES), RC2, Triple Data Encryption Standard (TripleDES) и Rijndael/AES, 
+              асимметричными алгоритмами (которые также известны как публичные 
+              ключи) типа RSA, DSA и хэш-алгоритмами типа MD5, SHA1, SHA256, SHA384 
+              и SHA512. Пространство имен System.Security.Cryptography.X509 также 
+              содержит минимальную поддержку публичных сертификатов.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Классы, 
+              которые реализуют поддержку цифровой подписи в XML-документах, располагаются 
+              в пространстве имен System.Security.Cryptography.XML.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Большинство 
+              алгоритмов в пространстве имен System.Secutity.Cryptography реализовано 
+              на основе интерфейса Microsoft CryptoAPI. Некоторые алгоритмы шифрования 
+              — SHA256, SHA384, SHA512 и Rijndael/AES — в настоящее время не поддерживаются 
+              интерфейсом CryptoAPI.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">После 
+              того как мы выберем провайдера, который обеспечивает нам шифровку 
+              и расшифровку: DESCryptoServiceProvider, RC2CryptoServiceProvider, 
+              TripleDESCryptoServiceProvider и т.п., мы будем использовать его 
+              с ключом и инициализационным вектором для зашифровки или расшифровки 
+              указанного потока.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Последний 
+              шаг — сохранение зашифрованного или расшифрованного потока в файле. 
+              В следующем примере показано, как зашифровать массив байтов, сохранить 
+              его в файле, а затем расшифровать на основе алгоритма DES. Мы используем 
+              здесь конструктор по умолчанию, который заполняет необходимые параметры 
+              выбранного нами алгоритма:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">'----------------------------------------  
+' Использование класса CryptoStream  
+'----------------------------------------  
+&nbsp;  
+Imports System  
+Imports System.IO  
+Imports System.Security.Cryptography  
+&nbsp;  
+Module VBDemo  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp;  
+&nbsp; Dim Bytes() As Byte = {65, 66, 67, 68, 69, 70, 71, 72, 73, 74}  
+&nbsp; Dim EncBytes() As Byte = New Byte(15) {}  
+&nbsp; Dim DecBytes() As Byte = New Byte(10) {}  
+&nbsp;  
+&nbsp; Dim FileName As String = "c:\temp\text.enc"  
+&nbsp; Dim EncFile As New FileStream(FileName, FileMode.Create, _  
+&nbsp;&nbsp; FileAccess.Write)  
+&nbsp; Dim DES As New DESCryptoServiceProvider()  
+&nbsp; Dim DESEncrypt As ICryptoTransform = DES.CreateEncryptor()  
+&nbsp; Dim CryptoStreamEnc As New CryptoStream(EncFile, DESEncrypt, _  
+&nbsp;&nbsp; CryptoStreamMode.Write)  
+&nbsp;  
+&nbsp; Console.WriteLine("Original Data")  
+&nbsp; ToHexArray(Bytes)  
+&nbsp;  
+&nbsp; CryptoStreamEnc.Write(Bytes, 0, Bytes.Length)  
+&nbsp; CryptoStreamEnc.Close()  
+&nbsp; EncFile.Close()  
+&nbsp;  
+&nbsp; EncFile = New FileStream(FileName, FileMode.Open, FileAccess.Read)  
+&nbsp; EncFile.Read(EncBytes, 0, EncFile.Length)  
+&nbsp; EncFile.Close()  
+&nbsp;  
+&nbsp; Console.WriteLine("Encrypted Data")  
+&nbsp; ToHexArray(EncBytes)  
+&nbsp; Console.WriteLine()  
+&nbsp;  
+&nbsp; Dim DecFile As New FileStream(FileName, FileMode.Open, _  
+&nbsp;&nbsp; FileAccess.Read)  
+&nbsp; Dim DESDecrypt As ICryptoTransform = DES.CreateDecryptor()  
+&nbsp; Dim CryptoStreamDec As New CryptoStream(DecFile, DESDecrypt, _  
+&nbsp;&nbsp; CryptoStreamMode.Read)  
+&nbsp; Dim Reader As New BinaryReader(CryptoStreamDec)  
+&nbsp;  
+&nbsp; Console.WriteLine("Decrypted Data")  
+&nbsp; DecBytes = Reader.ReadBytes(10)  
+&nbsp; ToHexArray(DecBytes)  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+&nbsp;Sub ToHexArray(ByVal A As Byte())  
+&nbsp;  
+&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp; For I = 0 To A.GetUpperBound(0)  
+&nbsp;&nbsp; Console.Write("0x{0:x2} ", A(I))  
+&nbsp;&nbsp; If I = 7 Then  
+&nbsp;&nbsp;&nbsp; Console.WriteLine()  
+&nbsp;&nbsp; End If  
+&nbsp; Next  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="stream_f1.gif" width="317" height="147"></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Использование 
+              фиксированной длины ключа поддерживается во всех алгоритмах шифрования, 
+              но для алгоритмов, реализованных на основе CryptoAPI, мы должны 
+              установить High Encryption Pack, входящий в состав Windows 2000 
+              Service Pack, Windows NT 4.0 Service Pack 6a или Internet Explorer 
+              5.5 для Windows Me, Windows 98 и Windows 95.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=08></a>Чтение 
+              и запись потоков</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Пространство 
+              имен System.IO содержит четыре пары классов для чтения и записи 
+              потоков: классы, используемые для чтения и записи последовательной 
+              серии байтов или символов. К этим классам относятся классы BinaryReader 
+              и BinaryWriter для работы с примитивными типами данных, определенными 
+              в Common Type System, а также классы для чтения и записи последовательностей 
+              символов — TextReader и TextWriter, строк — StringReader и StringWriter 
+              и потоков — StreamReader и StreamWriter.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=09></a>Класс 
+              BinaryReader</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              BinaryReader предоставляет нам механизмы для чтения примитивных 
+              типов как бинарных значений. Он содержит методы для чтения каждого 
+              типа, определенного в Common Type System — ReadBoolean, ReadByte 
+              (ReadBytes), ReadChar (ReadChars), ReadDecimal, ReadDouble и т.д.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Для 
+              получения потока, ассоциированного с BinaryReader, что неизменно 
+              происходит в конструкторе, мы можем использовать свойство BaseStream 
+              типа Stream. Метод PeekChar() возвращает следующий символ из потока, 
+              но не перемещает указатель текущей позиции — это означает, что мы 
+              можем использовать данный метод для проверки того, имеются ли в 
+              потоке еще символы, перед тем как прочитать их. Метод Read(Byte(), 
+              Integer, Integer) or Read(Char(), Integer, Integer) используется 
+              для чтения указанного числа символов или байтов из потока. Этот 
+              метод может применяться вместо методов для чтения примитивных типов 
+              данных.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Следующий 
+              пример показывает, как использовать класс BinaryReader для создания 
+              простой утилиты шестнадцатеричного дампа:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">‘————————————————————
+‘ Использование класса BinaryReader
+‘————————————————————
+Imports System
+Imports System.IO
+Module VBDemo
+&nbsp;Sub Main()
+&nbsp;&nbsp;Dim Bytes As Byte()
+&nbsp;&nbsp;Dim I As Integer
+&nbsp;&nbsp;Dim Reader As BinaryReader
+Reader = New BinaryReader(File.OpenRead (“c:\demo.exe”))
+&nbsp;&nbsp;While Reader.PeekChar() &gt; -1
+&nbsp;&nbsp;&nbsp;Bytes = Reader.ReadBytes(16)
+&nbsp;&nbsp;&nbsp;For I = 0 To Bytes.GetUpperBound(0)
+&nbsp;&nbsp;&nbsp;&nbsp;Console.Write(“0x{0:X2}|”, Bytes(I))
+&nbsp;&nbsp;&nbsp;Next
+&nbsp;&nbsp;&nbsp;Console.WriteLine()
+&nbsp;&nbsp;End While
+&nbsp;End Sub
+End Module </font></pre>
+            <div align="center"><img src="stream_f2.gif" width="641" height="315"> 
+            </div>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=14></a>Класс 
+              BinaryWriter </font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Мы 
+              используем класс BinaryWriter для записи данных примитивных типов 
+              в ассоциированный поток. Этот класс содержит метод Write(), у которого 
+              существуют перегруженные методы для записи значений различных типов 
+              в текущий поток.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Объединяя 
+              методы классов BinaryReader и BinaryWriter, мы можем написать код, 
+              который выполняет операции копирования типа той, что приведена в 
+              следующем примере:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">‘————————————————————
+‘ Использование класса BinaryWriter
+‘————————————————————
+Imports System
+Imports System.IO
+Module VBDemo
+&nbsp;Sub Main()
+&nbsp;&nbsp;Dim Bytes As Byte()
+&nbsp;&nbsp;Dim Reader As BinaryReader
+&nbsp;&nbsp;Dim Writer As BinaryWriter
+ Reader = New BinaryReader(File.OpenRead (“c:\demo.exe”))
+Writer = New BinaryWriter(File.Create (“c:\demo_copy.exe”))
+ While Reader.PeekChar() &gt; -1
+&nbsp;&nbsp;&nbsp;Bytes = Reader.ReadBytes(1024)
+&nbsp;&nbsp;&nbsp;Writer.Write(Bytes)
+&nbsp;&nbsp;End While
+&nbsp;&nbsp;Reader.Close()
+&nbsp;&nbsp;Writer.Flush()
+&nbsp;&nbsp;Writer.Close()
+&nbsp;End Sub
+End Module
+Класс TextReader</font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              TextReader используется для чтения последовательности символов из 
+              ассоциированного потока. Этот класс служит основой для двух других 
+              классов: StreamReader и StringReader (рис. 3), которые мы рассмотрим 
+              ниже.</font></p>
+            <p align="center"><img src="stream_3.gif" width="377" height="300"></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              TextReader содержит следующие методы, которые мы можем использовать 
+              в нашем коде:</font></p>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Peek() — 
+                этот метод возвращает следующий символ из потока, но не перемещает 
+                указатель текущей позиции; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Read() или 
+                Read(Char(), Integer, Integer) — этот метод применяется для чтения 
+                указанного числа символов из потока; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">ReadBlock(Char(), 
+                Integer, Integer) — этот метод считывает указанное число символов 
+                в буфер; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">ReadLine() 
+                — этот метод считывает целую строку символов из потока; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">ReadToEnd() 
+                — этот метод считывает все символы с текущей позиции до конца 
+                потока как одну строку. </font></li>
+            </ul>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Поскольку 
+              класс TextReader является абстрактным классом, мы не можем задействовать 
+              его напрямую — мы должны использовать либо класс StreamReader, либо 
+              класс StringReader (их мы рассмотрим ниже).</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=10></a>Класс 
+              StreamReader</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              StreamReader применяется для чтения последовательности символов 
+              из указанного файла или другого потока. В следующих примерах показано, 
+              как использовать класс StreamReader, чтобы прочитать текстовый файл 
+              построчно и как одну строку:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">‘————————————————————
+‘ Использование класса StreamReader
+‘————————————————————
+&nbsp;Imports System
+&nbsp;Imports System.IO
+Module VBDemo
+&nbsp;Sub Main()
+&nbsp;&nbsp;Dim FileName As String = _
+“C:\Program Files\Microsoft.NET\FrameworkSDK\ include\corsym.h”
+&nbsp;&nbsp;Dim Reader As TextReader
+&nbsp;&nbsp;Dim I As Int32
+&nbsp;&nbsp;Reader = New StreamReader(FileName)
+&nbsp;&nbsp;While Reader.Peek() &gt; -1
+&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(Reader.ReadLine)
+&nbsp;&nbsp;&nbsp;&nbsp;I += 1
+&nbsp;&nbsp;End While
+&nbsp;&nbsp;Console.WriteLine(“Read {0:G} lines”, I)
+&nbsp;&nbsp;Reader.Close()
+&nbsp;End Sub
+End Module</font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Если 
+              нас не интересует число строк, которые мы должны прочитать, и мы 
+              знаем, что объем файла не очень велик, мы можем использовать метод 
+              ReadToEnd, как это продемонстрировано в следующем примере:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">‘————————————————————
+‘ Использование класса StreamReader
+‘————————————————————
+Imports System
+Imports System.IO
+Module VBDemo
+&nbsp;Sub Main()
+&nbsp;&nbsp;Dim FileName As String = _
+“C:\Program Files\Microsoft.NET\FrameworkSDK\ include\corsym.h”
+&nbsp;&nbsp;Dim Reader As TextReader
+&nbsp;&nbsp;Dim I As Int32
+&nbsp;&nbsp;Reader = New StreamReader(FileName)
+&nbsp;&nbsp;Console.WriteLine(Reader.ReadToEnd)
+&nbsp;&nbsp;Reader.Close()
+&nbsp;End Sub
+End Module
+Класс 
+StringReader</font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              StringReader служит для чтения символов из строк. В следующем примере 
+              показана возможность использования классов StreamReader и StringReader 
+              для чтения строки из текстового файла и чтения символов из этой 
+              строки как из потока:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">‘————————————————————
+‘ Использование класса StringReader
+‘————————————————————
+Imports System
+Imports System.IO
+Module VBDemo
+&nbsp;Sub Main()
+&nbsp;&nbsp;Dim FileName As String = _
+“C:\Program Files\Microsoft.NET\FrameworkSDK\ include\corsym.h”
+Dim Reader As TextReader
+Dim S As String
+Reader = New StreamReader(FileName)
+S = Reader.ReadLine
+Dim SReader As New StringReader(S)
+While SReader.Peek &gt; -1
+Console.WriteLine(Chr(SReader.Read))
+End While
+Reader.Close()
+End Sub
+End Module
+Класс 
+TextWriter</font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              TextWriter служит для записи последовательности символов в поток. 
+              Для байтовых операций записи мы должны использовать класс Stream, 
+              а для бинарной записи примитивных типов — класс BinaryWriter.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              TextWriter — это абстрактный класс, он служит в качестве базы для 
+              нескольких классов: классов StreamWriter, StringWriter, реализованных 
+              в пространстве имен System.IO, класса IntendedTextWriter из пространства 
+              имен System.CodeDom.Complier, а также классов HTTPWriter и HTMLWriter, 
+              реализованных в пространствах имен System.Web и System.Web.UI соответственно 
+              (рис. 4).</font></p>
+            <p align="center"><img src="stream_4.gif" width="300" height="252"></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=11></a>Класс 
+              StreamWriter</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              StreamWriter применяется для вывода последовательности символов 
+              в той или иной кодировке. По умолчанию используется экземпляр класса 
+              UTF8Encoding для записи символов в кодировке Unicode UTF-8. Существует 
+              несколько перегруженных конструкторов, позволяющих указать поток, 
+              кодировку по умолчанию, задать кодировку, размер буфера и тип операции: 
+              требуется перезаписать существующий файл или информация должна быть 
+              к нему добавлена.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Свойство 
+              AutoFlush служит для указания, следует ли записывать содержимое 
+              буфера в поток после каждого вызова методов Write и WriteLine.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=12></a>Класс 
+              StringWriter</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              StringWriter используется для записи строки, которая хранится в 
+              классе StringBuilder, реализованном в пространстве имен System.Text. 
+              Более подробно об этом сказано в части 5 данной статьи (см. КомпьютерПресс 
+              № 4’2002).</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=13></a>Другие 
+              классы на базе класса TextWriter</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Как 
+              мы отмечали выше, в библиотеке классов .NET Framework Class Library 
+              существует несколько дополнительных классов, базирующихся на абстрактном 
+              классе TextWriter:</font></p>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">IndentedTextWriter 
+                (пространство имен System.CodeDom.Complier) — этот класс служит 
+                для записи строк с выравниванием по левому краю на основе заданного 
+                шага табуляции; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">HTTPWriter 
+                (пространство имен System.Web) — этот класс доступен через объект 
+                HTTPRequest — его метод Write вызывает объект HTTPWriter; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">HTMLTextWriter 
+                (пространство имен System.Web.UI) — этот класс используется серверными 
+                компонентами ASP.NET для отображения HTML-содержимого на клиенте; 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">HTML32TextWriter 
+                (пространство имен System.Web.UI) — этот класс расширяет класс 
+                HTMLTextWriter и обеспечивает поддержку отображения HTML версии 
+                3.2. </font></li>
+            </ul>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">На 
+              этом мы завершаем рассмотрение потоков и существующих в них средств 
+              чтения и записи. Тема следующей статьи данного цикла — классы из 
+              пространства имен System.IO, служащие для работы с файлами и каталогами. 
+              В июньском номере мы поговорим о классах FileSystemInfo, FileInfo, 
+              DirectoryInfo, File и Path. </font></p>
+            <!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+<table width="100%" height="30" border="0" cellpadding="6" cellspacing="0">
+  <tr> 
+    <td background="fon2.gif" bgcolor="#FFFFCC"> 
+      <div align="left"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif">&copy; 
+        <a href="mailto:stasmit@mail.ru">Волшебник Станислав</a>, <a href="http://www.mista.ru"><br>
+        www.mista.ru</a>, 1997-2003</font></div></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC"> 
+
+      <table border="0" align="center" cellpadding="2" cellspacing="0">
+        <tr valign="middle" align="center"> 
+          <td width="95"> 
+            <script language="javascript"><!--
+Mu="u045.09.spylog.com";Md=document;Mnv=navigator;Mp=0;
+Md.cookie="b=b";Mc=0;if(Md.cookie)Mc=1;Mrn=Math.random();
+Mn=(Mnv.appName.substring(0,2)=="Mi")?0:1;Mt=(new Date()).getTimezoneOffset();
+Mz="p="+Mp+"&rn="+Mrn+"&c="+Mc+"&t="+Mt;
+if(self!=top){Mfr=1;}else{Mfr=0;}Msl="1.0";
+//--></script><script language="javascript1.1"><!--
+Mpl="";Msl="1.1";Mj = (Mnv.javaEnabled()?"Y":"N");Mz+='&j='+Mj;
+//--></script><script language="javascript1.2"><!-- 
+Msl="1.2";Ms=screen;Mpx=(Mn==0)?Ms.colorDepth:Ms.pixelDepth;
+Mz+="&wh="+Ms.width+'x'+Ms.height+"&px="+Mpx;
+//--></script><script language="javascript1.3"><!--
+Msl="1.3";//--></script><script language="javascript"><!--
+My="";My+="<a href='http://"+Mu+"/cnt?cid=4509&f=3&p="+Mp+"&rn="+Mrn+"' target='_blank'>";
+My+="<img src='http://"+Mu+"/cnt?cid=4509&"+Mz+"&sl="+Msl+"&r="+escape(Md.referrer)+"&fr="+Mfr+"&pg="+escape(window.location.href);
+My+="' border=0 width=88 height=31 alt='SpyLOG'>";
+My+="</a>";Md.write(My);//--></script><noscript>
+<a href="http://u045.09.spylog.com/cnt?cid=4509&f=3&p=0" target="_blank">
+<img src="http://u045.09.spylog.com/cnt?cid=4509&p=0" alt='SpyLOG' border='0' width=88 height=31 >
+</a></noscript></noscript>
+            </td>
+          <td width="95"> <a href="http://www.1c.klim.org/topsites/index.html" target="_blank"> 
+            <img src="http://1c.klim.org/topsites/topsites.php?ID=143" width="88" height="31" border="0" alt="1C:TOP-100"></a></td>
+          <td width="95"> <script language="javascript">
+hotlog_js="1.0";
+hotlog_r=""+Math.random()+"&s=23314&im=101&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+</script>
+            <script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script> <script language="javascript1.2">
+hotlog_js="1.2";
+hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</script> <script language="javascript1.3">hotlog_js="1.3"</script> 
+            <script language="javascript">hotlog_r+="&js="+hotlog_js;
+document.write("<a href='http://click.hotlog.ru/?23314' target='_top'><img "+
+" src='http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script> <noscript>
+            <a href=http://click.hotlog.ru/?23314 target=_top><img
+src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=23314&im=101" border=0 
+width="88" height="31" alt="HotLog"></a></noscript> </td>
+        </tr>
+      </table>
+      
+    </td>
+    <td background="../fon2.gif"> 
+      <div align="right"><a href="#begin"> Наверх&nbsp;<img src="../top.gif" alt="^" width="16" height="14" border="0"></a></div></td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

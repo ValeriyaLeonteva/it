@@ -1,0 +1,903 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/net.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" --> 
+<title>Типы данных в VB.Net | Технология .Net | mista.ru</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#990066" alink="#CC0066" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="180" background="fon2.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <a name="begin"></a><a href="http://www.mista.ru"><img src="logo.gif" alt="Информационные системы" width="180" height="70" border="0"></a></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC" class="unnamed5"> 
+      <div align="center"><!-- InstanceBeginEditable name="title" --><font color="#CC0000" size="6" face="Verdana, Arial, Helvetica, sans-serif">Типы 
+        данных в VB.Net</font><!-- InstanceEndEditable --></div></td>
+  </tr>
+</table>
+<table width="100%" height="90%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="180" valign="top" background="fon.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <table width="175" border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="100%" valign="top"> 
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../it.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><br>
+              Информационные технологии</font></strong></font></a> </font></p>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="index.htm">Технология .Net </a></strong></font></font></strong></font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><a href="intro.htm">Что 
+              такое .Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="net_framework.htm">.Net 
+              Framework</a><br>
+              <a href="vbnet_future.htm">VB.Net: дорога в будущее</a><br>
+              <a href="vbnet_types.htm">Типы данных VB.Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="vbnet_impression.htm">Впечатление 
+              от VB.Net</a><br>
+              <a href="links.htm">Ссылки по Net</a> </font></p>
+            <table width="99%" border="1" cellspacing="0" cellpadding="5" bordercolor="#FFCC33">
+              <tr> 
+                <td> <p><font face="Arial, Helvetica, sans-serif" size="2">1. 
+                    <a href="clr.htm">CLR - Введение</a><br>
+                    2. <a href="clr2.htm">CLR - Часть 2</a><br>
+                    3. <a href="vs.htm">Visual Studio.Net</a><br>
+                    4. <a href="lib.htm">Библиотека классов </a><br>
+                    5. <a href="array.htm">Массивы и коллекции</a><br>
+                    6. <a href="string.htm">Строки</a><br>
+                    7. <a href="file.htm">Файлы и каталоги</a><br>
+                    8. <a href="stream.htm">Потоки ввода-вывода</a></font></p>
+                  <p align="right"><font face="Arial, Helvetica, sans-serif" size="2"><i><a href="http://www.compress.ru" target="_blank">Компьютер</a></i><a href="http://www.compress.ru" target="_blank"><i>Пресс</i></a> 
+                    </font></p></td>
+              </tr>
+            </table>
+            <br>
+            <hr width="95%" size="1" noshade>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../isu/index.htm">Инф. системы</a></strong></font></font><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../gorod/index.htm">Модель города</a></strong></font></font><br>
+              <img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <font color="#330099" face="Verdana, Arial, Helvetica, sans-serif"><a href="../itbooks.htm">Книги 
+              и статьи</a></font></font></strong></font><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <a href="../era/index.htm">ЭРА</a> </font></strong></font></p>
+            <p><a href="../1c.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">1С:Предприятие</font></strong></font></a> 
+            </p>
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../interesting.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">Интересное</font></strong></font></a></font> 
+            </p>
+            <!-- InstanceBeginEditable name="EditRegion2" --><!-- InstanceEndEditable --> 
+            </td>
+        </tr>
+      </table>
+    </td>
+    <td valign="top" class="unnamed1">  
+      <table width="100%" border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+          <td valign="top" bgcolor="#FFFFCC" class="unnamed4"> <!-- InstanceBeginEditable name="navigation" --><a href="../index.htm">mista.ru</a> 
+            / <a href="../it.htm">Инф. технологии</a> / <a href="index.htm">Технология 
+            .Net</a> / Типы данных в VB.Net<!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td height="65"><!-- InstanceBeginEditable name="text" -->
+            <p align="right"><font size="2" face="Arial, Helvetica, sans-serif">Автор: 
+              <a href="mailto:ivan@vbnet.ru" target="_blank">Шатрыкин Иван <br>
+              </a>12 августа 2002 г</font></p>
+            <p align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b>Введение</b><br>
+              Переход на платформу .NET потребовал от разработчиков Visual Basic 
+              титанических усилий по его приведению в соответствие со спецификацией 
+              CLS. Изменения коснулись практически всех средств языка, но наиболее 
+              существенные из них произошли в типах данных и работе с ними. Если 
+              кто-то из вас еще сомневается в новизне VB .NET, то после прочтения 
+              этой статьи все сомнения должны рассеяться: VB .NET - это действительно 
+              новый язык, позаимствовавший от дедушки Basic синтаксис, но не более 
+              того. В этой статье я попытаюсь рассказать об основных изменениях 
+              в работе с данными и, кроме того, сравнить скорость работы старого 
+              VB6 и нового VB .NET при обработке переменных различных типов.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Типы данных 
+              в VB .NET</b><br>
+              Каждый язык, входящий в &quot;сообщество .NET&quot;, полностью поддерживает 
+              все типы данных .NET Framework, иначе этот язык не может считаться 
+              .NET-языком.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">На что хочется 
+              обратить ваше внимание? Я считаю, что одним из наиболее существенных 
+              изменений в работе с переменными в VB .NET является возможность 
+              включения жесткой проверки типов оператором Option Strict. При включении 
+              такого режима компилятор требует, чтобы все преобразования типов, 
+              которые могут привести к потере данных, выполнялись явно, т.е. с 
+              помощью функций явного преобразования CBool, CByte, CDate и т.п. 
+              Например, если вы преобразуете число типа Long в число типа Integer, 
+              то компилятор выдаст предупреждение, а если наоборот, т.е. Integer 
+              в Long, то преобразование может быть выполнено автоматически.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Существует множество 
+              других изменений в работе с данными различных типов. VB .NET поддерживает 
+              13 типов данных.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Логические 
+              величины Boolean</b><br>
+              Основное отличие в переменных этого типа - то, что теперь они занимают 
+              в два раза больше памяти, чем раньше: 4 байта, а не 2. Честно говоря, 
+              после изучения всех изменений в размерах переменных, я начал понимать, 
+              куда новые версии Windows, а также новые версии большинства программ 
+              тратят память моего компьютера. Именно из-за увеличения размеров 
+              практически всех типов данных и возрастают потребности в оперативной 
+              памяти. Однако, может быть, в будущем это позволит с наименьшими 
+              затратами расширять возможности языка.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Что же еще изменилось 
+              в работе с логическими данными? Да, пожалуй, больше ничего, хотя 
+              многие программисты ожидали изменений в работе &quot;логических&quot; 
+              операторов (And, Or и т.д). Более того, в первой бета-версии языка 
+              его разработчики попытались сделать то, что уже давно необходимо. 
+              Что же нам нужно? А было нужно, на мой взгляд, немного.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Давайте вспомним, 
+              как работает VB с логическими величинами. Представим себе, что вы 
+              проверяете результат выполнения функции, например InStr, которая 
+              возвращает 0 (по логике это False) , если подстрока не найдена, 
+              или ее позицию в строке, если она найдена, т.е. любое число больше 
+              0 (по логике это True). Но, посмотрите на следующий пример:</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">If InStr(1, 
+              &quot;Журнал Программист&quot;, &quot;Программист&quot;) And_<br>
+              InStr(1, &quot;Журнал Программист&quot;, &quot;Журнал&quot;) Then<br>
+              Console.WriteLine(&quot;True&quot;)<br>
+              Else<br>
+              Console.WriteLine(&quot;False&quot;)<br>
+              End If </font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Рассуждая логически, 
+              если первое выражение &quot;истина&quot; и второе тоже &quot;истина&quot;, 
+              то операция And также должна давать &quot;истину&quot;... Но только 
+              не в Visual Basic! Вы никогда не получите логически предсказуемый 
+              результат в данном случае. Первый вызов InStr вернет 8, второй 1 
+              и при выполнении операции And вы получите не что иное, как False! 
+              Почему? Все очень просто, оператор And (и Or, кстати, также) выполняют 
+              не логическое сравнение, а поразрядную операцию, а результат в данном 
+              случае получается 0, т.е. False.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">В первой бета-версии 
+              был сделан шаг навстречу логике: операторы были переписаны и стали 
+              логическими. Кроме того, появились новые операторы для поразрядных 
+              действий, например BitAnd. Однако уже во второй бете все в спешном 
+              порядке убрали, и в результате вместо логических операторов мы вновь 
+              получили поразрядные.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Вот как нужно 
+              писать вышеприведенный код в Visual Basic:</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">If CBool(InStr(1, 
+              &quot;Журнал Программист&quot;, &quot;Программист&quot;)) And_<br>
+              CBool(InStr(1, &quot;Журнал Программист&quot;, &quot;Журнал&quot;)) 
+              Then<br>
+              Console.WriteLine(&quot;True&quot;)<br>
+              Else<br>
+              Console.WriteLine(&quot;False&quot;)<br>
+              End If </font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Вывод: при работе 
+              с переменными Boolean по-прежнему нужно очень осторожно проводить 
+              их сравнение, а точнее, никогда не применять сравнение, не преобразовав 
+              полученный результат в переменную типа Boolean, например, с помощью 
+              функции CBool. Только так вы можете застраховаться от &quot;нелогического&quot; 
+              мышления Visual Basic.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Целочисленные 
+              типы</b><br>
+              В новой версии языка есть четыре целочисленных типа данных: Integer, 
+              Short, Long и Byte. Следует внимательно отнестись к тому, что теперь 
+              тип Integer - это 4-байтовое число, т.е. он соответствует старому 
+              типу Long, а вот Long становится 8-байтовым. Что это означает на 
+              практике? Дело в том, что если раньше при вызове функции API вы 
+              писали Long, то теперь в тех же ситуациях нужно применять Integer.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Очень существенным 
+              изменением является то, что все типы данных обладают методами и 
+              свойствами. Например, содержат метод ToString, который можно использовать 
+              для преобразования числа в строковую переменную с одновременным 
+              ее форматированием в соответствии с заданным форматом. Но вот вопрос: 
+              нужно ли? Что это может дать программисту? Конечно, неоспоримо то, 
+              что это позволяет сделать ваш код более читабельным, однако меня 
+              интересует другой вопрос - не скажется ли это на производительности 
+              программы? Если вы читали мою статью &quot;Оптимизация кода в Visual 
+              Basic&quot; 1, то видели, насколько объектно-ориентированный код 
+              снижал производительность в VB6. Так вот давайте проверим, как изменится 
+              производительность при использовании функции Format и метода ToString. 
+              Более того, я позволил себе некоторое пижонство и написал подобные 
+              тесты для компилятора VB6. Результаты тестов приведены в таблице 
+              1.</font></p>
+            <table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tr> 
+                <td><font face="Arial, Helvetica, sans-serif" size="2">Компилятор</font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2">Метод преобразования</font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2">Быстродействие, 
+                  %</font></td>
+              </tr>
+              <tr> 
+                <td><font face="Arial, Helvetica, sans-serif" size="2">VB .NET</font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2">метод ToString</font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2">0 </font></td>
+              </tr>
+              <tr> 
+                <td><font face="Arial, Helvetica, sans-serif" size="2">VB .NET</font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2">функция 
+                  Format</font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2">- 40 ... 
+                  - 50 </font></td>
+              </tr>
+              <tr> 
+                <td><font face="Arial, Helvetica, sans-serif" size="2">VB 6 (компилятор)</font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2">функция 
+                  Format</font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2">- 100 ... 
+                  - 110 </font></td>
+              </tr>
+              <tr> 
+                <td><font face="Arial, Helvetica, sans-serif" size="2">VB 6 (псевдокод) 
+                  </font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2"><br>
+                  функция Format</font></td>
+                <td><font face="Arial, Helvetica, sans-serif" size="2">- 110 ... 
+                  - 120 </font></td>
+              </tr>
+            </table>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2">Таблица 
+              1.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Можно сделать 
+              следующие выводы. Во-первых, наблюдается заметный рост производительности 
+              при преобразовании (форматировании) данных в VB .NET, по сравнению 
+              с VB 6. Кроме того, при использовании внутренних методов библиотеки 
+              классов .NET Framework можно получить код, работающий более чем 
+              в 2 раза быстрее, чем подобный код компилятора VB 6, однако для 
+              этого нужно хорошо знать .NET Framework и использовать все ее преимущества. 
+              Для тех, кто в этом еще сомневается, ниже я приведу результаты работы 
+              VB .NET со строками.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Типы данных 
+              с плавающей запятой</b><br>
+              Для работы с вещественными числами в VB .NET имеется три типа: Single, 
+              Double и Decimal. Первые два вы должны хорошо знать еще со времен 
+              VB, а вот Decimal - новый тип, и по заверениям Microsoft, именно 
+              этот тип должен заменить старый Currency. Я пока еще не совсем представляю, 
+              зачем нужно было увеличивать &quot;денежный&quot; тип до 12 байт, 
+              но полагаю, что доходы Microsoft уже не поддаются исчислению в 8 
+              байтах.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Итак, теперь 
+              деньги нужно считать в 12 байтах, а вот Single и Double какими были, 
+              такими и остались. Отмечу, что эти типы данных также имеют свойства 
+              и методы, как и целочисленные типы. Например, вам могут быть полезны 
+              такие их свойства, как MaxValue и MinValue, позволяющие узнать верхнюю 
+              и нижнюю границы диапазона допустимых значений.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Обратите внимание 
+              на тип данных Double. Это нужный и полезный во всех отношениях тип 
+              данных. Почему? Все очень просто. Библиотека классов .NET Framework 
+              устроена таким образом, что практически все математические функции 
+              класса Math возвращают значения именно этого типа. Это означает, 
+              что, используя этот тип в своей программе, вам не придется тратить 
+              время на преобразование типов из Double в тот, который используете 
+              вы. Более того, многие математические функции VB .NET также возвращают 
+              результаты работы именно этого типа.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Строки String 
+              и Char</b><br>
+              Насчет строк у меня две новости, одна плохая, а вторая еще хуже. 
+              И это не шутка. Но начнем по порядку. VB 6 поддерживал особый тип 
+              строк, которые назывались строками фиксированной длины. Такие строки 
+              в отдельных случаях обладали целым рядом преимуществ по сравнению 
+              с обычными строками. Одним из главных преимуществ было то, что компилятор 
+              сразу выделял под них нужный нам объем памяти, который к тому же 
+              брался из стека. При изменениях самой строки память под нее не перераспределялась, 
+              что в некоторых случаях, хотя и крайне редких, давало преимущество 
+              в скорости работы. Теперь в VB отсутствует понятие строк фиксированной 
+              длины, и все строки являются динамическими. Но даже не это главное, 
+              гораздо важнее другое изменение - теперь строки &quot;неизменны&quot;. 
+              Иными словами, если вы хотите изменить значение строковой переменной, 
+              то VB .NET вместо модификации старого экземпляра строки создает 
+              совершенно новую строку, а старая удаляется при следующем вызове 
+              сборщика мусора. Кроме типа String существуют переменные типа Char, 
+              которые используются для работы с Unicode-символами. Переменная 
+              Char представляет собой 16-битовый код Unicode-символа.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Итак, в новой 
+              версии Visual Basic .NET вы можете для работы со строками использовать 
+              обычные переменные типа String, либо воспользоваться классом System.Text.StringBuilder 
+              из .NET Framework для создания и модификации строки текста. Чем 
+              они отличаются? Как раз тем, что StringBuilder при модификации строки 
+              не создает новую, а модифицирует исходную.</font></p>
+            <blockquote> 
+              <p><font face="Arial, Helvetica, sans-serif" size="2">Технические 
+                подробности. Если углубиться в техническую сторону дела, то процесс 
+                выделения памяти для строки выглядит примерно так. При объявлении 
+                переменной, например так: Dim sText As New System.Text.StringBuilder() 
+                система выделяет для нее память в размере, достаточном для хранения 
+                16 символов. Как только вам потребуется строка, состоящая из 17 
+                символов, размер выделенной памяти автоматически увеличится на 
+                ту же величину. Класс System.Text.StringBuilder имеет также в 
+                своем арсенале замечательное свойство Capacity, с помощью которого 
+                вы можете переопределить шаг увеличения памяти. Например, присвоив 
+                этому свойству, значение 64, вы заставите систему увеличивать 
+                размер памяти под строку на величину, достаточную для хранения 
+                не 16, а 64 символов. Иногда это очень важно, поскольку позволяет 
+                сэкономить время, но не следует злоупотреблять этим свойством 
+                - это может привести к нерациональному использованию памяти.<br>
+                </font></p>
+            </blockquote>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Естественно, 
+              поэтому StringBuilder работает гораздо быстрее, но вы даже не представляете, 
+              насколько. Кроме того, вас, конечно, интересует, как изменилась 
+              скорость работы VB со строками при переходе на платформу .NET, поэтому 
+              я все проверил и собрал полученные данные в таблице 2.</font></p>
+            <table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tr> 
+                <td width="15%"> <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Компилятор</b></font></div></td>
+                <td width="52%"> <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Тип 
+                    строки</b></font></div></td>
+                <td width="11%"> <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Метод</b></font></div></td>
+                <td width="22%"> <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Быстродействие, 
+                    <br>
+                    мс на 10 000 операций</b></font></div></td>
+              </tr>
+              <tr> 
+                <td width="15%"><font face="Arial, Helvetica, sans-serif" size="2">VB 
+                  .NET</font></td>
+                <td width="52%"><font face="Arial, Helvetica, sans-serif" size="2">класс 
+                  System.Text.StringBuilder с предварительным выделением памяти</font></td>
+                <td width="11%"><font face="Arial, Helvetica, sans-serif" size="2">Append</font></td>
+                <td width="22%"> <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">6,7 
+                    </font></div></td>
+              </tr>
+              <tr> 
+                <td width="15%"><font face="Arial, Helvetica, sans-serif" size="2">VB 
+                  .NET</font></td>
+                <td width="52%"><font face="Arial, Helvetica, sans-serif" size="2">класс 
+                  System.Text.StringBuilder</font></td>
+                <td width="11%"><font face="Arial, Helvetica, sans-serif" size="2">Append</font></td>
+                <td width="22%"> <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">9,6 
+                    </font></div></td>
+              </tr>
+              <tr> 
+                <td width="15%"><font face="Arial, Helvetica, sans-serif" size="2">VB 
+                  .NET</font></td>
+                <td width="52%"><font face="Arial, Helvetica, sans-serif" size="2">простая 
+                  строка типа String</font></td>
+                <td width="11%"><font face="Arial, Helvetica, sans-serif" size="2">&amp;</font></td>
+                <td width="22%"> <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">3413 
+                    </font></div></td>
+              </tr>
+              <tr> 
+                <td width="15%"><font face="Arial, Helvetica, sans-serif" size="2">VB 
+                  6 (компилятор)</font></td>
+                <td width="52%"><font face="Arial, Helvetica, sans-serif" size="2">простая 
+                  строка типа String</font></td>
+                <td width="11%"><font face="Arial, Helvetica, sans-serif" size="2">&amp;</font></td>
+                <td width="22%"> <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">766 
+                    </font></div></td>
+              </tr>
+              <tr> 
+                <td width="15%"><font face="Arial, Helvetica, sans-serif" size="2">VB 
+                  6 (псевдокод)</font></td>
+                <td width="52%"><font face="Arial, Helvetica, sans-serif" size="2">простая 
+                  строка типа String</font></td>
+                <td width="11%"><font face="Arial, Helvetica, sans-serif" size="2">&amp;</font></td>
+                <td width="22%"> <div align="center"><font face="Arial, Helvetica, sans-serif" size="2">832 
+                    </font></div></td>
+              </tr>
+            </table>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2">Таблица 
+              2.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Думаю, что таблица 
+              требует некоторых пояснений. При тестировании я решил использовать 
+              простейшую операцию работы со строками: присоединение нового символа 
+              в конец строки. System.Text.StringBuilder с предварительным выделением 
+              памяти означает, что мы при вызове конструктора строки заранее указываем 
+              ее размер и, естественно, память под нее больше не перераспределяется. 
+              Как видно из таблицы, это заметно повышает быстородействие.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Результаты меня 
+              удивили. Класс System.Text.StringBuilder работает с потрясающей 
+              скоростью, а вот обычный строковый тип String, которым мы так привыкли 
+              пользоваться... Хотя если подумать, то примерно так и должно быть: 
+              создавать при любом изменении переменной новую ее копию - не лучший 
+              выбор, даже если это позволяет более эффективно расходовать память.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Вывод здесь 
+              может быть только один: если вы собираетесь часто изменять какую-то 
+              строку, используйте для этого класс System.Text.StringBuilder, он 
+              в сотни раз быстрее обычной переменной типа String, причем, уверяю 
+              вас, преимущество в скорости с увеличением размера строки только 
+              возрастает.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Date и Object</b><br>
+              Увеличение разрядности произошло и у типа Date, хотя и 4 байтов 
+              раньше вполне хватало. Но теперь дата представлена в 8 байтах. Кроме 
+              того, изменение разрядности повлекло невозможность автоматического 
+              преобразования типа Date в Double, как это было раньше. Поэтому 
+              вычислить завтрашнюю дату, прибавив к переменной единицу, не получится. 
+              Но не стоит расстраиваться, так как в .NET Framework существует 
+              класс Convert, с помощью которого вы без труда выполните необходимые 
+              преобразования.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Бывалых VB-программистов 
+              уже пугали, что Visual Basic больше не поддерживает тип данных Variant. 
+              Ну и пусть, потому что теперь есть новый тип данных, который еще 
+              лучше и гибче. Он называется Object. По заверениям Microsoft, новый 
+              тип обладает рядом преимуществ, одним из которых является улучшенная 
+              производительность. За счет чего это стало возможным? По их мнению, 
+              это связано с тем, что теперь с технической точки зрения Object 
+              - это ссылка на область памяти, в которой содержатся произвольные 
+              данные, включая и тип самих данных для идентификации. В случае если 
+              Object меняет свой тип, VB .NET просто переставляет ссылку на другую 
+              область памяти. Казалось бы, все просто и правильно, но... я никому 
+              не верю и всегда проверяю теоретические рассуждения на практике. 
+              По моему мнению, тип Object работает еще медленнее, чем старый Variant! 
+              И дальше я это докажу по крайней мере на математических операциях.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Производительность</b></font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><i><b>Переменные 
+              различных типов</b></i><br>
+              Мне было очень интересно узнать, переменные каких типов работают 
+              наиболее эффективно с точки зрения производительности. Я не считаю 
+              себя большим специалистом в области тестирования, но все же написал 
+              тесты для подобной проверки. Кроме того, мне было интересно, насколько 
+              производительность в VB .NET отличается от производительности в 
+              VB6.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Для тестирования 
+              я написал по три теста для каждого типа переменных, это работа переменных 
+              в цикле в качестве счетчика, математические операции сложение/вычитание/умножение/деление 
+              и операция преобразования переменной в тип String (лучше ничего 
+              не придумал). Измерение скорости я производил с помощью API функции 
+              timeGetTime из мультимедиа-библиотеки winmm.dll. При компилировании 
+              тестов я отключал оптимизацию и в VB 6, и в VB .NET. Тестирование 
+              провел в операционной системе Windows 2000 SP2. Тесты для VB6 и 
+              VB .NET были аналогичны, поэтому допускают непосредственное сравнение 
+              результатов. Все тесты проводились 5 раз, и их средние результаты 
+              (в миллисекундах) приведены в таблице 3 (чем меньше значение, тем 
+              быстрее выполнен тест). Нужно сразу отметить, что некоторые результаты 
+              расходятся с теорией и ответа на вопрос &quot;Почему?&quot; у меня 
+              нет.</font></p>
+            <p>&nbsp; 
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr> 
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Переменная/действие</b></font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b> 
+                  VB .NET</b></font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b> 
+                  VB 6 p-код</b></font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b> 
+                  VB 6 компилятор</b></font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"><b> Работа 
+                  в цикле</b></font></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Integer</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  140</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9643</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9273</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Long</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  280</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9464</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9033</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Byte</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  160</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9544</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9102</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Variant</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  11015</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  13583</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Currency</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  -</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9433</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  12918</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Double</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  1953</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10475</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9604</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Single</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  1031</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10505</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9528</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Short</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  171</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Object</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  25757</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Decimal</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  13409</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"><b> Математические 
+                  операции</b></font></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Integer</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2580</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9430</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2884</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Long</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  6935</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  7090</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2433</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Byte</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2782</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  14962</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  3615</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Variant</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  15071</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10125</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Currency</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10275</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  5368</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Double</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  90</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  6159</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2003</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Single</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  80</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  6329</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2002</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Short</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2664</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Object</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  33688</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Decimal</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9153</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"><b> Преобразование 
+                  в String</b></font></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Integer</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2093</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10182</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9982</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Long</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2037</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10723</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9805</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Byte</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2043</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10026</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  9786</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Variant</font></td>
+                <td align="center"></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  17702</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  15702</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Currency</font></td>
+                <td align="center"></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  8230</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  8158</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Double</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  3690</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10207</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10158</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Single</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  3355</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10346</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  10180</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Short</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  2068</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Object</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  3059</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif"> Decimal</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif"> 
+                  3515</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+                <td align="center"><font size="2" face="Arial, Helvetica, sans-serif">-</font></td>
+              </tr>
+            </table>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2">Таблица 
+              3.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">По результатам 
+              тестирования однозначно ответить на вопрос &quot;что быстрее&quot; 
+              нельзя. Дело в том, что на одних операциях VB .NET намного быстрее 
+              своего предшественника, а на других, например, в операциях умножения/деления, 
+              немного отстает, хотя это отставание очень небольшое. В целом VB 
+              .NET все же гораздо быстрее, чем VB 6. Я бы сказал так: &quot;VB 
+              .NET опережает по скорости работы не только p-код VB 6, но и компилятор 
+              шестой версии, причем увеличение быстродействия на некоторых операциях 
+              достигает десятков раз&quot;.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Если посмотреть, 
+              какие типы переменных имеют наиболее быструю математику, то по логике 
+              такими переменными должны быть Integer, как соответствующие разрядности 
+              операционной системы, но в моих тестах на первое место по скорости 
+              работы вышли (кто бы мог подумать) Single и Double. Честно говоря, 
+              объяснения этому факту у меня нет. А вот при работе в цикле в качестве 
+              счетчика самые быстрые переменные типа Integer.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Я намерено привел 
+              результаты только комплексного математического теста, а не отдельно 
+              по каждой из его составляющих, потому, что заметил очень большое 
+              различие в производительности переменных в разных операциях. Так, 
+              например, умножение/деление переменные типа Single и Double выполняют 
+              гораздо быстрее, чем другие типы переменных, а вот на операциях 
+              сложение/вычитание такого преимущества они уже не имеют и скорость 
+              их работы практически не отличается от Integer. Если кому-то интересны 
+              подобные результаты, провести необходимые тесты нетрудно.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Я же хочу сказать 
+              еще вот что: при оптимизации критичного по времени кода не нужно 
+              верить другим программистам и следует проверять работу своего кода, 
+              используя переменные разных типов. Только так вы сможете выбрать 
+              наиболее быстрые переменные для своего случая. И, поверьте, теория 
+              и практика здесь сильно расходятся.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Проводя тестирование, 
+              я использовал простейшие математические операции, потому что, используя 
+              математические функции VB .NET, возвращающие результаты в Double, 
+              я бы сразу поставил в неравные условия другие типы данных, поскольку 
+              результат бы еще преобразовывался из Double в используемый тип.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Говоря о переменных 
+              типа Object, я могу сделать такой вывод: математика у него стала 
+              еще хуже, чем была раньше у Variant. Если на математических операциях 
+              Variant в VB 6 в среднем отставал совсем немного (причем основное 
+              отставание было на операциях сложения/вычитания), то теперь Object 
+              отстает в десять и более раз, и это грустно.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Общие проблемы 
+              производительности в VB .NET</b><br>
+              Проблема производительности в VB .NET выходит далеко за рамки этой 
+              статьи, но я немного расскажу о самой большой проблеме - это &quot;компиляция 
+              по требованию&quot;. Что это означает? Вы уже знаете, что JIT-компилятор 
+              не выполняет компиляцию всего MSIL-кода вашей программы при ее запуске. 
+              Вместо этого каждый метод компилируется при первом обращении к нему, 
+              на что, естественно, требуется время. Откомпилированный код хранится 
+              в памяти, а последующие обращения к нему выполняют уже откомпилированный 
+              код. Более того, первые обращения к методам, функциям и свойствам 
+              классов .NET Framework, выполняются также значительно медленнее, 
+              чем их последующие вызовы.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Вам, конечно, 
+              хочется узнать, насколько это все медленнее? Так вот, например, 
+              первый вызов метода ToString на моей тестовой системе прошел почти 
+              за 100 миллисекунд, тогда как последующие вызовы просто не поддаются 
+              измерению! Но если вы думаете, что первое обращение к VB .NET функции 
+              Format пройдет, как и в VB 6, практически мгновенно, то вы глубоко 
+              заблуждаетесь, первое обращение к этой, встроенной в VB .NET функции, 
+              занимает не меньше, а, иногда, несколько больше времени, чем к подобному 
+              методу из .NET Framework! Однако и здесь не все так плохо, обратившись 
+              однажды в программе, например, к классу TimeOfDay и &quot;прочитав&quot; 
+              одно из его свойств, при следующем вызове любого метода этого класса 
+              или обращению к любому из его многочисленных свойств вы больше не 
+              потеряете ни одной миллисекунды. Это я прошел не по учебникам.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Есть ли выход? 
+              Конечно! Microsoft, вместе с .NET Framework, поставляет специальный 
+              компилятор, с помощью которого вы можете обработать свою сборку 
+              и получить машинный код, производительность которого значительно 
+              выше. Кроме того, этот компилятор загружает вашу откомпилированную 
+              сборку в специальный системный кэш. Например, я после обработки 
+              этим компилятором своего кода получил результаты, при которых первые 
+              вызовы функций VB .NET и .NET Framework прошли практически мгновенно 
+              и ничем не отличались от их последующих вызовов. Так что если вас 
+              сильно огорчает &quot;компиляция по требованию&quot;, то этот компилятор 
+              должен стать вашим другом.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Но не стоит 
+              злоупотреблять этим методом, так как сильно загрузив системный кэш, 
+              можно даже немного снизить общее быстродействие системы. Стоит также 
+              отметить, что такого рода предварительная обработка сборки должна 
+              проводиться на компьютере клиента, т.е. заранее откомпилировать 
+              код для другого компьютера, скорее всего, не получится, так как 
+              компилятор генерирует код, зависящий от конкретной платформы. Иными 
+              словами (по крайней мере, именно в этом убеждает нас Microsoft) 
+              ваш код должен работать не только на процессорах Intel, но и других, 
+              а откомпилировав его, вы потеряете такую возможность.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Заключение</b><br>
+              В общем, можно заключить, что изменения языка явно пошли ему на 
+              пользу и принесли не только новые возможности, но сделали его более 
+              быстродействующим, чем предыдущая версия. Однако максимальный выигрыш 
+              в производительности в ваших программах может быть получен только 
+              при &quot;умном&quot; использовании всей мощи библиотеки классов 
+              .NET Framework, иначе можно получить код, который будет работать 
+              с черепашьей скоростью.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Однако многие 
+              усовершенствования языка принесли ему не только новые возможности, 
+              но и новые проблемы, которые еще очень долго будут оставаться неразрешенными. 
+              Пройдет немало времени, прежде чем &quot;пытливые умы&quot; программистов 
+              на все 100% поймут внутреннюю структуру .NET Framework и напишут 
+              подробные рекомендации по оптимизации кода. Если же у кого-то имеется 
+              другое мнение по этому вопросу, то я готов с ним поспорить.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><br>
+              --------------------------------------------------------------------------------</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">1 Журнал &quot;Программист&quot; 
+              №11/2001.</font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2">Статья опубликована 
+              в журнале &quot;Программист&quot; №7 за 2002 год.<br>
+              </font></p>
+            <!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+<table width="100%" height="30" border="0" cellpadding="6" cellspacing="0">
+  <tr> 
+    <td background="fon2.gif" bgcolor="#FFFFCC"> 
+      <div align="left"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif">&copy; 
+        <a href="mailto:stasmit@mail.ru">Волшебник Станислав</a>, <a href="http://www.mista.ru"><br>
+        www.mista.ru</a>, 1997-2003</font></div></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC"> 
+
+      <table border="0" align="center" cellpadding="2" cellspacing="0">
+        <tr valign="middle" align="center"> 
+          <td width="95"> 
+            <script language="javascript"><!--
+Mu="u045.09.spylog.com";Md=document;Mnv=navigator;Mp=0;
+Md.cookie="b=b";Mc=0;if(Md.cookie)Mc=1;Mrn=Math.random();
+Mn=(Mnv.appName.substring(0,2)=="Mi")?0:1;Mt=(new Date()).getTimezoneOffset();
+Mz="p="+Mp+"&rn="+Mrn+"&c="+Mc+"&t="+Mt;
+if(self!=top){Mfr=1;}else{Mfr=0;}Msl="1.0";
+//--></script><script language="javascript1.1"><!--
+Mpl="";Msl="1.1";Mj = (Mnv.javaEnabled()?"Y":"N");Mz+='&j='+Mj;
+//--></script><script language="javascript1.2"><!-- 
+Msl="1.2";Ms=screen;Mpx=(Mn==0)?Ms.colorDepth:Ms.pixelDepth;
+Mz+="&wh="+Ms.width+'x'+Ms.height+"&px="+Mpx;
+//--></script><script language="javascript1.3"><!--
+Msl="1.3";//--></script><script language="javascript"><!--
+My="";My+="<a href='http://"+Mu+"/cnt?cid=4509&f=3&p="+Mp+"&rn="+Mrn+"' target='_blank'>";
+My+="<img src='http://"+Mu+"/cnt?cid=4509&"+Mz+"&sl="+Msl+"&r="+escape(Md.referrer)+"&fr="+Mfr+"&pg="+escape(window.location.href);
+My+="' border=0 width=88 height=31 alt='SpyLOG'>";
+My+="</a>";Md.write(My);//--></script><noscript>
+<a href="http://u045.09.spylog.com/cnt?cid=4509&f=3&p=0" target="_blank">
+<img src="http://u045.09.spylog.com/cnt?cid=4509&p=0" alt='SpyLOG' border='0' width=88 height=31 >
+</a></noscript></noscript>
+            </td>
+          <td width="95"> <a href="http://www.1c.klim.org/topsites/index.html" target="_blank"> 
+            <img src="http://1c.klim.org/topsites/topsites.php?ID=143" width="88" height="31" border="0" alt="1C:TOP-100"></a></td>
+          <td width="95"> <script language="javascript">
+hotlog_js="1.0";
+hotlog_r=""+Math.random()+"&s=23314&im=101&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+</script>
+            <script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script> <script language="javascript1.2">
+hotlog_js="1.2";
+hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</script> <script language="javascript1.3">hotlog_js="1.3"</script> 
+            <script language="javascript">hotlog_r+="&js="+hotlog_js;
+document.write("<a href='http://click.hotlog.ru/?23314' target='_top'><img "+
+" src='http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script> <noscript>
+            <a href=http://click.hotlog.ru/?23314 target=_top><img
+src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=23314&im=101" border=0 
+width="88" height="31" alt="HotLog"></a></noscript> </td>
+        </tr>
+      </table>
+      
+    </td>
+    <td background="../fon2.gif"> 
+      <div align="right"><a href="#begin"> Наверх&nbsp;<img src="../top.gif" alt="^" width="16" height="14" border="0"></a></div></td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

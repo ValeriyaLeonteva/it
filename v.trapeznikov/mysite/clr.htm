@@ -1,0 +1,483 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/net2.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" --> 
+<title>CLR - введение | Технология .Net | mista.ru</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="180" background="fon2.gif" bgcolor="#FFFFCC" class="unnamed1"><a name="begin"></a><img src="logo.gif" alt="Информационные системы" width="180" height="70"></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC" class="unnamed5"> 
+      <div align="center"><!-- InstanceBeginEditable name="title" --><font color="#CC0000" size="6" face="Verdana, Arial, Helvetica, sans-serif">CLR 
+        - Введение</font><!-- InstanceEndEditable --></div></td>
+  </tr>
+</table>
+<table width="100%" height="90%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="180" valign="top" background="fon.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <table width="175" border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="100%" valign="top"> 
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../it.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">Информационные 
+              технологии</font></strong></font></a> </font></p>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="index.htm">Технология .Net </a></strong></font></font></strong></font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><a href="intro.htm">Что 
+              такое .Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="net_framework.htm">.Net 
+              Framework</a><br>
+              <a href="vbnet_future.htm">VB.Net: дорога в будущее</a><br>
+              <a href="vbnet_types.htm">Типы данных VB.Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="vbnet_impression.htm">Впечатление 
+              от VB.Net</a><br>
+              <a href="links.htm">Ссылки по Net</a> </font></p>
+            <table width="99%" border="1" cellspacing="0" cellpadding="5" bordercolor="#FFCC33">
+              <tr> 
+                <td> <p><font face="Arial, Helvetica, sans-serif" size="2">1. 
+                    <a href="clr.htm">CLR - Введение</a><br>
+                    2. <a href="clr2.htm">CLR - Часть 2</a><br>
+                    3. <a href="vs.htm">Visual Studio.Net</a><br>
+                    4. <a href="lib.htm">Библиотека классов </a><br>
+                    5. <a href="array.htm">Массивы и коллекции</a><br>
+                    6. <a href="string.htm">Строки</a><br>
+                    7. <a href="file.htm">Файлы и каталоги</a><br>
+                    8. <a href="stream.htm">Потоки ввода-вывода</a></font></p>
+                  <p align="right"><font face="Arial, Helvetica, sans-serif" size="2"><i><a href="http://www.compress.ru" target="_blank">Компьютер</a></i><a href="http://www.compress.ru" target="_blank"><i>Пресс</i></a> 
+                    </font></p></td>
+              </tr>
+            </table>
+            <br>
+            <hr width="95%" size="1" noshade>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../isu/index.htm">Инф. системы</a></strong></font></font><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../gorod/index.htm">Модель города</a></strong></font></font><br>
+              <img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <font color="#330099" face="Verdana, Arial, Helvetica, sans-serif"><a href="../itbooks.htm">Книги</a></font></font></strong></font><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <font color="#330099" face="Verdana, Arial, Helvetica, sans-serif"><a href="../itarticles.htm">Статьи</a> 
+              </font></font></strong></font></p>
+            <p><a href="../1c.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">1С:Предприятие</font></strong></font></a> 
+            </p>
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../interesting.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">Интересное</font></strong></font></a></font> 
+            </p>
+            <!-- InstanceBeginEditable name="EditRegion2" --><!-- InstanceEndEditable --> 
+            </td>
+        </tr>
+      </table>
+    <p>&nbsp;</p></td>
+    <td valign="top" class="unnamed1">  
+      <table width="100%" border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+          <td valign="top" bgcolor="#FFFFCC" class="unnamed4"> <!-- InstanceBeginEditable name="navigation" --><a href="../index.htm">mista.ru</a> 
+            / <a href="../it.htm">Инф. технологии</a> / <a href="../index.htm">Технология 
+            .Net</a> / CLR - Введение<!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td height="65"><!-- InstanceBeginEditable name="text" --> 
+            <p align="right"><font face="Arial, Helvetica, sans-serif" size="2">Алексей 
+              Федоров<a href="http://www.compress.ru" target="_blank"><br>
+              КомпьютерПресс</a> 11'2001</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2"><a class=contents 
+href="#01">Введение</a><br>
+              <a class=contents 
+href="#02">Компонент Common Language Runtime</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#03">Исполняемые файлы и метаданные</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#04">Microsoft Intermediate Language</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#05">Just-In-Time Compiler</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#06">Сборки</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#07">Global Assembly Cache</a></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Microsoft 
+              .NET Framework является ключевым компонентом Microsoft .NET и служит 
+              платформой для создания, внедрения и выполнения Web-сервисов и приложений. 
+              Она предоставляет основанную на стандартах высокопроизводительную 
+              многоязычную среду, в которой выполняются различные типы приложений 
+              и сервисов.</font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=01></a>Введение 
+              </font></h2>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              этой и последующих частях статьи мы ознакомимся с Microsoft .NET 
+              Framework, с ее основными компонентами — Common Language Runtime 
+              (CLR), библиотекой классов и ASP.NET, рассмотрим назначение каждого 
+              из них, архитектуру, составные части, а также приведем примеры их 
+              использования. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Основные 
+              компоненты Microsoft .NET Framework показаны на диаграмме (рис. 
+              1)</font></p>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="clr_1.gif" width="200" height="235"></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Компонент 
+              Common Language Runtime, подробно рассматриваемый в данной статье, 
+              располагается над сервисами операционной системы, которая в настоящее 
+              время является операционной системой Windows, но в дальнейшем таковой 
+              может быть практически любая программная платформа. Основное назначение 
+              CLR — выполнение приложений, соблюдение всех программных зависимостей, 
+              управление памятью, обеспечение безопасности, интеграция с языками 
+              программирования и т.п. Среда выполнения обеспечивает множество 
+              сервисов, облегчающих создание и внедрение приложений, и существенно 
+              улучшает надежность последних.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Разработчики 
+              не взаимодействуют с Common Language Runtime напрямую — все сервисы 
+              предоставляются унифицированной библиотекой классов, которая располагается 
+              над CLR. Эта библиотека содержит более 1000 классов для решения 
+              различных программных задач — от взаимодействия с сервисами операционной 
+              системы до работы с данными и XML-документами.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Частью 
+              указанной библиотеки классов является программная модель для создания 
+              Web-приложений, называемая ASP.NET. Она модель содержит классы, 
+              компоненты и сервисы, облегчающие создание Web-сервисов и приложений. 
+              Отметим, что помимо Web-сервисов и Web-приложений с помощью Microsoft 
+              .NET Framework можно создавать и другие типы приложений — консольные 
+              приложения, приложения на основе Windows Forms и Windows-сервисы. 
+              Но поскольку основной задачей Microsoft .NET Framework является 
+              поддержка создания Web-приложений, именно компонент ASP.NET играет 
+              наиболее значительную роль в архитектуре Microsoft .NET Framework.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">На 
+              самом нижнем уровне нашей диаграммы (см. рис. 1) располагаются сервисы 
+              операционной системы. Сервисы платформы Windows обеспечивают поддержку 
+              таких технологий, как COM+, а также управление транзакциями, очередями 
+              сообщений и т.п. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">После 
+              того как мы рассмотрели основные компоненты Microsoft .NET Framework, 
+              перейдем к более подробному изучению важнейшего из них — Common 
+              Language Runtime.</font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=02></a>Компонент 
+              Common Language Runtime</font></h2>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Common 
+              Language Runtime обеспечивает среду выполнения .NET-приложений. 
+              Среди предоставляемых этой средой функций следует отметить обработку 
+              исключительных ситуаций, обеспечение безопасности, средства отладки 
+              поддержки версий. Все эти функции доступны из любого языка программирования, 
+              соответствующего спецификации Common Language Specification. Microsoft 
+              предоставляет три языка программирования, способных использовать 
+              CLR, — Visual Basic .NET, Visual C# .NET и Visual C++ With Managed 
+              Extensions. Кроме того, ряд третьих фирм работает над .NET-версиями 
+              таких языков программирования, как Perl, Python и COBOL. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">компилируемый 
+              компилятором код для CLR называется управляемым кодом (managed code). 
+              Управляемый код пользуется преимуществами среды выполнения и помимо 
+              собственно кода содержит метаданные, которые создаются в процессе 
+              компиляции и содержат информацию о типах, членах и ссылках, используемых 
+              в коде. Метаданные используются средой выполнения:</font></p>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">для обнаружения 
+                классов; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">загрузки 
+                классов; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">генерации 
+                кода для конкретной платформы; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">обеспечения 
+                безопасности. </font></li>
+            </ul>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Среда 
+              выполнения также следит за временем жизни объектов. В COM/COM+ с 
+              этой целью использовались специальные счетчики (reference counter); 
+              в CLR тоже используются счетчики, а удаление объектов из памяти 
+              происходит с помощью процесса, называемого сборкой мусора (garbage 
+              collection). </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Common 
+              Language Runtime также задает общую систему типов, используемую 
+              всеми языками программирования. Это означает, например, что все 
+              языки программирования будут оперировать целочисленными данными 
+              или данными с плавающей точкой единого формата и единой длины, а 
+              представления строк тоже будут едиными для всех языков программирования. 
+              За счет единой системы типов достигается более простая интеграция 
+              компонентов и кода, написанных на разных языках программирования. 
+              В отличие от COM-технологии, также основанной на наборе стандартных 
+              типов, но представляемых в бинарном виде, CLR позволяет выполнять 
+              интеграцию кода (который может быть написан на различных языках 
+              программирования) в режиме дизайна, а не в режиме выполнения.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">После 
+              компиляции управляемый код содержит метаданные, описывающие сам 
+              компонент, а также компоненты, использовавшиеся для создания кода. 
+              Среда выполнения проверяет, доступны ли все необходимые ресурсы. 
+              Использование метаданных позволяет отказаться от необходимости хранить 
+              информацию о компонентах в реестре. Следовательно, при переносе 
+              компонента на другой компьютер нам больше не требуется регистрировать 
+              этот компонент (за исключением глобальной сборки — global assembly, 
+              которую мы рассмотрим ниже), а удаление компонента сводится к простому 
+              удалению содержащей его сборки. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Как 
+              видно из приведенного выше функционального описания Common Language 
+              Runtime, среда выполнения обеспечивает ряд преимуществ, облегчающих 
+              создание, выполнение и внедрение .NET-приложений.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=03></a>Исполняемые 
+              файлы и метаданные</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">А 
+              теперь более подробно остановимся на концепции метаданных. Начнем 
+              с того, что создадим примитивную программу на VB.NET. Эта консольная 
+              программа выводит строку “Running under .NET” на стандартное устройство 
+              вывода и завершает свое выполнение. Код этой программы таков:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">'---------------------------------  
+'&nbsp;&nbsp; VB.NET-приложение – CONS.VB  
+'---------------------------------  
+Imports System  
+Module Cons  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp;&nbsp;&nbsp; Console.WriteLine("Running under .NET")  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Директива 
+              Imports указывает на то, что мы используем классы, реализованные 
+              в пространстве имен System. Одним из таких классов является класс 
+              Console. Метод WriteLine этого класса мы используем для вывода строки 
+              на экран. Откомпилируем эту программу (рис. 2) с помощью пакетного 
+              компилятора VB.NET:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">vbc cons.vb</font></pre>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="clr_2.gif" width="488" height="194"></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              результате компиляции мы получаем исполняемый файл CONS.EXE, который 
+              является файлом в формате СOFF/PE с дополнительными секциями, содержащими 
+              информацию, необходимую для Common Language Runtime. Мы можем убедиться 
+              в этом, выполнив команду DUMPBIN:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">dumpbin cons.exe /all</font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">На 
+              листинге 1 приведен фрагмент дампа исполняемого файла (показаны 
+              только основные элементы).</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Дамп 
+              исполняемого файла для .NET начинается с обычных заголовков для 
+              MS-DOS и COFF-заголовка, стандартных в отношении всех Windows-программ. 
+              Далее мы увидим, что наша программа — это 32-битная Windows-программа 
+              (PE32). В секции данных #1 располагаются CLR-заголовок и данные. 
+              Отметим, что эта секция имеет атрибуты Code и Execute Read, указывающие 
+              загрузчику на то, что в секции содержится код, который будет выполняться 
+              средой выполнения.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              заголовке CLR Header мы видим импортируемую функцию _CorExeMain, 
+              реализованную в mscoree.dll — основном модуле среды выполнения. 
+              Для реализации возможности выполнения .NET-файлов под управлением 
+              операционных систем Windows 98, Windows Me и Windows 2000 фирма 
+              Microsoft изменила код загрузчика: теперь он распознает CLR-элементы 
+              в исполняемых файлах и передает управление CLR через точку входа 
+              — _CorExeMain. Функция Main() нашей программы вызывается самой средой 
+              выполнения.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">После 
+              того как мы рассмотрели содержимое исполняемого файла, обратимся 
+              к той его секции, где размещаются код и метаданные.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Метаданные 
+              содержат описания типов, информацию о версии, ссылки на различные 
+              сборки и другую информацию, используемую средой выполнения. В целом 
+              метаданные представляют собой высокоуровневый вариант библиотеки 
+              типов, известной нам из технологии COM/COM+. Метаданные используются 
+              самой средой выполнения, загрузчиком классов, JIT-компилятором, 
+              а также различными утилитами. Одна из таких утилит — ILDASM, входящая 
+              в состав Microsoft .NET Framework. Данная утилита может использоваться 
+              не только для просмотра метаданных, но и для изучения кода на промежуточном 
+              языке (IL) в том или ином файле (в файле с расширением .EXE или 
+              .DLL, рис. 3)</font></p>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="clr_3.gif" width="470" height="188">. 
+              </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">С 
+              помощью ILDASM можно сохранить в текстовом файле дамп нашего исполняемого 
+              файла. В результате мы получим более подробное описание заголовка, 
+              уже рассмотренного выше, а также дополнительную информацию, используемую 
+              CLR. На листинге 2 показан фрагмент дампа, содержащий секции, о 
+              которых мы расскажем далее.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Как 
+              видно из приведенного фрагмента дампа, в нем содержится вся необходимая 
+              информация о нашей программе. Первая инструкция на языке IL (.assembly) 
+              содержит указание на внешнюю сборку — mscorlib. Следующая инструкция 
+              также содержит ссылку на внешнюю сборку. Это будет набор классов 
+              для поддержки программ на Visual Basic, реализованный в сборке Microsoft, 
+              — Microsoft.VisualBasic. Далее идет инструкция, описывающая нашу 
+              программу (в виде сборки) и собственно код. Отметим, что нашей программе 
+              присвоен уникальный глобальный идентификатор (GUID). </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Обратите 
+              внимание на то, что наш класс Cons является наследником класса System.Object 
+              — базового класса библиотеки классов .NET Framework. Как видно из 
+              кода нашей программы, мы не указывали этого наследования напрямую 
+              — этот факт автоматически добавлен компилятором. Класс имеет два 
+              метода. Метод Main() является статическим методом, который реализован 
+              в коде нашей программы. Второй метод — конструктор ctor(), автоматически 
+              добавленный компилятором. Конструктор позволяет другим приложениям 
+              создавать экземпляры нашего приложения.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=04></a>Microsoft 
+              Intermediate Language</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              вышеприведенном дампе намеренно пропущена важная часть — код на 
+              языке IL. Когда мы компилируем наш код, результатом этого процесса 
+              становится не код на языке, понятном конкретной платформе, а код 
+              на промежуточном языке, называемом Microsoft Intermediate Language 
+              (MSIL), который представляет собой набор инструкций, не зависящих 
+              от конкретного процессора. Ниже приведен IL-код нашего метода Main():</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">&nbsp; .method public static void&nbsp; Main() cil managed  
+&nbsp; {  
+&nbsp;&nbsp;&nbsp; .entrypoint  
+&nbsp;&nbsp;&nbsp; .custom instance void   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [mscorlib]System.STAThreadAttribute::.ctor() = ( 01 00 00 00 )   
+&nbsp;&nbsp;&nbsp; // Code size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11 (0xb)  
+&nbsp;&nbsp;&nbsp; .maxstack&nbsp; 8  
+&nbsp;&nbsp;&nbsp; IL_0000:&nbsp; ldstr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Running under .NET"  
+&nbsp;&nbsp;&nbsp; IL_0005:&nbsp; call&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [mscorlib]System.Console::WriteLine(string)  
+&nbsp;&nbsp;&nbsp; IL_000a:&nbsp; ret  
+&nbsp; } // end of method Cons::Main  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Если 
+              опустить пролог, наш код занимает 8 ячеек стека и состоит из 3 инструкций. 
+              Первая инструкция — ldstr — загружает строку в стек. Инструкция 
+              call вызывает указанный метод из сборки и передает ей параметр. 
+              Выполнение завершается инструкцией ret. Несмотря на то что язык 
+              IL является достаточно простым, писать программы на нем не имеет 
+              особого смысла, однако общее понимание инструкций может помочь вам 
+              разобраться в логике работы программ, а также ядра .NET Framework. 
+              (Дополнительную информацию можно получить из спецификации Common 
+              Language Infrastructure, Partition 3. CIL Instruction Set, доступной 
+              на Web-сайте фирмы Microsoft.)</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=05></a>Just-In-Time 
+              Compiler</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Программа 
+              на языке IL остается неизменной до тех пор, пока мы не вызовем на 
+              выполнение тот файл, в котором она хранится. В момент, когда управление 
+              передается среде исполнения, IL-код преобразуется в код для конкретной 
+              платформы. Эту задачу выполняет компилятор, называемый Just-In-Time 
+              Compiler (JIT). Теоретически только указанный компилятор является 
+              компонентом .NET, зависящим от конкретной платформы. Однако на самом 
+              деле от платформы также зависят и значительная часть библиотеки 
+              классов, и ряд других компонентов, например следующие компоненты 
+              платформы .NET:</font></p>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">mscorlib 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">System </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">System.Design 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">System.Drawing 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">System.Windows.Forms 
+                </font></li>
+            </ul>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Тем 
+              не менее существует реальная возможность наличия .NET для не-Windows-платформ, 
+              и, возможно, уже в ближайшее время мы увидим реализации .NET для 
+              Linux. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Следует 
+              также обратить внимание на то, что из .NET-программ можно напрямую 
+              вызывать функции Windows API. В этом случае наши программы будут 
+              привязаны к конкретной платформе и перенести их без изменения кода 
+              будет невозможно.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Интересно, 
+              что JIT-компилятор не выполняет компиляцию всего IL-кода при первом 
+              обращении к программе. Вместо этого каждый метод компилируется при 
+              первом обращении к нему, и, таким образом, неиспользуемый код не 
+              компилируется. Откомпилированный код хранится в памяти, а последующие 
+              обращения к программе выполняют уже откомпилированный код. Microsoft 
+              предоставляет специальный компилятор CLR Native Image Generator 
+              (NGEN), который выполняет компиляцию всего IL-кода и сохраняет результат 
+              на диске (рис. 4):</font></p>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="clr_4.gif" width="497" height="151"></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">На 
+              рис. 5 представлены пояснения к циклу приложений под управлением 
+              .NET:</font></p>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="clr_5.gif" width="250" height="179"></font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=06></a>Сборки</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">При 
+              рассказе о Common Language Runtime мы неоднократно использовали 
+              термин «сборка» (assembly). Сборка представляет собой коллекцию 
+              из одного или более файлов. Часто эти файлы содержат код, но в состав 
+              сборки могут также входить и графические изображения, и ресурсы, 
+              и другие бинарные данные, ассоциированные с кодом. Такие сборки 
+              называются статическими сборками, поскольку они хранятся на диске. 
+              Динамические сборки создаются во время выполнения программы и на 
+              диске обычно не сохраняются. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Сборки 
+              являются минимальной единицей внедрения, контроля версий, повторного 
+              использования и системы безопасности. Каждая сборка содержит специальные 
+              метаданные, называемые манифестом. В манифесте содержится информация 
+              о классах, типах и ссылках на другие сборки. Сборки могут содержать 
+              более одного класса — так, библиотека классов .NET состоит из десятка 
+              сборок, каждая из которых содержит несколько десятков классов. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">На 
+              рис. 6 показаны сборки, состоящие из одного и нескольких файлов:</font></p>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="clr_6.gif" width="400" height="199"></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Для 
+              просмотра манифеста сборки можно использовать утилиту ILDASM, о 
+              которой было сказано выше. На рис. 7, например, показан манифест 
+              для нашей тестовой программы:</font></p>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="clr_7.gif" width="400" height="225">. 
+              </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Как 
+              видно из рисунка, манифест содержит следующую информацию о сборке:</font></p>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">имя сборки; 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">версию; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">файлы в данной 
+                сборке; </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">сборки, используемые 
+                данной сборкой. </font></li>
+            </ul>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Помимо 
+              стандартных полей в манифесте могут присутствовать дополнительные 
+              поля, задаваемые программистами. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Использование 
+              сборок и номеров версии может решить проблему совместимости между 
+              различными версиями DLL, известную как DLL Hell. Теперь .NET-программы 
+              ищут сборки в локальном каталоге, что позволяет одновременно использовать 
+              несколько версий одной и той же сборки без всяких проблем. (Дополнительную 
+              информацию можно получить, прочитав спецификацию Common Language 
+              Infrastructure, Partition 2. Metadata Definition and Semantics, 
+              доступную на Web-сайте фирмы Microsoft.)</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=07></a>Global 
+              Assembly Cache</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Хотя 
+              компоненты .NET не требуют регистрации, необходимо некоторое хранилище 
+              для сборок, используемых более чем одним приложением. Common Language 
+              Runtime поддерживает два таких хранилища — Download Cache и Global 
+              Assembly Cache (GAC). Сборка, используемая более чем одним приложением, 
+              помещается в GAC. Если сборка не обнаружена в локальном каталоге 
+              или в GAC, то Common Language Runtime пытается прочитать файл конфигурации. 
+              В этом файле можно указать местонахождение сборки (code base), и 
+              тогда среда выполнения загрузит сборку и сохранит ее в Download 
+              Cache. Для просмотра содержимого GAC можно использовать утилиту 
+              GACUtil.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Утилита 
+              GACUtil также может использоваться для просмотра содержимого Download 
+              Cache, для установки и удаления сборок. Отметим, что GAC представляет 
+              собой специализированный каталог, располагаемый в C:\ WINNT\assembly 
+              (рис. 8):</font></p>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="clr_8.gif" width="350" height="300"></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              следующей части статьи мы рассмотрим последний компонент Common 
+              Language Runtime — Common Type System. (Дополнительная информация 
+              о Common Language Runtime имеется в спецификации Common Language 
+              Infrastructure, Partition 1. Concepts and Architecture на Web-сайте 
+              фирмы Microsoft.) </font></p>
+            <!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+<table width="100%" height="30" border="0" cellpadding="6" cellspacing="0">
+  <tr> 
+    <td height="30" background="fon2.gif" bgcolor="#FFFFCC"> 
+      <div align="left"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif">&copy; 
+        <a href="mailto:stasmit@mail.ru">Волшебник Станислав</a>, www.mista.ru, 
+        1997-2003</font></div></td>
+    <td width="300" background="../fon2.gif"><div align="right"><a href="#begin"> 
+        Наверх&nbsp;<img src="../top.gif" alt="^" width="16" height="14" border="0"></a></div></td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

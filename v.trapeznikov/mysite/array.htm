@@ -1,0 +1,834 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/net.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" --> 
+<title>Массивы и коллекции | Технология .Net | mista.ru</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#990066" alink="#CC0066" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="180" background="fon2.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <a name="begin"></a><a href="http://www.mista.ru"><img src="logo.gif" alt="Информационные системы" width="180" height="70" border="0"></a></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC" class="unnamed5"> 
+      <div align="center"><!-- InstanceBeginEditable name="title" --><font color="#CC0000" size="6" face="Verdana, Arial, Helvetica, sans-serif">Массивы 
+        и коллекции</font><!-- InstanceEndEditable --></div></td>
+  </tr>
+</table>
+<table width="100%" height="90%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="180" valign="top" background="fon.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <table width="175" border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="100%" valign="top"> 
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../it.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><br>
+              Информационные технологии</font></strong></font></a> </font></p>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="index.htm">Технология .Net </a></strong></font></font></strong></font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><a href="intro.htm">Что 
+              такое .Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="net_framework.htm">.Net 
+              Framework</a><br>
+              <a href="vbnet_future.htm">VB.Net: дорога в будущее</a><br>
+              <a href="vbnet_types.htm">Типы данных VB.Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="vbnet_impression.htm">Впечатление 
+              от VB.Net</a><br>
+              <a href="links.htm">Ссылки по Net</a> </font></p>
+            <table width="99%" border="1" cellspacing="0" cellpadding="5" bordercolor="#FFCC33">
+              <tr> 
+                <td> <p><font face="Arial, Helvetica, sans-serif" size="2">1. 
+                    <a href="clr.htm">CLR - Введение</a><br>
+                    2. <a href="clr2.htm">CLR - Часть 2</a><br>
+                    3. <a href="vs.htm">Visual Studio.Net</a><br>
+                    4. <a href="lib.htm">Библиотека классов </a><br>
+                    5. <a href="array.htm">Массивы и коллекции</a><br>
+                    6. <a href="string.htm">Строки</a><br>
+                    7. <a href="file.htm">Файлы и каталоги</a><br>
+                    8. <a href="stream.htm">Потоки ввода-вывода</a></font></p>
+                  <p align="right"><font face="Arial, Helvetica, sans-serif" size="2"><i><a href="http://www.compress.ru" target="_blank">Компьютер</a></i><a href="http://www.compress.ru" target="_blank"><i>Пресс</i></a> 
+                    </font></p></td>
+              </tr>
+            </table>
+            <br>
+            <hr width="95%" size="1" noshade>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../isu/index.htm">Инф. системы</a></strong></font></font><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../gorod/index.htm">Модель города</a></strong></font></font><br>
+              <img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <font color="#330099" face="Verdana, Arial, Helvetica, sans-serif"><a href="../itbooks.htm">Книги 
+              и статьи</a></font></font></strong></font><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <a href="../era/index.htm">ЭРА</a> </font></strong></font></p>
+            <p><a href="../1c.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">1С:Предприятие</font></strong></font></a> 
+            </p>
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../interesting.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">Интересное</font></strong></font></a></font> 
+            </p>
+            <!-- InstanceBeginEditable name="EditRegion2" --><!-- InstanceEndEditable --> 
+            </td>
+        </tr>
+      </table>
+    </td>
+    <td valign="top" class="unnamed1">  
+      <table width="100%" border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+          <td valign="top" bgcolor="#FFFFCC" class="unnamed4"> <!-- InstanceBeginEditable name="navigation" --><a href="../index.htm">mista.ru</a> 
+            / <a href="../it.htm">Инф. технологии</a> / <a href="index.htm">Технология 
+            .Net</a> / Массивы и коллекции<!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td height="65"><!-- InstanceBeginEditable name="text" --> 
+            <p align="right"><font face="Arial, Helvetica, sans-serif" size="2">Алексей 
+              Федоров<a href="http://www.compress.ru" target="_blank"><br>
+              КомпьютерПресс</a> 3'2002</font></p>
+            <p align="justify"><a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#01"><font face="Arial, Helvetica, sans-serif" size="2">Массивы</font></a><font face="Arial, Helvetica, sans-serif" size="2"><br>
+              <br>
+              <a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#02">Коллекции</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#03">Интерфейсы</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#04">Интерфейс IEnumerable</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#05">Интерфейс ICollection</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#06">Интерфейс IDictionary</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#07">Интерфейс IList</a></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2"><a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#08">Классы</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#09">Класс ArrayList</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#10">Класс BitArray</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#11">Класс HashTable</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#12">Класс SortedList</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#13">Класс Stack</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#14">Класс Queue</a></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2"><a class=contents 
+href="http://www.compress.ru/Temp/3097/index.htm#15">Заключение</a></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              предыдущих частях данной статьи мы начали знакомство с Microsoft 
+              .NET Framework — ключевым компонентом Microsoft .NET, представляющим 
+              собой платформу для создания, внедрения и выполнения Web-сервисов 
+              и приложений. Мы рассказали об основных компонентах Microsoft .NET 
+              Framework и кратко описали их назначение. Мы довольно подробно рассмотрели 
+              Common Language Runtime (CLR) — среду выполнения .NET-приложений, 
+              завершив знакомство с Common Language Runtime описанием Common Type 
+              System. После этого мы перешли к библиотеке классов. В этом номере 
+              мы продолжим знакомство с библиотекой классов .NET Framework Class 
+              Library — рассмотрим массивы (класс System.Array) и коллекции (пространство 
+              имен System.Collections).</font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=01></a>Массивы</font></h2>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              System.Array содержит свойства и методы для работы с массивами. 
+              Элемент массива может быть любого типа, так как в .NET все типы 
+              — это объекты, базирующиеся на классе System.Object. массив хранит 
+              элементы типа System.Object. Для того чтобы найти тип, которым был 
+              объявлен массив, мы используем метод GetType. Свойство Length позволяет 
+              узнать общее число элементов массива или число элементов, которое 
+              он может содержать. Свойство Rank возвращает число измерений массива. 
+              Чтобы определить, обладает ли массив фиксированным размером, мы 
+              используем свойство IsFixedSize. Массивы с фиксированным размером 
+              не позволяют добавлять и удалять элементы — они поддерживают только 
+              модификацию существующих элементов. Массивы могут быть только для 
+              чтения — чтобы это узнать, нужно использовать свойство IsReadOnly. 
+              </font></p>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Методы IndexOf(Array, 
+                Object) и LastIndexOf(Array, Object) могут быть использованы для 
+                нахождения индекса первого и последнего указанного объекта в одномерном 
+                массиве. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Clear(Array, 
+                Integer, Integer) обнуляет значения указанного диапазона элементов 
+                (для типов со значениями) или присваивает им значение Null (для 
+                ссылочных типов). </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Initialize() 
+                вызывает конструктор по умолчанию для каждого элемента (для типов 
+                со значениями) и, таким образом, инициализирует содержимое массива. 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Методы GetLowerBound(Integer) 
+                и GetUpperBound(Integer) используются для нахождения нижней и 
+                верхней границ указанного измерения массива. Рекомендуется использовать 
+                эти методы при переборе элементов измерения массива, например: 
+                </font></li>
+            </ul>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">For I = Chars.GetLowerBound(0) to Chars.GetUpperBound(0)  
+&nbsp;'  
+&nbsp;' Выполняем операцию над элементами – Chars(I)  
+&nbsp;'  
+Next </font></pre>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод GetLength(Integer) 
+                возвращает число элементов в указанном измерении массива. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Методы Reverse(Array) 
+                и Reverse(Array, Integer, Integer) используются для изменения 
+                порядка следования элементов в одномерном массиве. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Sort(Array) 
+                служит для сортировки элементов одномерного массива. Использовать 
+                методы Sort и Reverse можно следующим образом: </font></li>
+            </ul>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">'---------------------------------------  
+' .NET – пример использования массивов  
+'---------------------------------------  
+Imports System  
+Imports System.Array  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim Langs() As String = _  
+&nbsp;&nbsp; {"VB.NET", "C#", "J#", "C++", "JScript .NET", "Perl .NET"}  
+&nbsp; ShowArray(Langs, "Original Array")  
+&nbsp; Array.Sort(Langs)  
+&nbsp; ShowArray(Langs, "Sorted Array")  
+&nbsp; Array.Reverse(Langs)  
+&nbsp; ShowArray(Langs, "Reversed Array")  
+&nbsp;End Sub  
+&nbsp;  
+&nbsp;Sub ShowArray(ByVal A As Object, ByVal Title As String)  
+&nbsp; Dim I As Integer  
+&nbsp; Console.WriteLine(Title)  
+&nbsp; For I = A.GetLowerBound(0) To A.GetUpperBound(0)  
+&nbsp;&nbsp; Console.WriteLine(I &amp; ControlChars.Tab &amp; A(I))  
+&nbsp; Next  
+&nbsp; Console.WriteLine()  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <div align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="array_1.gif" width="205" height="290"></font></div>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод GetValue(Integer) 
+                используется для того, чтобы найти значение элемента с указанным 
+                индексом, а метод SetValue(Object, Integer) — чтобы установить 
+                новое значение элемента массива. В следующем примере показано, 
+                как использовать эти методы. Отметим, что метод доступа к элементам 
+                массива -() реализован на основе методов GetValue/SetValue, как 
+                это показано ниже: </font></li>
+            </ul>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">'-------------------------------------------------------  
+' .NET – пример использования методов GetValue/SetValue  
+'-------------------------------------------------------  
+Imports System  
+Imports System.Array  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp;  
+&nbsp; Dim I As Integer  
+&nbsp; Dim A() As Integer = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}  
+&nbsp; With A  
+&nbsp;  
+&nbsp; Console.WriteLine("Original Array:")  
+&nbsp;&nbsp; For I = .GetLowerBound(0) To .GetUpperBound(0)  
+&nbsp;&nbsp;&nbsp; Console.WriteLine("Array(" &amp; I &amp; ")" &amp; " = " &amp; .GetValue(I))  
+&nbsp;&nbsp;&nbsp; .SetValue(.GetValue(I) * 10, I)  
+&nbsp; Next  
+&nbsp;  
+&nbsp; Console.WriteLine("Modified Array:")  
+&nbsp; For I = .GetLowerBound(0) To .GetUpperBound(0)  
+&nbsp;&nbsp; Console.WriteLine("Array(" &amp; I &amp; ")" &amp; " = " &amp; .GetValue(I))  
+&nbsp; Next  
+&nbsp;  
+&nbsp; End With  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <div align="center"><img src="array_2.gif" width="156" height="291"></div>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Copy(Array, 
+                Array, Integer) используется для копирования части одного массива 
+                в другой массив. Метод CopyTo(Array, Integer) копирует все элементы 
+                текущего одномерного массива в указанный одномерный массив, начиная 
+                с указанного элемента в массиве-приемнике. </font></li>
+            </ul>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              Array реализует интерфейсы ICloneable, IList, ICollection и IEnumerable.</font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=02></a>Коллекции</font></h2>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Коллекции 
+              в библиотеке классов Microsoft .NET Framework реализованы в пространстве 
+              имен System.Collections. Здесь мы можем найти самые различные коллекции 
+              объектов — списки, очереди, хэш-таблицы, словари. В этом пространстве 
+              имен также определен ряд интерфейсов, задающих базовую функциональность 
+              коллекций. На рисунке показаны основные коллекции, реализованные 
+              в пространстве имен System.Collections. </font></p>
+            <p align="center"><img src="array_3.gif" width="500" height="302"></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=03></a>Интерфейсы 
+              </font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Наше 
+              знакомство с коллекциями мы начнем с краткого обзора интерфейсов, 
+              а затем перейдем к коллекциям. Как мы помним, интерфейсы используются 
+              для задания определенной функциональности без ее реализации — классы, 
+              которые реализуют интерфейсы, должны реализовать и методы, определенные 
+              в интерфейсах.</font></p>
+            <hr noshade size="1" width="85%">
+            <h4><font face="Arial, Helvetica, sans-serif" size="2"><a name=04></a>Интерфейс 
+              IEnumerable</font></h4>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Интерфейс 
+              IEnumerable описывает энумератор (enumerator), используемый для 
+              простой итерации по содержимому коллекции. Этот интерфейс описывает 
+              единственный метод — GetEnumerator, который возвращает IEnumerator 
+              — энумератор, используемый для итерации. Свойство Current типа Object 
+              возвращает текущий элемент коллекции. Метод MoveNext() перемещает 
+              нас на следующий элемент коллекции, а метод Reset() устанавливает 
+              энумератор в начальную позицию — перед первым элементом коллекции.</font></p>
+            <hr noshade size="1" width="85%">
+            <h4><font face="Arial, Helvetica, sans-serif" size="2"><a name=05></a>Интерфейс 
+              ICollection</font></h4>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Этот 
+              интерфейс наследует интерфейс IEnumerable и служит базовым интерфейсом 
+              для реализации коллекций — все классы в пространстве имен System.Collections 
+              реализуют этот интерфейс. Интерфейс ICollection определяет ряд методов, 
+              свойственных всем коллекциям, поддержку размера коллекции, энумераторов 
+              и синхронизации. Наиболее важным свойством является свойство Count 
+              типа Integer, которое возвращает число элементов в данной коллекции. 
+              Метод CopyTo(Array, Integer) служит для копирования элементов коллекции 
+              в одномерный массив, начиная с указанного индекса.</font></p>
+            <hr noshade size="1" width="85%">
+            <h4><font face="Arial, Helvetica, sans-serif" size="2"><a name=06></a>Интерфейс 
+              IDictionary</font></h4>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Данный 
+              интерфейс расширяет интерфейс ICollection и описывает доступ к элементам 
+              коллекций как к парам «ключ/значение» и позволяет выполнять перечисление 
+              пар «ключ/значение». Реализации этого интерфейса могут включать 
+              коллекции только для чтения (словарь не может быть модифицирован), 
+              коллекции фиксированного размера (не допускается добавление и удаление 
+              элементов), а также коллекции переменного размера (поддерживаются 
+              операции добавления, удаления и модификации элементов). </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Свойства 
+              и методы интерфейса IDictonary:</font></p>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Свойства 
+                IsFixedSize и IsReadOnly могут быть использованы для того, чтобы 
+                узнать, чем является словарь — словарем фиксированного размера 
+                или словарем только для чтения. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Свойство 
+                Item(Object) обеспечивает доступ к элементу с заданным ключом. 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Свойство 
+                Keys типа ICollection возвращает коллекцию ключей в данном словаре. 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Свойство 
+                Values типа ICollection возвращает коллекцию значений в данном 
+                словаре. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Add(Object, 
+                Object) используется для добавления нового элемента (ключ и значение) 
+                словаря. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Clear() 
+                служит для удаления всех элементов словаря. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Remove(Object) 
+                используется для удаления элемента с указанным ключом. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Contains(Object)применяется 
+                в случае, если нужно узнать, есть ли в словаре элемент с указанным 
+                ключом. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод GetEnumerator() 
+                возвращает энумератор типа IDictionaryEnumerator для данного словаря. 
+                </font></li>
+            </ul>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="2"><a name=07></a>Интерфейс 
+              IList</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Этот 
+              интерфейс наследует от интерфейсов ICollection и IEnumerable и определяет 
+              коллекцию значений, которая может быть отсортирована и члены которой 
+              могут быть доступны по индексу. Интерфейс IList является базовым 
+              интерфейсом для всех классов, реализующих списки. Методы Add(Object) 
+              и Remove(Object) используются для добавления и удаления элементов 
+              списка. Метод Contains(Object) служит для проверки того, содержит 
+              ли список указанное значение. Метод Clear() удаляет все элементы 
+              из списка.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=08></a>Классы</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">После 
+              того как мы ознакомились с базовой функциональностью коллекций, 
+              давайте рассмотрим классы, реализованные в пространстве имен System.Collections.</font></p>
+            <h4><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=09></a>Класс 
+              ArrayList</font></h4>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Этот 
+              класс реализует динамический массив, основанный на интерфейсе IList. 
+              В отличие от класса Array, который мы рассмотрели выше, класс ArrayList 
+              может увеличиваться и уменьшаться в размерах; кроме того, можно 
+              динамически добавлять и удалять его элементы. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Если 
+              нам необходим массив фиксированного размера, элементы которого могут 
+              быть модифицированы, но не могут быть ни удалены, ни добавлены, 
+              мы должны использовать метод FixedSize(ArrayList или IList). Этот 
+              метод возвращает список фиксированного размера для данного массива. 
+              При создании массивов, доступных только для чтения, мы должны использовать 
+              метод ReadOnly(ArrayList или IList) — он возвращает список, доступный 
+              только для чтения. Свойство Capacity типа Integer возвращает число 
+              элементов, которое может содержать массив. Свойство Count типа Integer 
+              возвращает текущее число элементов в массиве, а свойство Item(Integer) 
+              типа Object обеспечивает доступ к элементу с указанным индексом. 
+              </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              следующем примере показано, как использовать класс ArrayList:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">'----------------------------------------------  
+' .NET – пример использования класса ArrayList  
+'----------------------------------------------  
+Imports System  
+Imports System.Collections  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp;  
+&nbsp; Dim AList As New ArrayList()  
+&nbsp; Dim E As IEnumerator  
+&nbsp;&nbsp; With AList  
+&nbsp;&nbsp;&nbsp; .Add("Microsoft ")  
+&nbsp;&nbsp;&nbsp; .Add(".NET ")  
+&nbsp;&nbsp;&nbsp; .Add("Platform")  
+&nbsp;&nbsp;&nbsp; Console.WriteLine(.Capacity)  
+&nbsp;&nbsp;&nbsp; Console.WriteLine(.Count)  
+&nbsp;&nbsp;&nbsp; E = .GetEnumerator  
+&nbsp;&nbsp;&nbsp; While E.MoveNext()  
+&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(E.Current)  
+&nbsp;&nbsp;&nbsp; End While  
+&nbsp; End With  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Отметим, 
+              что в этом примере мы используем интерфейс IEnumerator для перебора 
+              элементов массива. Однако тот же самый эффект может быть достигнут 
+              с помощью операторов For/Next:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">&nbsp; For I = 0 To .Count - 1  
+&nbsp;&nbsp; Console.WriteLine(ControlChars.Tab &amp; .Item(I))  
+&nbsp;Next  </font></pre>
+            <hr noshade size="1" width="85%">
+            <h4><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=10></a>Класс 
+              BitArray</font></h4>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Данный 
+              класс представляет собой массив битов. Каждый бит может иметь значение 
+              типа Boolean и принимать значение true или false. Класс BitArray 
+              поддерживает такие логические операции, как Not, Or и Xor. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Методы 
+              класса BitArray: </font></p>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод And(BitArray) 
+                выполняет логическую операцию И над элементами текущего массива, 
+                используя элементы указанного массива, и возвращает результирующий 
+                массив типа BitArray. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Not() 
+                выполняет операцию инверсии всех элементов текущего массива и 
+                возвращает результирующий массив типа BitArray. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Or(BitArray) 
+                выполняет логическую операцию ИЛИ над элементами текущего массива, 
+                используя элементы указанного массива, и возвращает результирующий 
+                массив типа BitArray. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Xor(BitArray) 
+                выполняет логическую операцию исключающее ИЛИ над элементами текущего 
+                массива, используя элементы указанного массива, и возвращает результирующий 
+                массив типа BitArray. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод Set(Integer, 
+                Boolean) устанавливает бит с указанным индексом в указанное значение. 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Метод SetAll(Boolean) 
+                устанавливает указанное значение всех битов в данном массиве. 
+                </font></li>
+            </ul>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Продемонстрируем 
+              использование ряда операций над массивами битов на примере:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">'----------------------------------------------  
+' .NET – пример использования класса BitArray  
+'----------------------------------------------  
+Imports System  
+Imports System.Collections  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp;  
+&nbsp; Dim Bools() As Boolean = {True, False, True, False, _  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; True, False, True, False}  
+&nbsp; Dim BA As New BitArray(Bools)  
+&nbsp; Dim BA2 As New BitArray(8, False)  
+&nbsp;  
+&nbsp; ShowArray("Original Array:", BA)  
+&nbsp; ShowArray("After NOT:", BA.Not)  
+&nbsp; BA = New BitArray(Bools)  
+&nbsp; ShowArray("After AND:", BA.And(BA2))  
+&nbsp; BA = New BitArray(Bools)  
+&nbsp; ShowArray("After OR:", BA.Or(BA2))  
+&nbsp; BA = New BitArray(Bools)  
+&nbsp; ShowArray("After XOR:", BA.Xor(BA2))  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+&nbsp;Sub ShowArray(ByVal Header As String, ByVal A As IEnumerable)  
+&nbsp;&nbsp;   
+&nbsp; Dim E As IEnumerator  
+&nbsp; E = A.GetEnumerator  
+&nbsp; Console.WriteLine(ControlChars.NewLine &amp; Header)  
+&nbsp; Console.WriteLine("+-----+-----+-----+-----+" &amp; _  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "-----+-----+-----+-----+")  
+&nbsp; While E.MoveNext()  
+&nbsp;&nbsp; Console.Write("|")  
+&nbsp;&nbsp; Console.Write(CType(E.Current, String).PadLeft(5))  
+&nbsp; End While  
+&nbsp; Console.WriteLine("|")  
+&nbsp; Console.WriteLine("+-----+-----+-----+-----+" &amp; _  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "-----+-----+-----+-----+")  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="center"><img src="array_4.gif" width="395" height="290"></p>
+            <hr noshade size="1" width="85%">
+            <h4><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=11></a>Класс 
+              HashTable</font></h4>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              представляет собой хэш-таблицу, реализующую интерфейс IDictionary. 
+              Этот класс является коллекцией пар «ключ/значение», которые собраны 
+              в хэш-таблицу, где хэш-значение используется в качестве ключа. Класс 
+              HashTable может использоваться в тех случаях, когда необходима коллекция 
+              пар «ключ/значение».</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Ниже 
+              показано использование HashTable:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">'-----------------------------------------------  
+' .NET – пример использования класса HashTable  
+'-----------------------------------------------  
+Imports System  
+Imports System.Collections  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp; Sub Main()  
+&nbsp;  
+&nbsp; Dim HT As New Hashtable()  
+&nbsp; With HT  
+'  
+' Построим хэш-таблицу с телефонными кодами стран  
+'  
+&nbsp;&nbsp; .Add("Austria", "+43")  
+&nbsp;&nbsp; .Add("France", "+33")  
+&nbsp;&nbsp; .Add("Germany", "+49")  
+&nbsp;&nbsp; .Add("Italy", "+39")  
+&nbsp;&nbsp; .Add("Spain", "+34")  
+&nbsp;&nbsp; .Add("Switzerland", "+41")  
+&nbsp;&nbsp; ShowTable("Original Table", HT)  
+'  
+' Удалим Швейцарию, если она есть в таблице  
+'  
+&nbsp;&nbsp; If .Contains("Switzerland") Then  
+&nbsp;&nbsp;&nbsp; .Remove("Switzerland")  
+&nbsp;&nbsp; End If  
+&nbsp;&nbsp; ShowTable("Modified Table", HT)  
+&nbsp; End With  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+&nbsp;Sub ShowTable(ByVal Header As String, ByVal T As Hashtable)  
+&nbsp;  
+&nbsp; Dim E As IDictionaryEnumerator  
+&nbsp; E = T.GetEnumerator  
+&nbsp; Console.WriteLine(ControlChars.NewLine &amp; Header)  
+&nbsp; While E.MoveNext()  
+&nbsp;&nbsp; Console.WriteLine(E.Key &amp; "=" &amp; E.Value)  
+&nbsp; End While  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="center"><img src="array_5.gif" width="126" height="170"></p>
+            <hr noshade size="1" width="85%">
+            <h4><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=12></a>Класс 
+              SortedList</font></h4>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Как 
+              и рассмотренный выше класс HashTable, этот класс реализует интерфейс 
+              IDictionary. Но класс SortedList поддерживает коллекцию пар «ключ/значение», 
+              используя ключ, а не хэш-значения, в отличие от класса HashTable. 
+              Элементы коллекции могут быть доступны как по ключу, так и по индексу.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Покажем 
+              использование класса SortedList на примере:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">'------------------------------------------------  
+' .NET – пример использования класса SortedList  
+'------------------------------------------------  
+Imports System  
+Imports System.Collections  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp;  
+&nbsp; Dim SL As New SortedList()  
+&nbsp; With SL  
+'  
+' Построим отсортированный список кодов стран  
+'  
+&nbsp;&nbsp; .Add("Austria", "+43")  
+&nbsp;&nbsp; .Add("France", "+33")  
+&nbsp;&nbsp; .Add("Germany", "+49")  
+&nbsp;&nbsp; .Add("Italy", "+39")  
+&nbsp;&nbsp; .Add("Spain", "+34")  
+&nbsp;&nbsp; .Add("Switzerland", "+41")  
+&nbsp;&nbsp; ShowTable("Original Table", SL)  
+'  
+' Удалим Швейцарию, если она есть в таблице  
+'  
+&nbsp;&nbsp; If .Contains("Switzerland") Then  
+&nbsp;&nbsp;&nbsp; .Remove("Switzerland")  
+&nbsp;&nbsp; End If  
+&nbsp;&nbsp; ShowTable2("Modified Table", SL)  
+&nbsp; End With  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+&nbsp;Sub ShowTable(ByVal Header As String, ByVal L As SortedList)  
+&nbsp;  
+&nbsp; Dim E As IDictionaryEnumerator  
+&nbsp; E = L.GetEnumerator  
+&nbsp; Console.WriteLine(ControlChars.NewLine &amp; Header)  
+&nbsp; While E.MoveNext()  
+&nbsp;&nbsp; Console.WriteLine(E.Key &amp; "=" &amp; E.Value)  
+&nbsp; End While  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+&nbsp;Sub ShowTable2(ByVal Header As String, ByVal L As SortedList)  
+&nbsp;  
+&nbsp; Dim I As Integer  
+&nbsp; Console.WriteLine(ControlChars.NewLine &amp; Header)  
+&nbsp; For I = 0 To L.Count - 1  
+&nbsp;&nbsp; Console.WriteLine(L.GetKey(I) &amp; "=" &amp; L.GetByIndex(I))  
+&nbsp; Next  
+&nbsp;  
+End Sub  
+&nbsp;  
+End Module   </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Следует 
+              отметить, что, в отличие от предыдущего примеров, в данном случае 
+              мы получаем список элементов, отсортированных по значению ключа, 
+              а не по хэш-значению, как в случае с классом HashTable. Также нужно 
+              обратить внимание на метод ShowTable2, где показано, как обратиться 
+              к элементам класса SortedList по индексу и как найти все ключи (метод 
+              GetKey(Integer)) и значения (метод GetByIndex(Integer)). </font></p>
+            <p align="center"><img src="array_6.gif" width="124" height="171"></p>
+            <hr noshade size="1" width="85%">
+            <h4><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=13></a>Класс 
+              Stack</font></h4>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Этот 
+              класс реализует простую очередь объектов типа «последним вошел — 
+              первым вышел» (last-in-first-out, LIFO). Класс Stack реализует стек 
+              с помощью таких методов, как Push и Pop, для помещения элементов 
+              на стек и удаления их с вершины стека. Метод Peek возвращает верхний 
+              элемент на стеке без снятия этого элемента со стека. Для копирования 
+              элементов стека в новый массив мы можем использовать метод ToArray.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Класс 
+              Stack также реализует метод GetEnumerator, который можно использовать 
+              для получения энумератора для данного стека. Стек реализован как 
+              циркулярный буфер. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Использование 
+              класса Stack показано в следующем примере:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">'-------------------------------------------  
+' .NET – пример использования класса Stack  
+'-------------------------------------------  
+Imports System  
+Imports System.Collections  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim S As New Stack()  
+&nbsp;  
+&nbsp; With S  
+'  
+' Поместим на стек 3 элемента  
+'  
+&nbsp;&nbsp; .Push("Item0")  
+&nbsp;&nbsp; .Push("Item1")  
+&nbsp;&nbsp; .Push("Item2")  
+&nbsp;&nbsp; ShowStack("Original Stack", S)  
+'  
+' Снимем верхний элемент  
+'  
+&nbsp;&nbsp; .Pop()  
+&nbsp;&nbsp; ShowStack("Modified Stack", S)  
+'  
+' Поместим один элемент  
+'  
+&nbsp;&nbsp; .Push("Item3")  
+'  
+' Покажем верхний элемент, не удаляя его  
+'  
+&nbsp;&nbsp; ShowStack("Modified Stack", S)  
+&nbsp;&nbsp; Console.WriteLine("Top item: " &amp; .Peek())  
+&nbsp; End With  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+&nbsp;Sub ShowStack(ByVal Header As String, ByVal S As IEnumerable)  
+&nbsp;  
+&nbsp; Dim E As IEnumerator  
+&nbsp; E = S.GetEnumerator  
+&nbsp; Console.WriteLine(ControlChars.NewLine &amp; Header)  
+&nbsp; While E.MoveNext()  
+&nbsp;&nbsp;&nbsp; Console.WriteLine(E.Current)  
+&nbsp; End While  
+&nbsp;  
+End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="center"><img src="array_7.gif" width="126" height="170"></p>
+            <hr noshade size="1" width="85%">
+            <h4><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=14></a>Класс 
+              Queue</font></h4>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Данный 
+              класс реализует коллекцию объектов типа «первым вошел — первым вышел» 
+              (first-in-first-out, FIFO). Для добавления и удаления объектов из 
+              очереди используются методы Dequeue() и Enqueue(Object). Первый 
+              из них удаляет элемент в начале очереди, а второй — добавляет элемент 
+              в конец очереди. Для копирования элементов очереди в новый массив 
+              можно использовать метод ToArray().</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Пример 
+              использования класса Queue показан ниже:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">'-------------------------------------------  
+' .NET – пример использования класса Queue  
+'-------------------------------------------  
+Imports System  
+Imports System.Collections  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim Q As New Queue()  
+&nbsp;  
+&nbsp; With Q  
+'  
+' Добавим 3 элемента  
+'  
+&nbsp;&nbsp; .Enqueue("Item0")  
+&nbsp;&nbsp; .Enqueue("Item1")  
+&nbsp;&nbsp; .Enqueue("Item2")  
+&nbsp;&nbsp; ShowQueue("Original Queue", Q)  
+'  
+' Удалим первый элемент  
+'  
+&nbsp;&nbsp; .Dequeue()  
+&nbsp;&nbsp; ShowQueue("Modified Queue", Q)  
+'  
+' Добавим один элемент  
+'  
+&nbsp; &nbsp;.Enqueue("Item3")  
+&nbsp;&nbsp; ShowQueue("Modified Queue", Q)  
+'  
+' Покажем первый элемент, не удаляя его  
+'  
+&nbsp;&nbsp; Console.WriteLine("Top item: " &amp; .Peek())  
+&nbsp; End With  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+&nbsp;Sub ShowQueue(ByVal Header As String, ByVal Q As IEnumerable)  
+&nbsp;  
+&nbsp; Dim E As IEnumerator  
+&nbsp; E = Q.GetEnumerator  
+&nbsp; Console.WriteLine(ControlChars.NewLine &amp; Header)  
+&nbsp; While E.MoveNext()  
+&nbsp;&nbsp; Console.WriteLine(E.Current)  
+&nbsp; End While  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="array_8.gif" width="123" height="171"></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Нужно 
+              отметить, что метод Peek() играет такую же роль, что и в классе 
+              Stack, — он возвращает верхний элемент, не удаляя его из очереди. 
+              </font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=15></a>Заключение</font></h2>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Итак, 
+              мы ознакомились с массивами (класс System.Array) и коллекциями (пространство 
+              имен System.Collections). В следующем номере мы продолжим изучение 
+              библиотеки классов .NET Framework Class Library и рассмотрим строки 
+              и класс System.String. </font></p>
+            <!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+<table width="100%" height="30" border="0" cellpadding="6" cellspacing="0">
+  <tr> 
+    <td background="fon2.gif" bgcolor="#FFFFCC"> 
+      <div align="left"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif">&copy; 
+        <a href="mailto:stasmit@mail.ru">Волшебник Станислав</a>, <a href="http://www.mista.ru"><br>
+        www.mista.ru</a>, 1997-2003</font></div></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC"> 
+
+      <table border="0" align="center" cellpadding="2" cellspacing="0">
+        <tr valign="middle" align="center"> 
+          <td width="95"> 
+            <script language="javascript"><!--
+Mu="u045.09.spylog.com";Md=document;Mnv=navigator;Mp=0;
+Md.cookie="b=b";Mc=0;if(Md.cookie)Mc=1;Mrn=Math.random();
+Mn=(Mnv.appName.substring(0,2)=="Mi")?0:1;Mt=(new Date()).getTimezoneOffset();
+Mz="p="+Mp+"&rn="+Mrn+"&c="+Mc+"&t="+Mt;
+if(self!=top){Mfr=1;}else{Mfr=0;}Msl="1.0";
+//--></script><script language="javascript1.1"><!--
+Mpl="";Msl="1.1";Mj = (Mnv.javaEnabled()?"Y":"N");Mz+='&j='+Mj;
+//--></script><script language="javascript1.2"><!-- 
+Msl="1.2";Ms=screen;Mpx=(Mn==0)?Ms.colorDepth:Ms.pixelDepth;
+Mz+="&wh="+Ms.width+'x'+Ms.height+"&px="+Mpx;
+//--></script><script language="javascript1.3"><!--
+Msl="1.3";//--></script><script language="javascript"><!--
+My="";My+="<a href='http://"+Mu+"/cnt?cid=4509&f=3&p="+Mp+"&rn="+Mrn+"' target='_blank'>";
+My+="<img src='http://"+Mu+"/cnt?cid=4509&"+Mz+"&sl="+Msl+"&r="+escape(Md.referrer)+"&fr="+Mfr+"&pg="+escape(window.location.href);
+My+="' border=0 width=88 height=31 alt='SpyLOG'>";
+My+="</a>";Md.write(My);//--></script><noscript>
+<a href="http://u045.09.spylog.com/cnt?cid=4509&f=3&p=0" target="_blank">
+<img src="http://u045.09.spylog.com/cnt?cid=4509&p=0" alt='SpyLOG' border='0' width=88 height=31 >
+</a></noscript></noscript>
+            </td>
+          <td width="95"> <a href="http://www.1c.klim.org/topsites/index.html" target="_blank"> 
+            <img src="http://1c.klim.org/topsites/topsites.php?ID=143" width="88" height="31" border="0" alt="1C:TOP-100"></a></td>
+          <td width="95"> <script language="javascript">
+hotlog_js="1.0";
+hotlog_r=""+Math.random()+"&s=23314&im=101&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+</script>
+            <script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script> <script language="javascript1.2">
+hotlog_js="1.2";
+hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</script> <script language="javascript1.3">hotlog_js="1.3"</script> 
+            <script language="javascript">hotlog_r+="&js="+hotlog_js;
+document.write("<a href='http://click.hotlog.ru/?23314' target='_top'><img "+
+" src='http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script> <noscript>
+            <a href=http://click.hotlog.ru/?23314 target=_top><img
+src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=23314&im=101" border=0 
+width="88" height="31" alt="HotLog"></a></noscript> </td>
+        </tr>
+      </table>
+      
+    </td>
+    <td background="../fon2.gif"> 
+      <div align="right"><a href="#begin"> Наверх&nbsp;<img src="../top.gif" alt="^" width="16" height="14" border="0"></a></div></td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

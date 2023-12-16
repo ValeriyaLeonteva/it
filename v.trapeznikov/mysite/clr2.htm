@@ -1,0 +1,1095 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/net.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" --> 
+<title>CLR - часть 2 | Технология .Net | mista.ru</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#990066" alink="#CC0066" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="180" background="fon2.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <a name="begin"></a><a href="http://www.mista.ru"><img src="logo.gif" alt="Информационные системы" width="180" height="70" border="0"></a></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC" class="unnamed5"> 
+      <div align="center"><!-- InstanceBeginEditable name="title" --><font color="#CC0000" size="6" face="Verdana, Arial, Helvetica, sans-serif">CLR 
+        - часть 2</font><!-- InstanceEndEditable --></div></td>
+  </tr>
+</table>
+<table width="100%" height="90%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="180" valign="top" background="fon.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <table width="175" border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="100%" valign="top"> 
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../it.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><br>
+              Информационные технологии</font></strong></font></a> </font></p>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="index.htm">Технология .Net </a></strong></font></font></strong></font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><a href="intro.htm">Что 
+              такое .Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="net_framework.htm">.Net 
+              Framework</a><br>
+              <a href="vbnet_future.htm">VB.Net: дорога в будущее</a><br>
+              <a href="vbnet_types.htm">Типы данных VB.Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="vbnet_impression.htm">Впечатление 
+              от VB.Net</a><br>
+              <a href="links.htm">Ссылки по Net</a> </font></p>
+            <table width="99%" border="1" cellspacing="0" cellpadding="5" bordercolor="#FFCC33">
+              <tr> 
+                <td> <p><font face="Arial, Helvetica, sans-serif" size="2">1. 
+                    <a href="clr.htm">CLR - Введение</a><br>
+                    2. <a href="clr2.htm">CLR - Часть 2</a><br>
+                    3. <a href="vs.htm">Visual Studio.Net</a><br>
+                    4. <a href="lib.htm">Библиотека классов </a><br>
+                    5. <a href="array.htm">Массивы и коллекции</a><br>
+                    6. <a href="string.htm">Строки</a><br>
+                    7. <a href="file.htm">Файлы и каталоги</a><br>
+                    8. <a href="stream.htm">Потоки ввода-вывода</a></font></p>
+                  <p align="right"><font face="Arial, Helvetica, sans-serif" size="2"><i><a href="http://www.compress.ru" target="_blank">Компьютер</a></i><a href="http://www.compress.ru" target="_blank"><i>Пресс</i></a> 
+                    </font></p></td>
+              </tr>
+            </table>
+            <br>
+            <hr width="95%" size="1" noshade>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../isu/index.htm">Инф. системы</a></strong></font></font><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../gorod/index.htm">Модель города</a></strong></font></font><br>
+              <img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <font color="#330099" face="Verdana, Arial, Helvetica, sans-serif"><a href="../itbooks.htm">Книги 
+              и статьи</a></font></font></strong></font><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <a href="../era/index.htm">ЭРА</a> </font></strong></font></p>
+            <p><a href="../1c.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">1С:Предприятие</font></strong></font></a> 
+            </p>
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../interesting.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">Интересное</font></strong></font></a></font> 
+            </p>
+            <!-- InstanceBeginEditable name="EditRegion2" --><!-- InstanceEndEditable --> 
+            </td>
+        </tr>
+      </table>
+    </td>
+    <td valign="top" class="unnamed1">  
+      <table width="100%" border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+          <td valign="top" bgcolor="#FFFFCC" class="unnamed4"> <!-- InstanceBeginEditable name="navigation" --><a href="../index.htm">mista.ru</a> 
+            / <a href="../it.htm">Инф. технологии</a> / <a href="index.htm">Технология 
+            .Net</a> / CLR - часть 2<!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td height="65"><!-- InstanceBeginEditable name="text" --> 
+            <p align="right"><font face="Arial, Helvetica, sans-serif" size="2">Алексей 
+              Федоров<a href="http://www.compress.ru" target="_blank"><br>
+              КомпьютерПресс</a> 1'2002</font></p>
+            <p align="justify"><a class=contents href="#01"><font face="Arial, Helvetica, sans-serif" size="2">Common 
+              Type System</font></a><br>
+              <font face="Arial, Helvetica, sans-serif" size="2"><a class=contents href="#02">Данные 
+              со значениями</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;<a class=contents 
+href="#03">Перечисления</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;<a class=contents 
+href="#04">Структуры</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a class=contents 
+href="#05">Ссылочные типы</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;<a class=contents 
+href="#06">Классы</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;<a class=contents 
+href="#07">Методы</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;<a class=contents 
+href="#08">События</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;<a class=contents 
+href="#09">Делегаты</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;<a class=contents 
+href="#10">Массивы</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;<a class=contents 
+href="#11">Интерфейсы</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp;<a class=contents 
+href="#12">Указатели</a></font><br>
+              <font face="Arial, Helvetica, sans-serif" size="2"><a class=contents 
+href="#13">Заключение</a></font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              предыдущем номере мы начали знакомство с Microsoft .NET Framework 
+              — ключевым компонентом Microsoft .NET, представляющим собой платформу 
+              для создания, внедрения и выполнения Web-сервисов и приложений. 
+              Мы рассмотрели основные компоненты Microsoft .NET Framework и кратко 
+              описали их назначение. Мы также начали более подробное рассмотрение 
+              Common Language Runtime (CLR) — среды выполнения .NET-приложений. 
+              В этой части статьи мы продолжим разговор о Common Language Runtime 
+              и остановимся на Common Type System. </font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=01></a>Common 
+              Type System</font></h2>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Common 
+              Type System (CTS) — это последний компонент Common Language Runtime, 
+              который мы рассмотрим в данной статье. CTS определяет типы, поддерживаемые 
+              Common Language Runtime. Типы можно условно разделить на две большие 
+              группы: данные со значениями (value types) и ссылочные типы (reference 
+              types). В каждой группе существуют подтипы (см. рис. 1)</font></p>
+            <p align="center"><font face="Arial, Helvetica, sans-serif" size="2"><img src="clr2_1.gif" width="311" height="190">.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Данные 
+              со значениями описывают значения, представляемые последовательностью 
+              байтов. Для таких типов существует понятие идентичности. Например, 
+              32-битное целочисленное значение занимает определенную последовательность 
+              байтов. Два 32-битных целочисленных значения идентичны, если они 
+              содержат одно и то же число. К данным со значениями также относятся 
+              встроенные типы, рассматриваемые ниже. Ссылочные типы служат для 
+              описания значений, представляемых местонахождением последовательности 
+              байтов. Ссылочные типы подразделяются на три категории:</font></p>
+            <ul>
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Объектные 
+                типы — содержат самоописываемые значения. Некоторые объектные 
+                типы (абстрактные классы) содержат только частичное описание значений. 
+                </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Интерфейсные 
+                типы — всегда содержат только частичное описание значений. </font> 
+              <li><font face="Arial, Helvetica, sans-serif" size="2">Указательные 
+                типы — во время компиляции содержат описание значения, представленного 
+                адресом в памяти. </font></li>
+            </ul>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Составной 
+              частью Common Type System являются встроенные типы (табл. 1), непосредственно 
+              поддерживаемые виртуальной исполняющей системой (Virtual Execution 
+              System, VES).<a name="tab1"></a></font></p>
+            <table width="100%" border=1 bordercolor="#CCCCCC" cellspacing="0">
+              <tbody>
+                <tr> 
+                  <th><font face="Arial, Helvetica, sans-serif" size="2">Тип</font></th>
+                  <th><font face="Arial, Helvetica, sans-serif" size="2">Имя в 
+                    библиотеке классов</font></th>
+                  <th><font face="Arial, Helvetica, sans-serif" size="2">Описание</font></th>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">bool</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.Boolean</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    значение true/false</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">char</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.Char</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    16-битный Unicode-символ</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">object</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.Object</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    объектное значение</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">string</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.String</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    Unicode-строку</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">float32</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.Single</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    32-битное значение с плавающей точкой</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">float64</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.Double</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    64-битное значение с плавающей точкой</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">int8</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.SByte</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    знаковое 8-битное целочисленное значение</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">int16</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.Int16</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    знаковое 16-битное целочисленное значение</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">int32</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.Int32</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    знаковое 32-битное целочисленное значение</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">int64</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.Int64</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    знаковое 64-битное целочисленное значение</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">natural 
+                    int</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.IntPtr</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    знаковое целочисленное значение естественного размера</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">natural 
+                    unsigned int</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.UIntPtr</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    беззнаковое целочисленное значение естественного размера</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">typedref</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.TypedReference</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Указатель 
+                    на тип</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">unsigned 
+                    int8</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.Byte</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    беззнаковое 8-битное целочисленное значение</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">unsigned 
+                    int16</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.UInt16</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    беззнаковое 16-битное целочисленное значение</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">unsigned 
+                    int32</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.UInt32</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    беззнаковое 32-битное целочисленное значение</font></td>
+                </tr>
+                <tr> 
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">unsigned 
+                    int64</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">System.UInt64</font></td>
+                  <td><font face="Arial, Helvetica, sans-serif" size="2">Хранит 
+                    беззнаковое 64-битное целочисленное значение</font></td>
+                </tr>
+              </tbody>
+            </table>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Ниже 
+              мы рассмотрим типы и их подтипы более подробно, но прежде отметим, 
+              что в основе всех типов, как, впрочем, и в основе всей иерархии 
+              классов Microsoft .NET Framework, лежит класс System.Object. Для 
+              всех типов, которые будут рассмотрены ниже, этот класс, в частности, 
+              предоставляет методы, перечисленные в табл. 2.</font></p>
+            <table border="1" width="100%" cellspacing="0" bordercolor="#CCCCCC">
+              <tr> 
+                <th><font size="2" face="Arial, Helvetica, sans-serif">Метод</font></th>
+                <th><font size="2" face="Arial, Helvetica, sans-serif">Описание</font></th>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Equals</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Поддерживает 
+                  сравнение объектов одного класса</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Finalize</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Выполняет 
+                  операции очистки памяти перед уничтожением объекта</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">GetHashCode</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Генерирует 
+                  число, соответствующее значению, хранимому в объекте</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">ToString</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  строку, содержащую описание экземпляра класса</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">GetType</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  тип объекта</font></td>
+              </tr>
+            </table>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Далее 
+              мы сможем убедиться, что все типы так или иначе наследуют от System.Object. 
+              Начнем с данных со значениями.</font></p>
+            <hr noshade size="1" width="85%">
+            <font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><b><a name=02></a>Данные 
+            со значениями</b></font> 
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Как 
+              мы отметили выше, к данным со значением относятся как встроенные 
+              типы так и определяемые пользователями. Все встроенные типы базируются 
+              на классе System.ValueType, который является непосредственным наследником 
+              System.Object. Каждый класс, реализующий встроенный тип, поддерживает 
+              определенный набор интерфейсов, которые используются для реализации 
+              тех или иных операций, а также уникальные для данного типа свойства 
+              и методы. Например, класс Boolean поддерживает интерфейсы IConvertible 
+              (для выполнения операций преобразования) и IComparable (для выполнения 
+              операций сравнения), а также содержит такие свойства, как FalseString 
+              и TrueString. Кроме того, класс Byte поддерживает интерфейсы IConvertible 
+              и IComparable, а также интерфейс IFormattable, используемый для 
+              преобразования значений в их строчное представление. Двигаясь дальше 
+              по списку наследников класса System. ValueType, мы находим класс 
+              Char, который поддерживает такие методы, как IsDigit, IsLetter, 
+              IsLetterOrDigit, IsNumber и т.п., существенно облегчающие работу 
+              с символами. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Классы, 
+              представляющие целочисленные типы — Int16, Int32, Int64, IntPtr, 
+              UInt16, UInt32, UInt64 и UIntPtr, содержат константы MinValue и 
+              MaxValue, задающие минимальное и максимальное число, которое может 
+              содержаться в данном типе, а также метод Parse, используемый для 
+              преобразования строки, состоящей из набора цифр, в соответствующий 
+              тип данных.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Типы 
+              с плавающей точкой — Single и Double — содержат свойства Epsilon 
+              (минимальное положительное число данного типа), MinValue (минимально 
+              допустимое число), MaxValue (максимально допустимое число), Nan 
+              (константа Not-A-Number, не число), NegativeInfinity (константа, 
+              описывающая отрицательную бесконечность) и PositiveInfinity (константа, 
+              описывающая положительную бесконечность), а также методы IsInfinity, 
+              IsNan, IsNegativeInfinity и IsPositiveInfinity, используемые для 
+              проверки хранимых в переменной данного типа значений.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font face="Arial, Helvetica, sans-serif" size="2"><a name=03></a>Перечисления</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Среди 
+              разнообразия типов, которые могут определять пользователи, отметим 
+              перечисления, создающиеся на базе класса System. Enum. Этот класс 
+              поддерживает интерфейсы IComparable, IFormattable и IConvertible, 
+              а также методы для получения имен констант (GetName, GetNames), 
+              получения значений (GetValues), определения типа элементов перечисления 
+              (GetUnderlyingType) и ряд других. </font></p>
+            <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              следующем примере показано, как создать простое перечисление и воспользоваться 
+              методами GetNames и GetValues для получения списка имен всех его 
+              полей и их значений:</font></p>
+            <pre>Module Module1  
+&nbsp;&nbsp;&nbsp;   
+&nbsp;&nbsp; &nbsp;'  
+&nbsp;&nbsp;&nbsp; ' Геометрические фигуры  
+&nbsp;&nbsp;&nbsp; '  
+&nbsp;&nbsp;&nbsp; Public Enum Shapes  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Circle&nbsp;&nbsp;&nbsp; = 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rectangle = 2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ellipse&nbsp;&nbsp; = 3  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Triangle&nbsp; = 4  
+&nbsp;&nbsp;&nbsp; End Enum  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; Sub Main()  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim GeoShapes As New Shapes()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim Names As String()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim Values() As Integer  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim I As Integer  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Names&nbsp; = GeoShapes.GetNames(GeoShapes.GetType)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Values = GeoShapes.GetValues(GeoShapes.GetType)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For I = 0 To Names.GetUpperBound(0)  
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(vbTab &amp; Names(I) &amp; "=" &amp; _  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CType(Values(I), Integer).ToString("G"))  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine()  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; End Sub  
+End Module
+</pre>
+            <div align="center"><img src="clr2_01.gif" width="284" height="206"> 
+              <br>
+            </div>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font face="Arial, Helvetica, sans-serif" size="2"><a name=04></a>Структуры</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Структуры 
+              позволяют создавать новые типы данных путем объединения нескольких 
+              существующих типов. Структуры могут содержать методы и события, 
+              но в отличие от классов, которые мы рассмотрим ниже, структуры не 
+              поддерживают наследования и инициализации полей. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Рассмотрим 
+              небольшой пример. Создадим структуру TPoint, у которой будет два 
+              поля: целочисленные члены X и Y. В коде нашей программы, написанной 
+              на Visual Basic.NET, создадим переменную типа TPoint, инициализируем 
+              ее поля и выведем на экран их значения. Как это сделать, показано 
+              ниже:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">Module Module1  
+&nbsp;  
+'  
+' Структура TPoint содержит два целочисленных члена  
+'  </font></pre>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp; Structure TPoint  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Public X As Integer  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Public Y As Integer  </font></pre>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp; End Structure  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; Sub Main()  
+'  
+' Переменная MyPoint – пользовательского типа  
+'  
+&nbsp;&nbsp;&nbsp;&nbsp; Dim MyPoint As TPoint  
+&nbsp;  
+'   
+' Инициализация переменной  
+'  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With MyPoint  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .X = 100  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Y = 150  
+'  
+' Вывод значений   
+'  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(" X should be 100" &amp; " X=" &amp; .X)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(" Y should be 150" &amp; " Y=" &amp; .Y)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End With  
+&nbsp;&nbsp;&nbsp; End Sub  
+End Module  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Теперь 
+              скопируем структуру в объектную переменную и изменим значения ее 
+              полей. Поскольку структура скопирована, а не передана по ссылке, 
+              оригинальные значения не изменяются:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">Dim MyPoint As TPoint  
+Dim NewPoint  
+&nbsp;  
+&nbsp;With MyPoint  
+&nbsp; .X = 100  
+&nbsp; .Y = 150  
+&nbsp;End With  
+&nbsp;  
+&nbsp;NewPoint = MyPoint  
+&nbsp;With NewPoint  
+&nbsp; .X = 200  
+&nbsp; .Y = 50  
+&nbsp;End With  
+&nbsp;Console.WriteLine("NewPoint X, Y=" &amp; NewPoint.X &amp; ", " &amp; NewPoint.Y)  
+&nbsp;Console.WriteLine("MyPoint&nbsp; X, Y=" &amp; MyPoint.X &amp; ", " &amp; MyPoint.Y)  
+&nbsp;  
+&nbsp;End Sub  </font></pre>
+            <p align="center"><img src="clr2_02.gif" width="266" height="136"></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">По 
+              сравнению со структурами классы предоставляют большую гибкость. 
+              Мы рассмотрим классы в следующем разделе. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Завершая 
+              наше знакомство с данными со значениями, напомним, что они описывают 
+              значения, представляемые последовательностью байтов. Многие встроенные 
+              типы, перечисленные в <a href="#tab1">табл. 1</a>, относятся к этой 
+              группе. Данные со значениями часто располагаются на стеке — они 
+              могут быть локальными переменными, параметрами и значениями, возвращаемыми 
+              функциями. Таким образом, данные со значениями не должны занимать 
+              много места — в общем случае они занимают не более 12-16 байтов. 
+              </font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=05></a>Ссылочные 
+              типы</font></h2>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Вторая 
+              группа типов в Common Type System — это ссылочные типы. Среди них 
+              есть объектные, интерфейсные и указательные типы. Рассмотрение ссылочных 
+              типов начнем с классов.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              общем случае классы и объекты могут содержать поля, свойства, методы 
+              и события. Строго говоря, свойства и события являются методами. 
+              Свойства — это не более чем синтаксические конструкции, заменяющие 
+              обращения к соответствующим методам Set и Get. События служат для 
+              асинхронных объявлений об изменениях в объектах. Клиенты предоставляют 
+              специальные методы — обработчики событий, которые вызываются при 
+              возникновении данного события.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font face="Arial, Helvetica, sans-serif" size="2"><a name=06></a>Классы</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Классы 
+              — это структуры, определяющие операции, которые могут выполнять 
+              объекты, а также значения, которые объекты могут хранить. Функциональность 
+              объектов (экземпляров класса) доступна через поля и методы, а также 
+              через события. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Продолжим 
+              наш пример. Теперь мы преобразуем созданную выше структуру в класс, 
+              который также будет иметь два целочисленных свойства. Для установки 
+              и получения значений этих свойств мы должны использовать ключевое 
+              слово Property и новые в VB.NET конструкции языка — Get/End Get 
+              и Set/End Set. Мы также создаем конструктор для нашего класса. Реализация 
+              класса TPoint показана ниже:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+'  
+' Класс TPoint содержит два целочисленных свойства  
+'  </font></pre>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp; Public Class TPoint  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim ptX As Integer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' X  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim ptY As Integer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Y  
+'  
+' Get и Set для свойства ptX  
+'  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Public Property X() As Integer  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Get  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return ptX  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Get  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set(ByVal Value As Integer)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ptX = Value  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Set  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Property  
+'  
+' Get и Set для свойства ptY  
+'  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Public Property Y() As Integer  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return ptY  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Get  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set(ByVal Value As Integer)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ptY = Value  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Set  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Property  
+'  
+' Конструктор  
+'  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Public Sub New()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ptX = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ptY = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;End Sub  
+&nbsp;&nbsp;&nbsp; End Class  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; Sub Main()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim MyPoint As New TPoint()  
+'   
+' Инициализация объекта  
+'  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With MyPoint  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .X = 100  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Y = 150  
+'  
+' Вывод значений   
+'  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(" X should be 100" &amp; " X=" &amp; .X)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(" Y should be 150" &amp; " Y=" &amp; .Y)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End With  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Здесь 
+              следует обратить внимание на то, что внутренние имена свойств класса 
+              (в нашем примере ptX и ptY) отличаются от имен, «видимых» вне класса 
+              (в нашем примере X и Y).</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font face="Arial, Helvetica, sans-serif" size="2"><a name=07></a>Методы</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Методы 
+              служат для реализации функциональности классов. Рассмотрим это на 
+              примере. Расширим наш класс и реализуем метод SetXY, который будет 
+              устанавливать новые значения свойств X и Y. Для этого добавим в 
+              описание класса следующий код:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;Public Sub SetXY(ByVal newX As Integer, ByVal newY As Integer)  
+&nbsp; X = newX  
+&nbsp; Y = newY   
+&nbsp;End Sub  
+и изменим код нашей программы:
+&nbsp;Sub Main()  
+&nbsp;&nbsp; Dim MyPoint As New TPoint()  
+'   
+' Инициализация объекта  
+'  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+&nbsp;&nbsp; With MyPoint  
+&nbsp;&nbsp;&nbsp; .SetXY(100, 150)  
+'  
+' Вывод значений   
+'  
+&nbsp;&nbsp;&nbsp; Console.WriteLine(" X should be 100" &amp; " X=" &amp; .X)  
+&nbsp;&nbsp;&nbsp; Console.WriteLine(" Y should be 150" &amp; " Y=" &amp; .Y)  
+&nbsp; End With  
+&nbsp;  
+&nbsp;End Sub  </font></pre>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font face="Arial, Helvetica, sans-serif" size="2"><a name=08></a>События</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">И 
+              наконец, последним элементом, который может содержаться в классах, 
+              создаваемых пользователями, является событие. Как было отмечено 
+              выше, события служат для асинхронных объявлений об изменениях в 
+              объектах. В нашем примере таким изменением в объекте будет задание 
+              новых значений свойств X и Y. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Реализацию 
+              события начнем с задания его имени, сопровождаемого ключевым словом 
+              Event. Далее в код, который является причиной возникновения события 
+              (в нашем примере это код, устанавливающий новые значения свойств), 
+              добавляем ключевое слово RaiseEvent и указываем название возникающего 
+              события:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">Public Class TPoint  
+&nbsp;&nbsp;&nbsp; Dim ptX As Integer&nbsp; ' X  
+&nbsp;&nbsp;&nbsp; Dim ptY As Integer&nbsp; ' Y  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; Event PTChanged()  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; '  
+&nbsp;&nbsp;&nbsp; ' Get и Set для свойства ptX  
+&nbsp;&nbsp;&nbsp; '  
+&nbsp;&nbsp;&nbsp; Public Property X() As Integer  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Get  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return ptX  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Get  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set(ByVal Value As Integer)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ptX = Value  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RaiseEvent PTChanged()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Set  
+&nbsp;&nbsp;&nbsp; End Property  
+&nbsp;&nbsp;&nbsp; '  
+&nbsp;&nbsp;&nbsp; ' Get и Set для свойства ptY  
+&nbsp;&nbsp;&nbsp; '  
+&nbsp;&nbsp;&nbsp; Public Property Y() As Integer  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Get  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return ptY  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Get  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set(ByVal Value As Integer)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ptY = Value  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RaiseEvent PTChanged()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Set  
+&nbsp;&nbsp;&nbsp; End Property  
+&nbsp;&nbsp;&nbsp; '  
+&nbsp;&nbsp;&nbsp; ' Конструктор  
+&nbsp;&nbsp;&nbsp; '  
+&nbsp;&nbsp;&nbsp; Public Sub New()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ptX = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ptY = 0  
+&nbsp;&nbsp;&nbsp; End Sub  
+&nbsp;&nbsp;&nbsp; Public Sub SetXY(ByVal newX As Integer, ByVal newY As Integer)  
+&nbsp;&nbsp;&nbsp;&nbsp; X = newX  
+&nbsp;&nbsp;&nbsp;&nbsp; Y = newY   
+&nbsp;&nbsp;&nbsp; End Sub  
+End Class  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Проверить 
+              работу нашего класса, который теперь имеет свойства, методы и события, 
+              можно с помощью небольшого клиентского приложения. Оно содержит 
+              кнопку, список и панель. При каждом нажатии кнопки мыши на панели 
+              мы вызываем метод SetXY нашего класса Tpoint, в результате чего 
+              происходит событие, которое регистрируется нашим обработчиком события 
+              в списке.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Вот 
+              код клиентского приложения (для простоты класс TPoint реализован 
+              в отдельной библиотеке классов): </font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">Imports ClassLibrary1  
+Public Class Form1  
+&nbsp;&nbsp;&nbsp; Inherits System.Windows.Forms.Form  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; Dim WithEvents MyPoint As TPoint  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; Private Sub Button1_Click(ByVal sender As System.Object, _  
+&nbsp;&nbsp;&nbsp;&nbsp; ByVal e As System.EventArgs) Handles Button1.Click  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyPoint = New TPoint()  
+&nbsp;&nbsp;&nbsp; End Sub  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; Private Sub Panel1_MouseDown(ByVal sender As Object, _   
+&nbsp;&nbsp;&nbsp;&nbsp; ByVal e As System.Windows.Forms.MouseEventArgs) _  
+&nbsp;&nbsp;&nbsp;&nbsp; Handles Panel1.MouseDown  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyPoint.SetXY(e.X, e.Y)  
+&nbsp;&nbsp;&nbsp; End Sub  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; Private Sub MyPoint_PTChanged() Handles MyPoint.PTChanged  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ListBox1.Items.Add(MyPoint.X &amp; ", " &amp; MyPoint.Y)  
+&nbsp;&nbsp;&nbsp; End Sub  
+&nbsp;  
+End Class  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Теперь 
+              объект MyPoint типа TPoint описан с использованием ключевого слова 
+              WithEvents. Это означает, что класс поддерживает события и мы можем 
+              создавать их обработчики. На рис. 2 показан пример работы нашей 
+              программы.</font></p>
+            <p align="center"><img src="clr2_2.gif" width="528" height="384"></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Обратите 
+              внимание на то, что в списке регистрируются парные координаты — 
+              X, Y, X, Y1, X1, Y1 и т.п. Это происходит из-за того, что событие 
+              PTChanged возникает и при изменении значения свойства X, и при изменении 
+              значения свойства Y. Таким образом, если одновременно изменяются 
+              два свойства, возникают два события. Чтобы исправить логику, достаточно 
+              удалить код, генерирующий события, из описаний свойств и добавить 
+              его в реализацию метода SetXY, как это показано ниже:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;Public Sub SetXY(ByVal newX As Integer, ByVal newY As Integer)  
+&nbsp;&nbsp;&nbsp; X = newX  
+&nbsp;&nbsp;&nbsp; Y = newY  
+&nbsp;&nbsp;&nbsp; RaiseEvent PTChanged()  
+End Sub  </font></pre>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font face="Arial, Helvetica, sans-serif" size="2"><a name=09></a>Делегаты</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Говоря 
+              о событиях, следует упомянуть о делегатах — классе на базе System.Delegate, 
+              который содержит ссылку на метод. Таким образом, делегат — это указатель 
+              на функцию или косвенно-вызываемая функция. Чаще всего делегаты 
+              используются для описания обработчиков событий или для создания 
+              косвенно-вызываемых функций. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Ниже 
+              показано, как изменить код предыдущего примера так, чтобы обработчик 
+              события стал делегатом и подключался в момент выполнения программы:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;Dim MyPoint As TPoint  
+&nbsp;  
+&nbsp;Private Sub Button1_Click(ByVal sender As System.Object, _  
+&nbsp; ByVal e As System.EventArgs) Handles Button1.Click  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyPoint = New TPoint()  
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddHandler MyPoint.PTChanged, AddressOf MyPoint_PTChanged  
+&nbsp;End Sub  
+&nbsp;  
+&nbsp;Private Sub Panel1_MouseDown(ByVal sender As Object, _   
+&nbsp;&nbsp; ByVal e As System.Windows.Forms.MouseEventArgs) _  
+&nbsp;&nbsp; Handles Panel1.MouseDown  
+&nbsp;&nbsp;&nbsp;&nbsp; MyPoint.SetXY(e.X, e.Y)  
+&nbsp;End Sub  
+&nbsp;  
+&nbsp;Private Sub MyPoint_PTChanged()  
+&nbsp;&nbsp;&nbsp; ListBox1.Items.Add(MyPoint.X &amp; ", " &amp; MyPoint.Y)  
+&nbsp;End Sub  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Такой 
+              подход позволяет нам создавать обработчики событий для более чем 
+              одного события, динамически переключать и отключать обработчики 
+              событий и т.п.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font face="Arial, Helvetica, sans-serif" size="2"><a name=10></a>Массивы</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Массивы 
+              задаются описанием типа элементов, числа размерностей, и нижней 
+              и верхней границ каждой размерности и могут содержать только данные 
+              указанного типа. Каждый элемент массива — это объект. массив базируется 
+              на классе System.Array, описывающем базовую функциональность массивов. 
+              Этот класс поддерживает такие интерфейсы, как ICloneable (реализует 
+              возможность создания еще одного экземпляра класса со значениями 
+              существующего экземпляра), IList (реализует возможность индивидуальной 
+              индексации коллекции объектов), ICollection (реализует возможность 
+              задания размеров, создания перечислителей и методов синхронизации) 
+              и IEnumerable (поддерживает итерацию по элементам коллекции). Ниже 
+              приведены базовые свойства массивов (табл. 3) </font></p>
+            <table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#CCCCCC">
+              <tr> 
+                <th><font size="2" face="Arial, Helvetica, sans-serif">Свойство</font></th>
+                <th><font size="2" face="Arial, Helvetica, sans-serif">Описание</font></th>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">IsFixedSize</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Позволяет 
+                  узнать, является ли массив массивом фиксированного размера</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">IsReadOnly</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Позволяет 
+                  узнать, является ли массив массивом только для чтения</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">IsSynchronized</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Позволяет 
+                  узнать, является ли доступ к массиву синхронизированным</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Length</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  общее число элементов во всех размерностях массива</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Rank</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  число размерностей массива</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">SyncRoot</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  объект, используемый для синхронизации доступа к массиву</font></td>
+              </tr>
+            </table>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">и 
+              методы (табл. 4), поддерживаемые массивами. </font></p>
+            <table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#CCCCCC">
+              <tr> 
+                <th><font size="2" face="Arial, Helvetica, sans-serif">Метод</font></th>
+                <th><font size="2" face="Arial, Helvetica, sans-serif">Описание</font></th>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">BinarySearch</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Выполняет 
+                  поиск в одномерном массиве, используя алгоритм бинарного поиска</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Clear</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Обнуляет 
+                  указанные элементы массива</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Copy</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Копирует 
+                  указанные элементы массива в другой массив и при необходимости 
+                  выполняет преобразование типов</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">IndexOf</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  первый индекс указанного элемента в одномерном массиве </font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">LastIndexOf</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  последний индекс указанного элемента в одномерном массиве</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Reverse</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Изменяет 
+                  порядок следования элементов одномерного массива на противоположный</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Sort</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Сортирует 
+                  элементы одномерного массива</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">CopyTo</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Копирует 
+                  все элементы одномерного массива в указанный одномерный массив, 
+                  начиная с указанного индекса в принимающем массиве</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Clone</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Создает 
+                  точную копию массива</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">GetEnumerator</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  интерфейс IEnumerator для данного массива</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">GetLength</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  число элементов в указанной размерности массива</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">GetLowerBound</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  нижний индекс массива</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">GetUpperBound</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  верхний индекс массива</font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">GetValue</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Возвращает 
+                  значения указанных элементов массива </font></td>
+              </tr>
+              <tr> 
+                <td><font size="2" face="Arial, Helvetica, sans-serif">SetValue</font></td>
+                <td><font size="2" face="Arial, Helvetica, sans-serif">Устанавливает 
+                  значения указанных элементов массива</font></td>
+              </tr>
+            </table>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              следующем примере показаны некоторые базовые операции с массивами:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;&nbsp;&nbsp; Sub Main()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim IntArray() As Integer = {0, 1, 2, 3, 4, 5}  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With IntArray  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(vbTab &amp; "Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = " &amp; _  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .GetType.ToString)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(vbTab &amp; "IsFixedSize = " &amp; .IsFixedSize)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(vbTab &amp; "Length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = " &amp; .Length)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(vbTab &amp; "Rank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = " &amp; .Rank)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(vbTab &amp; "LowerBound&nbsp; = " &amp; _  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .GetLowerBound(0))  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(vbTab &amp; "UpperBound&nbsp; = " &amp; _  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .GetUpperBound(0))  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End With  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+&nbsp;&nbsp;&nbsp; End Sub  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Ниже 
+              показано, как использовать методы GetValue и SetValue для получения 
+              значений элементов массива и изменения этих значений: </font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">Console.WriteLine(vbCrLf &amp; "Original Array:")  
+&nbsp;For I = .GetLowerBound(0) To .GetUpperBound(0)  
+&nbsp; Console.WriteLine(vbTab &amp; "Array(" &amp; I &amp; ")" &amp; " = " &amp; .GetValue(I))  
+&nbsp; .SetValue(.GetValue(I) * 10, I)  
+&nbsp;Next  
+&nbsp;  
+Console.WriteLine(vbCrLf &amp; "Modified Array:")  
+&nbsp;For I = .GetLowerBound(0) To .GetUpperBound(0)  
+&nbsp; Console.WriteLine(vbTab &amp; "Array(" &amp; I &amp; ")" &amp; " = " &amp; .GetValue(I))  
+Next  </font></pre>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font face="Arial, Helvetica, sans-serif" size="2"><a name=11></a>Интерфейсы</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Интерфейсы 
+              служат для описания функциональности, которая должна быть реализована 
+              тем или иным классом, но они не содержат кода, реализующего данную 
+              функциональность. Поскольку интерфейс не содержит кода, его нельзя 
+              унаследовать — вместо этого вы наследуете класс, реализующий тот 
+              или иной интерфейс.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Интерфейсы 
+              широко используются в библиотеке классов Microsoft .NET. Мы уже 
+              приводили несколько примеров классов, в которых реализуются такие 
+              интерфейсы, как IConvertible (для выполнения операций преобразования) 
+              и IComparable (для выполнения операций сравнения)). Полный список 
+              интерфейсов, определенных в библиотеке классов Microsoft .NET, представлен 
+              в документации к Microsoft .NET Framework SDK.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font face="Arial, Helvetica, sans-serif" size="2"><a name=12></a>Указатели</font></h3>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Common 
+              Language Runtime поддерживает три типа указателей. К первому типу 
+              относятся управляемые указатели (managed poiters), генерируемые 
+              для аргументов методов, которые передаются по ссылке. Это единственный 
+              тип указателей, совместимый со спецификацией Common Language Runtime. 
+              К двум другим типам относятся неуправляемые указатели (unmanaged 
+              pointers) и неуправляемые указатели на функции (unmanaged function 
+              pointers). Так как неуправляемые указатели не совместимы с Common 
+              Language Runtime, их реализация и поддержка зависят от выбранного 
+              языка программирования. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Common 
+              Language Runtime поддерживает две операции над управляемыми указателями: 
+              получение значения, хранимого по указателю, и запись значения по 
+              адресу указателя. Отметим, что хотя указатели являются ссылочными 
+              типами, значение типа «указатель» не является объектом, а следовательно, 
+              определить точный тип такого значения невозможно.</font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font face="Arial, Helvetica, sans-serif" size="2"><a name=13></a>Заключение</font></h2>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Мы 
+              ознакомились с одним из основных компонентов Microsoft .NET Framework 
+              — средой выполнения Common Language Runtime, рассмотрели такие темы, 
+              как исполняемые файлы и метаданные, кратко поговорили о Microsoft 
+              Intermediate Language (MSIL), Just-In-Time Compiler, узнали о назначении 
+              сборок и глобального кэша сборок (Global Assembly Cache). Затем 
+              мы подробно рассмотрели систему типов Common Type System и основные 
+              группы типов — данные со значениями и ссылочные типы. Отметим, что 
+              поддержка типов на уровне Common Language Runtime обеспечивает простую 
+              интеграцию кода, написанного на разных языках программирования. 
+              Вопрос о выборе языка программирования — будь то Visual Basic .NET, 
+              C# или какой-либо другой — не является первостепенным, поскольку 
+              все языки, поддерживающие спецификацию Common Language Runtime, 
+              обеспечивают доступ к рассмотренным нами типам. Вопрос лишь в синтаксических 
+              особенностях того или иного языка. </font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Проиллюстрируем 
+              вышесказанное. Рассказывая о классах, свойствах, методах и событиях, 
+              мы создали VB.NET-класс, реализующий объект TPoint, с двумя свойствами 
+              — X и Y и методом SetXY, который позволяет изменять значения этих 
+              свойств. При изменении значений свойств X и Y возникает событие 
+              PTChanged. Создадим клиентское приложение на C#, которое будет использовать 
+              наш VB.NET-класс, и в нем реализуем обработчик события PTChanged. 
+              Ниже приведен фрагмент кода, иллюстрирующий необходимые действия:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">public class Form1 : System.Windows.Forms.Form  
+{  
+...  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private ClassLibrary1.TPoint MyPoint;  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public Form1()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {  
+...  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.MyPoint = new ClassLibrary1.TPoint();  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyPoint.PTChanged +=   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new System.EventHandler(this.MyPoint_PTChanged);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  
+&nbsp;  
+...  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private void button1_Click(object sender, System.EventArgs e)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyPoint.SetXY(10, 150);  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private void button2_Click(object sender, System.EventArgs e)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyPoint.SetXY(100, 250);  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private void button3_Click(object sender, System.EventArgs e)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyPoint.SetXY(50, 100);  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void MyPoint_PTChanged(object sender, System.EventArgs e)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageBox.Show("X=" + MyPoint.X.ToString("G") +   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", Y=" + MyPoint.Y.ToString("G"),   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Changed", MessageBoxButtons.OK);  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  
+}  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              данном случае необходимо лишь создать Windows-приложение на C#, 
+              подключить ссылку на библиотеку классов, в которой описан класс, 
+              реализующий объект TPoint, и описать объект типа TPoint:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">private ClassLibrary1.TPoint MyPoint;</font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Теперь 
+              вызовем конструктор объекта TPoint и опишем новый обработчик событий:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">this.MyPoint = new ClassLibrary1.TPoint();
+MyPoint.PTChanged += new
+System.EventHandler(this.MyPoint_PTChanged);</font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Сам 
+              обработчик событий реализован в следующем методе:</font></p>
+            <pre><font face="Arial, Helvetica, sans-serif" size="2">void MyPoint_PTChanged(object sender, System.EventArgs e)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageBox.Show(  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "X=" + MyPoint.X.ToString("G") + ", Y=" +   
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyPoint.Y.ToString("G"),   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Changed", MessageBoxButtons.OK);  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  </font></pre>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">Те, 
+              кто когда-либо пробовал использовать в Visual Basic библиотеки для 
+              C или интегрировать код на Delphi с кодом на VB, смогут по достоинству 
+              оценить изменения, привнесенные Common Language Runtime.</font></p>
+            <p align="justify"><font face="Arial, Helvetica, sans-serif" size="2">В 
+              следующей статье мы начнем ознакомление с библиотекой классов, рассмотрим 
+              основные составляющие ее пространства имен и классы, а также приведем 
+              некоторые примеры их использования. </font></p>
+            <!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+<table width="100%" height="30" border="0" cellpadding="6" cellspacing="0">
+  <tr> 
+    <td background="fon2.gif" bgcolor="#FFFFCC"> 
+      <div align="left"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif">&copy; 
+        <a href="mailto:stasmit@mail.ru">Волшебник Станислав</a>, <a href="http://www.mista.ru"><br>
+        www.mista.ru</a>, 1997-2003</font></div></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC"> 
+
+      <table border="0" align="center" cellpadding="2" cellspacing="0">
+        <tr valign="middle" align="center"> 
+          <td width="95"> 
+            <script language="javascript"><!--
+Mu="u045.09.spylog.com";Md=document;Mnv=navigator;Mp=0;
+Md.cookie="b=b";Mc=0;if(Md.cookie)Mc=1;Mrn=Math.random();
+Mn=(Mnv.appName.substring(0,2)=="Mi")?0:1;Mt=(new Date()).getTimezoneOffset();
+Mz="p="+Mp+"&rn="+Mrn+"&c="+Mc+"&t="+Mt;
+if(self!=top){Mfr=1;}else{Mfr=0;}Msl="1.0";
+//--></script><script language="javascript1.1"><!--
+Mpl="";Msl="1.1";Mj = (Mnv.javaEnabled()?"Y":"N");Mz+='&j='+Mj;
+//--></script><script language="javascript1.2"><!-- 
+Msl="1.2";Ms=screen;Mpx=(Mn==0)?Ms.colorDepth:Ms.pixelDepth;
+Mz+="&wh="+Ms.width+'x'+Ms.height+"&px="+Mpx;
+//--></script><script language="javascript1.3"><!--
+Msl="1.3";//--></script><script language="javascript"><!--
+My="";My+="<a href='http://"+Mu+"/cnt?cid=4509&f=3&p="+Mp+"&rn="+Mrn+"' target='_blank'>";
+My+="<img src='http://"+Mu+"/cnt?cid=4509&"+Mz+"&sl="+Msl+"&r="+escape(Md.referrer)+"&fr="+Mfr+"&pg="+escape(window.location.href);
+My+="' border=0 width=88 height=31 alt='SpyLOG'>";
+My+="</a>";Md.write(My);//--></script><noscript>
+<a href="http://u045.09.spylog.com/cnt?cid=4509&f=3&p=0" target="_blank">
+<img src="http://u045.09.spylog.com/cnt?cid=4509&p=0" alt='SpyLOG' border='0' width=88 height=31 >
+</a></noscript></noscript>
+            </td>
+          <td width="95"> <a href="http://www.1c.klim.org/topsites/index.html" target="_blank"> 
+            <img src="http://1c.klim.org/topsites/topsites.php?ID=143" width="88" height="31" border="0" alt="1C:TOP-100"></a></td>
+          <td width="95"> <script language="javascript">
+hotlog_js="1.0";
+hotlog_r=""+Math.random()+"&s=23314&im=101&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+</script>
+            <script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script> <script language="javascript1.2">
+hotlog_js="1.2";
+hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</script> <script language="javascript1.3">hotlog_js="1.3"</script> 
+            <script language="javascript">hotlog_r+="&js="+hotlog_js;
+document.write("<a href='http://click.hotlog.ru/?23314' target='_top'><img "+
+" src='http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script> <noscript>
+            <a href=http://click.hotlog.ru/?23314 target=_top><img
+src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=23314&im=101" border=0 
+width="88" height="31" alt="HotLog"></a></noscript> </td>
+        </tr>
+      </table>
+      
+    </td>
+    <td background="../fon2.gif"> 
+      <div align="right"><a href="#begin"> Наверх&nbsp;<img src="../top.gif" alt="^" width="16" height="14" border="0"></a></div></td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,894 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/net.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" --> 
+<title>Строки | Технология .Net | mista.ru</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#990066" alink="#CC0066" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="180" background="fon2.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <a name="begin"></a><a href="http://www.mista.ru"><img src="logo.gif" alt="Информационные системы" width="180" height="70" border="0"></a></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC" class="unnamed5"> 
+      <div align="center"><!-- InstanceBeginEditable name="title" --><font color="#CC0000" size="6" face="Verdana, Arial, Helvetica, sans-serif">Строки 
+        в .Net</font><!-- InstanceEndEditable --></div></td>
+  </tr>
+</table>
+<table width="100%" height="90%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="180" valign="top" background="fon.gif" bgcolor="#FFFFCC" class="unnamed1"> 
+      <table width="175" border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="100%" valign="top"> 
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../it.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><br>
+              Информационные технологии</font></strong></font></a> </font></p>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="index.htm">Технология .Net </a></strong></font></font></strong></font></p>
+            <p><font face="Arial, Helvetica, sans-serif" size="2"><a href="intro.htm">Что 
+              такое .Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="net_framework.htm">.Net 
+              Framework</a><br>
+              <a href="vbnet_future.htm">VB.Net: дорога в будущее</a><br>
+              <a href="vbnet_types.htm">Типы данных VB.Net</a><br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2"><a href="vbnet_impression.htm">Впечатление 
+              от VB.Net</a><br>
+              <a href="links.htm">Ссылки по Net</a> </font></p>
+            <table width="99%" border="1" cellspacing="0" cellpadding="5" bordercolor="#FFCC33">
+              <tr> 
+                <td> <p><font face="Arial, Helvetica, sans-serif" size="2">1. 
+                    <a href="clr.htm">CLR - Введение</a><br>
+                    2. <a href="clr2.htm">CLR - Часть 2</a><br>
+                    3. <a href="vs.htm">Visual Studio.Net</a><br>
+                    4. <a href="lib.htm">Библиотека классов </a><br>
+                    5. <a href="array.htm">Массивы и коллекции</a><br>
+                    6. <a href="string.htm">Строки</a><br>
+                    7. <a href="file.htm">Файлы и каталоги</a><br>
+                    8. <a href="stream.htm">Потоки ввода-вывода</a></font></p>
+                  <p align="right"><font face="Arial, Helvetica, sans-serif" size="2"><i><a href="http://www.compress.ru" target="_blank">Компьютер</a></i><a href="http://www.compress.ru" target="_blank"><i>Пресс</i></a> 
+                    </font></p></td>
+              </tr>
+            </table>
+            <br>
+            <hr width="95%" size="1" noshade>
+            <p><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../isu/index.htm">Инф. системы</a></strong></font></font><font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"> 
+              <a href="../gorod/index.htm">Модель города</a></strong></font></font><br>
+              <img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <font color="#330099" face="Verdana, Arial, Helvetica, sans-serif"><a href="../itbooks.htm">Книги 
+              и статьи</a></font></font></strong></font><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><br>
+              <font size="2"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="../ball.gif" width="17" height="17" align="absmiddle"></strong></font> 
+              <a href="../era/index.htm">ЭРА</a> </font></strong></font></p>
+            <p><a href="../1c.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">1С:Предприятие</font></strong></font></a> 
+            </p>
+            <p><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif"><a href="../interesting.htm"><font color="#330099" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#CC0000" size="3" face="Arial, Helvetica, sans-serif">Интересное</font></strong></font></a></font> 
+            </p>
+            <!-- InstanceBeginEditable name="EditRegion2" --><!-- InstanceEndEditable --> 
+            </td>
+        </tr>
+      </table>
+    </td>
+    <td valign="top" class="unnamed1">  
+      <table width="100%" border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+          <td valign="top" bgcolor="#FFFFCC" class="unnamed4"> <!-- InstanceBeginEditable name="navigation" --><a href="../index.htm">mista.ru</a> 
+            / <a href="../it.htm">Инф. технологии</a> / <a href="index.htm">Технология 
+            .Net</a> / Строки<!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td height="65"><!-- InstanceBeginEditable name="text" -->
+            <p align="right"><font face="Arial, Helvetica, sans-serif" size="2">Алексей 
+              Федоров<a href="http://www.compress.ru" target="_blank"><br>
+              КомпьютерПресс</a> 4'2002</font></p>
+            <p align="justify"><a class=contents 
+href="#01"><font size="2" face="Arial, Helvetica, sans-serif">Строки</font></a><font size="2" face="Arial, Helvetica, sans-serif"><br>
+              <a class=contents 
+href="#02">Пространство имен System.Text</a><br>
+              <a class=contents 
+href="#03">Форматирование</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#04">Форматирование по умолчанию</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#05">Форматирование типа Currency</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#06">Форматирование типа Decimal</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#07">Форматирование типа Exponential</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#08">Форматирование типа Fixed-point</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#09">Форматирование типа General</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#10">Форматирование типа Number</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#11">Форматирование типа Percent</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#12">Форматирование типа Round-trip</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#13">Форматирование типа Hexadecimal</a><br>
+              &nbsp;&nbsp;&nbsp;<a class=contents 
+href="#14">Форматирование типа Picture Numeric</a><br>
+              <a class=contents 
+href="#15">Заключение</a></font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Мы 
+              продолжаем знакомство с Microsoft .NET Framework (см. КомпьютерПресс 
+              № 11-12’2001, 1-3’2002) и библиотекой классов .NET Framework Class 
+              Library. В этом номере мы рассмотрим строки и класс System.String, 
+              а также ознакомимся с некоторыми способами форматирования, доступными 
+              в библиотеке классов .NET Framework Class Library.</font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=01></a>Строки</font></h2>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Класс 
+              System.String содержит методы, применяемые для манипуляций со строками. 
+              С помощью методов этого класса мы можем определить длину строки, 
+              выполнить поиск подстрок, изменить регистр символов в строке, сравнить 
+              две строки, разделить строки на подстроки и выполнить ряд других 
+              действий.</font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">После 
+              того как экземпляр класса String создан, он не может быть изменен 
+              — все методы класса, которые изменяют содержимое стоки, возвращают 
+              новый экземпляр данного класса. Класс StringBuilder, находящийся 
+              в пространстве имен System.Text, используется для создания строк, 
+              содержимое которых может быть модифицировано. В Microsoft .NET первый 
+              символ строки имеет нулевой индекс. </font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Класс 
+              String реализует интерфейсы IComparable, ICloneable, IConvertible 
+              и IEnumerable. </font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Мы 
+              уже знакомы с интерфейсом IEnumerable — мы рассмотрели его в предыдущей 
+              статье данного цикла. Интерфейс IComparable содержит объявление 
+              метода CompareTo, который реализующие данный интерфейс классы используют 
+              для того, чтобы обеспечить поддержку сортировки экземпляров класса. 
+              Интерфейс ICloneable задает метод Clone, который используется в 
+              тех случаях, когда классу необходимо следить за созданием копий 
+              экземпляров данного класса. Интерфейс IConvertible задает методы, 
+              которые используются при преобразовании между типами, поддерживаемыми 
+              Common Language Runtime, и другими типами.</font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Класс 
+              String содержит два свойства: свойство Chars(Integer), которое возвращает 
+              символ в указанной позиции, и свойство Length, возвращающее число 
+              символов в строке. Ниже показан пример использования этих свойств, 
+              в котором мы выводим содержимое строки по одному символу.</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET String Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+Imports System.String  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp;  
+&nbsp; Dim Str As String  
+&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp;&nbsp; Str = "Microsoft .NET"  
+&nbsp;  
+&nbsp;&nbsp; While I &lt;= Str.Length - 1  
+&nbsp;&nbsp;&nbsp; Console.WriteLine(Str.Chars(I))  
+&nbsp;&nbsp;&nbsp; I += 1  
+&nbsp; End While  
+&nbsp;  
+End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Метод 
+              IndexOf(Char) используется для нахождения первой копии подстроки 
+              в данной строке. Он возвращает начальную позицию подстроки, если 
+              она найдена, или –1 — в противном случае. Перегруженные версии метода 
+              IndexOf позволяют указывать параметры типа Char, String или массив 
+              элементов Char. Ниже показано, как использовать данный метод:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Strings Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+Imports System.String  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp;  
+&nbsp; Dim Str As String  
+&nbsp; Dim Ch As Char  
+&nbsp; Dim Chars As Char() = {".", "N", "E", "T"}  
+&nbsp; Str = "Microsoft .NET"  
+&nbsp; Ch = "."  
+&nbsp; Console.WriteLine(Str.IndexOf(".NET"))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'returns 10  
+&nbsp; Console.WriteLine(Str.IndexOf(Ch))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'returns 10  
+&nbsp; Console.WriteLine(Str.IndexOf(Chars))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'returns 10  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Метод 
+              IndexOf() имеет два опциональных параметра, способных ограничить 
+              поиск за счет указания начальной и конечной позиции в строке, в 
+              которой выполняется поиск. </font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Метод 
+              LastIndexOf() также используется для поиска подстроки, только он 
+              ищет последний экземпляр указанной подстроки в данной строке. </font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Для 
+              изменения регистра символов в строке — приведения символов к верхнему 
+              или нижнему регистру — используются методы ToUpper() и ToLower() 
+              соответственно.</font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Для 
+              сравнения двух строк мы используем одну из перегруженных версий 
+              метода Compare. Этот метод возвращает 0, если сравниваемые строки 
+              идентичны, отрицательное число, если первая строка меньше второй, 
+              или положительное число, если первая строка больше второй. По умолчанию 
+              сравнение строк выполняется с учетом регистра символов. Для того 
+              чтобы регистр символов игнорировался при сравнении строк, третий 
+              опциональный параметр метода Compare должен иметь значение True. 
+              </font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Например, 
+              два следующих сравнения возвращают разные результаты:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">Str = “Microsoft .NET”
+Console.WriteLine(Str.Compare(Str.ToUpper, Str.ToLower)) ‘ 1
+Console.WriteLine(Str.Compare(Str.ToUpper, Str.ToLower, True)) ‘ 0</font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Для 
+              преобразования строки в массив подстрок используется метод Split(ParamArray 
+              Char()). При вызове этого метода указывается символ, который считается 
+              символом, разделяющим подстроки, — это может быть пробел, запятая 
+              и т.п. В следующем примере показано использование метода Split:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Strings Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+Imports System.String  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp;  
+&nbsp;&nbsp; Dim Str As String  
+&nbsp;&nbsp; Dim Words() As String  
+&nbsp;&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp;&nbsp; Str = "Microsoft .NET Platform"  
+&nbsp;&nbsp; Words = Str.Split(" ")  
+&nbsp;&nbsp; For I = 0 To Words.GetUpperBound(0)  
+&nbsp;&nbsp;&nbsp; Console.WriteLine(I &amp; " : " &amp; Words(I))  
+&nbsp;&nbsp; Next  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Метод 
+              Join(String, String()) служит для объединения элементов массива 
+              в строку. </font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">После 
+              того как мы рассмотрели основные методы класса String, давайте кратко 
+              ознакомимся с другими методами, реализованными в данном классе:</font></p>
+            <ul>
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Методы StartsWith(String) 
+                и EndWith(String) могут использоваться для проверки того, начинается 
+                ли и заканчивается ли данная строка указанной подстрокой. Например, 
+                следующий код: </font> 
+                <pre><font size="2" face="Arial, Helvetica, sans-serif">Str = “** Microsoft .NET Platform **”
+Console.WriteLine(Str.StartsWith(“**”) &amp; “ “ &amp; Str.EndsWith(“**”))</font></pre>
+                <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">возвращает 
+                  true, true, так как в начале и в конце строки присутствуют указанные 
+                  подстроки. </font></p>
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Для замены 
+                всех экземпляров указанного символа на другой символ мы используем 
+                метод Replace(Char, Char) или Replace(String, String), который 
+                возвращает результирующую строку. Для замены спецификаторов формата 
+                на их текстовые эквиваленты мы используем один из перегруженных 
+                методов Format. Например, следующий код: </font> 
+                <pre><font size="2" face="Arial, Helvetica, sans-serif">Str = “Microsoft .NET Platform”
+Console.WriteLine(Str.Replace(“ “, “_”))</font></pre>
+                <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">возвращает 
+                  строку “Microsoft_.NET_Platform”.</font></p>
+                <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Следующий 
+                  пример показывает использование метода Format:</font></p>
+                <pre><font size="2" face="Arial, Helvetica, sans-serif">Str = “Amount to pay: {0:C}”
+Console.WriteLine(Str.Format(Str, 12.34))</font></pre>
+                <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Результатом 
+                  работы данного кода будет строка “Amount to pay: $12.34”.</font></p>
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Для объединения 
+                одной или более строк в одну строку используется один из перегруженных 
+                методов Concat. Например, в следующем фрагменте показано, как 
+                объединить в одну строку строки “Microsoft”, “.NET” и “Platform”: 
+                </font> 
+                <pre><font size="2" face="Arial, Helvetica, sans-serif">Dim Str1, Str2, Str3 As String
+Str1 = “Microsoft “
+Str2 = “.NET “
+Str3 = “Platform”
+Console.WriteLine(Str1.Concat(Str1, Str2, Str3))</font></pre>
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Методы PadLeft(Integer, 
+                Char) и PadRight (Integer, Char) используются для заполнения строки 
+                слева или справа указанным числом символов. Например, следующий 
+                код: </font> 
+                <pre><font size="2" face="Arial, Helvetica, sans-serif">Str = “Microsoft .NET Platform”
+Console.WriteLine(Str.PadLeft(Str.Length + 5, “*”))
+возвращает строку “*****Microsoft .NET Platform”, а код, приведенный ниже:
+Str = “Microsoft .NET Platform”
+Console.WriteLine(Str.PadRight(Str.Length + 5, “*”))
+возвращает строку “Microsoft .NET Platform*****”.</font></pre>
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Методы TrimStart(Char()) 
+                и TrimEnd(Char()) служат для удаления заданной последовательности 
+                символов из начала или конца строки. Метод Trim() используется 
+                для удаления указанной последовательности символов как из начала, 
+                так и из конца строки. </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Для удаления 
+                заданного числа символов из строки с указанной позиции служит 
+                метод Remove(Integer, Integer). В следующем примере показано, 
+                как превратить оригинальную строку в строку “Microsoft Platform”: 
+                </font> 
+                <pre><font size="2" face="Arial, Helvetica, sans-serif">Str = “Microsoft .NET Platform”
+Console.WriteLine(Str.Remove(Str.IndexOf(“.NET”), “.NET”.Length + 1))</font></pre>
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Для того 
+                чтобы вставить строку в указанную позицию данной строки, мы используем 
+                метод Insert(Integer, String). Так, следующий пример показывает, 
+                как добавить строку “Platform” в конец оригинальной строки: </font> 
+                <pre><font size="2" face="Arial, Helvetica, sans-serif">Str = “Microsoft .NET”
+Console.WriteLine(Str.Insert(Str.Length, “ Platform”))</font></pre>
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Для поиска 
+                подстроки в данной строке используется метод Substring(Integer, 
+                Integer). Например, следующий код возвращает строку “.NET”: </font> 
+                <pre><font size="2" face="Arial, Helvetica, sans-serif">Str = “Microsoft .NET Platform”
+Console.WriteLine(Str.Substring(Str.IndexOf(“.NET”), “.NET”.Length))</font></pre>
+              </li>
+            </ul>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Отметим, 
+              что в приведенном выше примере мы использовали свойство Length класса 
+              String в строке, заданной литералом — это еще один способ использования 
+              класса String без создания экземпляра данного класса.</font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=02></a>Пространство 
+              имен System.Text</font></h2>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Пространство 
+              имен System.Text содержит классы, которые представляют собой различные 
+              кодировки символов, а также предоставляют вспомогательные классы 
+              для манипуляции объектами типа String, включая операции форматирования.</font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Класс 
+              StringBuilder может использоваться совместно с классом String для 
+              манипуляции строками. Этот класс полезен в тех случаях, когда нам 
+              требуется модифицировать содержимое экземпляра класса String — вставить, 
+              заменить или удалить символы — без создания новой строки. Для выполнения 
+              необходимой операции мы используем методы Insert, Replace и Remove, 
+              предоставляемые классом StringBuilder. Доступ к отдельным символам 
+              в строке возможен через свойство Chars, которое обеспечивает посимвольную 
+              манипуляцию строками.</font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Пространство 
+              имен System.Text также содержит ряд преобразователей — классов, 
+              которые реализуют различные кодировки символов и используются для 
+              преобразования между ними, включая кодировки ASCII (класс ASCIIEncoding), 
+              UTF-7 (класс UTF7Encoding), UTF-8 (класс UTF8Encoding), Unicode 
+              (класс UnicodeEncoding) и кодовые страницы Windows: </font></p>
+            <ul>
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Класс ASCIIEncoding 
+                представляет символы Unicode (U+0000 — U+007F) как 7-битные ASCII-символы. 
+                </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Класс UnicodeEncoding 
+                представляет символы Unicode как двухбайтовые символы. </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Класс UTF7Encoding 
+                представляет символы Unicode, используя 7-битную форму формата 
+                UCS Transformation Format. Поддерживаются все символы Unicode. 
+                </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Класс UTF8Encoding 
+                представляет символы Unicode, используя 8-битную форму формата 
+                UCS Transformation Format. Поддерживаются все символы Unicode. 
+                </font></li>
+            </ul>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Все 
+              вышеперечисленные классы наследуют классу Encoding, который задает 
+              базовую функциональность этих классов. </font></p>
+            <p align="center"><img src="string_1.gif" width="361" height="267"></p>
+            <ul>
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Методы GetDecoder() 
+                и GetEncoder() возвращают объекты Decoder и Encoder для данного 
+                объекта Encoding. Объект Decoder используется для преобразования 
+                последовательности байтов в символы, а объект Encoder выполняет 
+                обратную операцию — преобразует последовательность символов в 
+                байты. </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Свойство 
+                CodePage типа Integer содержит номер кодовой страницы для текущей 
+                кодировки. </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Свойство 
+                ASCII типа Encoding возвращает кодировку для 7-битного набора 
+                ASCII-символов. </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Свойство 
+                Default типа Encoding возвращает кодировку для текущей кодовой 
+                страницы ANSI. </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Свойство 
+                Unicode типа Encoding возвращает кодировку для Unicode-формата, 
+                в котором байты расположены в порядке little-endian. </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Свойство 
+                UTF7 типа Encoding возвращает кодировку для формата UTF7. </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Свойство 
+                UTF8 типа Encoding возвращает кодировку для формата UTF8. </font> 
+              <li><font size="2" face="Arial, Helvetica, sans-serif">Методы GetByteCount(Char()) 
+                и GetCharCount(Byte()) используются для определения размера результата 
+                того или иного преобразования кодировок — они возвращают число 
+                результирующих байтов или символов соответственно. </font></li>
+            </ul>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">После 
+              того как мы ознакомились с массивами, коллекциями и строками, давайте 
+              рассмотрим способы форматирования, доступные в библиотеке классов.</font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=03></a>Форматирование</font></h2>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Из 
+              рассказа о классе Object мы уже знаем, что каждый класс в библиотеке 
+              классов .NET Framework Class Library содержит метод ToString(). 
+              Реализация этого метода зависит от конкретного класса, но для типов 
+              со значениями, особенно для примитивных типов, мы можем использовать 
+              данный метод для вывода значений, хранимых в переменных того или 
+              иного типа. В следующих разделах мы рассмотрим, как использовать 
+              различные спецификаторы формата для того, чтобы сформатировать значения 
+              как десятичные, экспоненциальные, шестнадцатеричные и т.п.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=04></a>Форматирование 
+              по умолчанию</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">По 
+              умолчанию, когда мы используем метод Console.WriteLine() или любой 
+              другой метод, преобразующий значение в тип String, реальное преобразование 
+              выполняет метод ToString(). Например, следующий код:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp; Sub Main()  
+&nbsp;  
+&nbsp;Dim Amount As Decimal = 123.45  
+&nbsp;Console.WriteLine(Amount)  
+&nbsp;  
+End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">выведет 
+              данные, как и ожидается, — 123.45. Для простого отображения данных 
+              этого вполне достаточно, но если мы захотим, например, отобразить 
+              значение переменной Amount как «денежное» значение (currency) или 
+              в любом другом формате, то нам нужны более мощные средства. И здесь 
+              нам на помощь приходят специальные спецификаторы форматов. Мы рассмотрим 
+              эти спецификаторы ниже.</font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=05></a>Форматирование 
+              типа Currency</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Для 
+              форматирования значения как «денежного», мы используем спецификатор 
+              C (или c), как показано в следующем примере:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp; Sub Main()  
+&nbsp;  
+&nbsp;Dim Amount As Decimal = 123.45  
+&nbsp;Dim Saldo&nbsp; As Decimal = 94.20  
+&nbsp;  
+&nbsp;Console.WriteLine("Amount: {0:C}, Saldo: {1:C}", Amount, Saldo)  
+End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Приведенный 
+              выше код выводит: Amount: $123.45, Saldo: $94.20. Если теперь мы 
+              изменим значение страны:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System.Globalization  
+Imports System.Threading  
+&nbsp;  
+Module Formatting  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; Sub Main()  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim Cult As CultureInfo  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim Cults() As String = {"FR-FR", "EN-GB", "FR-CH"}  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim Amount As Decimal = 123.45  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim Saldo As Decimal = 94.2  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For I = 0 To Cults.GetUpperBound(0)  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cult = New CultureInfo(Cults(I))  
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Thread.CurrentThread.CurrentCulture = Cult  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine("Amount: {0:C}, Saldo: {1:C}", _   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Amount, Saldo)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cult = Nothing  
+&nbsp;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next  
+&nbsp;  
+&nbsp;&nbsp;&nbsp; End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">то 
+              мы получим значения, специфические для той или иной страны, то есть 
+              включающие символ той или иной валюты: евро для Франции, фунты стерлингов 
+              для Великобритании и швейцарские франки для Швейцарии: </font></p>
+            <p align="center"><img src="string_2.gif" width="333" height="55"></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=06></a>Форматирование 
+              типа Decimal</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Этот 
+              тип форматирования указывается спецификатором D (или d). Помимо 
+              этого можно указать точность преобразования — минимальное число 
+              отображаемых цифр. Например, следующий код:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim Formats() As String = {"D", "D4", "D6"}  
+&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp; Dim Value As Integer = 123  
+&nbsp;  
+&nbsp;&nbsp; For I = 0 To Formats.GetUpperBound(0)  
+&nbsp;&nbsp;&nbsp; Console.WriteLine("Value:&nbsp; {0:" &amp; Formats(I) &amp; "}", Value)  
+&nbsp;&nbsp; Next  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">выводит 
+              такие данные: </font></p>
+            <p align="center"><img src="string_3.gif" width="162" height="54"></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=07></a>Форматирование 
+              типа Exponential</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Мы 
+              используем этот формат (который также называется «инженерным» форматом; 
+              спецификатор E или e) для преобразования значений в экспоненциальное 
+              представление. Мы также можем указать точность преобразования — 
+              число символов после десятичной точки. Так, следующий код:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim Formats() As String = {"E", "E2", "E3"}  
+&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp; Dim Value As Integer = 123456  
+&nbsp;  
+&nbsp;&nbsp; For I = 0 To Formats.GetUpperBound(0)  
+&nbsp;&nbsp;&nbsp; Console.WriteLine("Value:&nbsp; {0:" &amp; Formats(I) &amp; "}", Value)  
+&nbsp;&nbsp; Next  
+&nbsp;  
+End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">выводит 
+              следующие данные: </font></p>
+            <p align="center"><img src="string_4.gif" width="205" height="54"></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">Dim Formats() As String = {"e", "e2", "e3"}</font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">что 
+              приведет к следующему результату: </font></p>
+            <p align="center"><img src="string_5.gif" width="170" height="38"></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=08></a>Форматирование 
+              типа Fixed-point</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Форматирование 
+              чисел с фиксированной точкой (спецификатор F или f) используется 
+              для преобразования десятичных чисел путем добавления указанного 
+              числа нулей (по умолчанию два) после десятичной точки. В частности, 
+              код:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim Formats() As String = {"F", "F3", "F5"}  
+&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp; Dim Value As Integer = 123  
+&nbsp;  
+&nbsp; For I = 0 To Formats.GetUpperBound(0)  
+&nbsp;&nbsp; Console.WriteLine("Value:&nbsp; {0:" &amp; Formats(I) &amp; "}", Value)  
+&nbsp; Next  
+&nbsp;  
+End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">выводит 
+              такие данные: </font></p>
+            <p align="center"><img src="string_6.gif" width="167" height="49"></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=09></a>Форматирование 
+              типа General</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Этот 
+              тип форматирования (спецификатор G или g) используется для преобразования 
+              значения либо в формат с фиксированной точкой, либо в «научный» 
+              формат. Максимальная точность для типа Double — 17, а точность по 
+              умолчанию — 15. Точность можно указывать вместе со спецификатором. 
+              Например, код:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim Formats() As String = {"G", "G3", "G17"}  
+&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp; Dim Value As Double = 123456789123456789  
+&nbsp;  
+&nbsp; For I = 0 To Formats.GetUpperBound(0)  
+&nbsp;&nbsp; Console.WriteLine("Value:&nbsp; {0:" &amp; Formats(I) &amp; "}", Value)  
+&nbsp; Next  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">выводит 
+              следующие данные: </font></p>
+            <p align="center"><img src="string_7.gif" width="272" height="57"></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=10></a>Форматирование 
+              типа Number</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Данный 
+              формат (спецификатор N или n) используется для преобразования значения 
+              в форму [-]d,ddd,ddd.dd. Следующий пример показывает, как выполняется 
+              это преобразование:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim Formats() As String = {"N", "N3", "N5"}  
+&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp; Dim Value As Integer = 123456  
+&nbsp;  
+&nbsp; For I = 0 To Formats.GetUpperBound(0)  
+&nbsp;&nbsp; Console.WriteLine("Value:&nbsp; {0:" &amp; Formats(I) &amp; "}", Value)  
+&nbsp; Next  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <div align="center"><img src="string_8.gif" width="189" height="53"> 
+            </div>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=11></a>Форматирование 
+              типа Percent</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Мы 
+              используем данный формат (спецификатор P или p) для представления 
+              числового значения в виде процента. Следующий пример демонстрирует 
+              применение этого типа форматирования:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim Formats() As String = {"P", "P3", "P5"}  
+&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp; Dim Value As Decimal = 0.12345  
+&nbsp;  
+&nbsp; For I = 0 To Formats.GetUpperBound(0)  
+&nbsp;&nbsp; Console.WriteLine("Value:&nbsp; {0:" &amp; Formats(I) &amp; "}", Value)  
+&nbsp; Next  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <div align="center"><img src="string_9.gif" width="180" height="52"> 
+            </div>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=12></a>Форматирование 
+              типа Round-trip</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Этот 
+              формат (спецификатор R или r) используется при необходимости гарантии 
+              того, что преобразованное число может быть преобразовано обратно 
+              в первоначальную величину. </font></p>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=13></a>Форматирование 
+              типа Hexadecimal</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Данный 
+              формат (спецификатор X или x) применяется в тех случаях, когда необходимо 
+              шестнадцатеричное представление значения. Использование данного 
+              типа форматирования показано на следующем примере:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+
+ Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim Formats() As String = {"X", "X3", "X5"}  
+&nbsp; Dim I As Integer  
+&nbsp;  
+&nbsp; Dim Value As Byte = 128  
+&nbsp;  
+&nbsp; For I = 0 To Formats.GetUpperBound(0)  
+&nbsp;&nbsp; Console.WriteLine("Value:&nbsp; 0x{0:" &amp; Formats(I) &amp; "}", Value)  
+&nbsp; Next  
+&nbsp;  
+&nbsp; Console.WriteLine()  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <div align="center"><img src="string_10.gif" width="162" height="50"> 
+            </div>
+            <hr noshade size="1" width="85%">
+            <h3><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"></font><font size="2" face="Arial, Helvetica, sans-serif"><a name=14></a>Форматирование 
+              типа Picture Numeric</font></h3>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Мы 
+              уже использовали шаблоны при рассмотрении различных спецификаторов 
+              форматов. Они имеют форму {0:xy}, где x — один из существующих спецификаторов, 
+              а y — указатель точности. Помимо простых шаблонов мы можем использовать 
+              и более комплексные. Некоторые из таких шаблонов показаны в следующем 
+              примере:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp; Dim Formats() As String = {" {0:0.##}", " {0:##.###}", _  
+&nbsp;&nbsp; "{0:%#.##}", "{0:##.##E+0}", "{0:{{##.##}}}", _  
+&nbsp;&nbsp; "{0:\###.##\#}"}  
+&nbsp;  
+&nbsp; Dim I As Integer  
+&nbsp; Dim Value As Double = 1.23456  
+&nbsp;  
+&nbsp; For I = 0 To Formats.GetUpperBound(0)  
+&nbsp;&nbsp; Console.WriteLine("Value:&nbsp; " &amp; Formats(I), Value)  
+&nbsp; Next  
+&nbsp;  
+&nbsp;End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="center"><font size="2" face="Arial, Helvetica, sans-serif"><img src="string_11.gif" width="159" height="91"></font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Мы 
+              можем использовать спецификаторы форматов G, F, D и X (или их эквиваленты 
+              в нижнем регистре) для преобразования имен членов перечислений в 
+              их строчные эквиваленты. Следующий пример показывает, как это сделать:</font></p>
+            <pre><font size="2" face="Arial, Helvetica, sans-serif">'---------------------------------------  
+' .NET Formatting Demo  
+'---------------------------------------  
+&nbsp;  
+Imports System  
+&nbsp;  
+Module Module1  
+&nbsp;  
+&nbsp;Sub Main()  
+&nbsp;&nbsp; Dim Formats() As String = {"{0:G}", "{0:F}", "{0:D}", "{0:X}"}  
+&nbsp;  
+&nbsp;&nbsp; Dim I As Integer  
+&nbsp;&nbsp; Dim Value As FileAttributes = FileAttributes.Directory  
+&nbsp;  
+&nbsp;&nbsp; For I = 0 To Formats.GetUpperBound(0)  
+&nbsp;&nbsp;&nbsp; Console.WriteLine("Value:&nbsp; " &amp; Formats(I), Value)  
+&nbsp;&nbsp; Next  
+&nbsp;  
+End Sub  
+&nbsp;  
+End Module  </font></pre>
+            <p align="center"><font size="2" face="Arial, Helvetica, sans-serif"><img src="string_12.gif" width="169" height="63"></font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Примечание. 
+              В библиотеке классов Microsoft .NET Framework Library также поддерживаются 
+              различные опции форматирования значений даты и времени. Мы ознакомимся 
+              с ними в одной из наших следующих статей.</font></p>
+            <hr noshade size="1" width="85%">
+            <h2><font face="Arial, Helvetica, sans-serif" size="3"><img src="rombik.gif" width="31" height="27" align="absmiddle"><a name=15></a>Заключение</font></h2>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">В 
+              этой части статьи мы рассмотрели использование строк, классов System.String, 
+              System.Text. StringBuilder, а также рассказали об использовании 
+              различных спецификаторов форматирования. </font></p>
+            <p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">Следующий 
+              этап в освоении библиотеки классов Microsoft .NET Framework Library 
+              — потоки, поддержка файловой системы и сетевые функции. Об этом 
+              мы поговорим в следующем номере. </font></p>
+            <!-- InstanceEndEditable --></td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+<table width="100%" height="30" border="0" cellpadding="6" cellspacing="0">
+  <tr> 
+    <td background="fon2.gif" bgcolor="#FFFFCC"> 
+      <div align="left"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif">&copy; 
+        <a href="mailto:stasmit@mail.ru">Волшебник Станислав</a>, <a href="http://www.mista.ru"><br>
+        www.mista.ru</a>, 1997-2003</font></div></td>
+    <td background="fon2.gif" bgcolor="#FFFFCC"> 
+
+      <table border="0" align="center" cellpadding="2" cellspacing="0">
+        <tr valign="middle" align="center"> 
+          <td width="95"> 
+            <script language="javascript"><!--
+Mu="u045.09.spylog.com";Md=document;Mnv=navigator;Mp=0;
+Md.cookie="b=b";Mc=0;if(Md.cookie)Mc=1;Mrn=Math.random();
+Mn=(Mnv.appName.substring(0,2)=="Mi")?0:1;Mt=(new Date()).getTimezoneOffset();
+Mz="p="+Mp+"&rn="+Mrn+"&c="+Mc+"&t="+Mt;
+if(self!=top){Mfr=1;}else{Mfr=0;}Msl="1.0";
+//--></script><script language="javascript1.1"><!--
+Mpl="";Msl="1.1";Mj = (Mnv.javaEnabled()?"Y":"N");Mz+='&j='+Mj;
+//--></script><script language="javascript1.2"><!-- 
+Msl="1.2";Ms=screen;Mpx=(Mn==0)?Ms.colorDepth:Ms.pixelDepth;
+Mz+="&wh="+Ms.width+'x'+Ms.height+"&px="+Mpx;
+//--></script><script language="javascript1.3"><!--
+Msl="1.3";//--></script><script language="javascript"><!--
+My="";My+="<a href='http://"+Mu+"/cnt?cid=4509&f=3&p="+Mp+"&rn="+Mrn+"' target='_blank'>";
+My+="<img src='http://"+Mu+"/cnt?cid=4509&"+Mz+"&sl="+Msl+"&r="+escape(Md.referrer)+"&fr="+Mfr+"&pg="+escape(window.location.href);
+My+="' border=0 width=88 height=31 alt='SpyLOG'>";
+My+="</a>";Md.write(My);//--></script><noscript>
+<a href="http://u045.09.spylog.com/cnt?cid=4509&f=3&p=0" target="_blank">
+<img src="http://u045.09.spylog.com/cnt?cid=4509&p=0" alt='SpyLOG' border='0' width=88 height=31 >
+</a></noscript></noscript>
+            </td>
+          <td width="95"> <a href="http://www.1c.klim.org/topsites/index.html" target="_blank"> 
+            <img src="http://1c.klim.org/topsites/topsites.php?ID=143" width="88" height="31" border="0" alt="1C:TOP-100"></a></td>
+          <td width="95"> <script language="javascript">
+hotlog_js="1.0";
+hotlog_r=""+Math.random()+"&s=23314&im=101&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+</script>
+            <script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script> <script language="javascript1.2">
+hotlog_js="1.2";
+hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</script> <script language="javascript1.3">hotlog_js="1.3"</script> 
+            <script language="javascript">hotlog_r+="&js="+hotlog_js;
+document.write("<a href='http://click.hotlog.ru/?23314' target='_top'><img "+
+" src='http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script> <noscript>
+            <a href=http://click.hotlog.ru/?23314 target=_top><img
+src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=23314&im=101" border=0 
+width="88" height="31" alt="HotLog"></a></noscript> </td>
+        </tr>
+      </table>
+      
+    </td>
+    <td background="../fon2.gif"> 
+      <div align="right"><a href="#begin"> Наверх&nbsp;<img src="../top.gif" alt="^" width="16" height="14" border="0"></a></div></td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>
