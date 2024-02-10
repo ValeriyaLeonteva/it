@@ -1,4 +1,5 @@
-﻿public class Company
+﻿namespace MyProject;
+public class Company
 {
     public string title;
 

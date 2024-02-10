@@ -1,4 +1,6 @@
-﻿class Person
+﻿namespace MyProject;
+
+class Person
 {
 	public string name = "Undefined";
 	public int age;
